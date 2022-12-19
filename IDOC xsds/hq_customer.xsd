@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="customer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ocustomer_id" type="xs:unsignedInt" />
+        <xs:element name="oprice_list_id" type="xs:unsignedByte" />
+        <xs:element name="oentity_id" type="xs:unsignedByte" />
+        <xs:element name="oterritory_id" type="xs:unsignedByte" />
+        <xs:element name="oterritory_state_id" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_status_id" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_rep_id" type="xs:unsignedByte" />
+        <xs:element name="ouser_sales_person_id" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_company" type="xs:string" />
+        <xs:element name="ocustomer_company_type" />
+        <xs:element name="ocustomer_parent_co" />
+        <xs:element name="ocustomer_contact" type="xs:string" />
+        <xs:element name="ocustomer_phone" type="xs:unsignedLong" />
+        <xs:element name="ocustomer_fax" type="xs:string" />
+        <xs:element name="ocustomer_email" type="xs:string" />
+        <xs:element name="ocustomer_rep" />
+        <xs:element name="ocustomer_federal_id" />
+        <xs:element name="ocustomer_utah_id" />
+        <xs:element name="ocustomer_delivery" />
+        <xs:element name="slug" />
+        <xs:element name="order_variable" />
+        <xs:element name="parent_id" />
+        <xs:element name="OCDT" type="xs:string" />
+        <xs:element name="OCU" type="xs:unsignedByte" />
+        <xs:element name="OMDT" type="xs:string" />
+        <xs:element name="OMU" type="xs:unsignedShort" />
+        <xs:element name="ocustomer_type" type="xs:string" />
+        <xs:element name="ocustomer_notes" />
+        <xs:element name="ship_oaddress_id" type="xs:unsignedShort" />
+        <xs:element name="bill_oaddress_id" type="xs:unsignedShort" />
+        <xs:element name="ocustomer_cim_token" type="xs:unsignedInt" />
+        <xs:element name="ocustomer_stripe_customer_token" />
+        <xs:element name="ocustomer_stripe_card_token" />
+        <xs:element name="ocustomer_stripe_token" />
+        <xs:element name="ocustomer_external_id" type="xs:string" />
+        <xs:element name="ocustomer_channels" type="xs:string" />
+        <xs:element name="ocustomer_assigned_ouser_id" />
+        <xs:element name="ocustomer_credit_limit" type="xs:unsignedShort" />
+        <xs:element name="ocustomer_maximum_write_off" />
+        <xs:element name="ocustomer_minimum_payment" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_finance_charge" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_balance_type" />
+        <xs:element name="ocustomer_price_level" type="xs:string" />
+        <xs:element name="ocustomer_due_date_grace_period" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_discount_grace_period" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_payment_terms" type="xs:string" />
+        <xs:element name="opayment_term_id" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_trade_discount_percent" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_is_active" type="xs:boolean" />
+        <xs:element name="ocustomer_is_hold" type="xs:boolean" />
+        <xs:element name="ocusotmer_class" type="xs:string" />
+        <xs:element name="ocustomer_bank_account_key" />
+        <xs:element name="ocustomer_receivable_key" />
+        <xs:element name="ocustomer_sales_key" />
+        <xs:element name="ocustomer_cost_of_goods_sold_key" />
+        <xs:element name="ocustomer_inventory_account_key" />
+        <xs:element name="default_oaddress_id" />
+        <xs:element name="ocustomer_state" type="xs:string" />
+        <xs:element name="ocustomer_phone_number" />
+        <xs:element name="ocustomer_created_on" />
+        <xs:element name="ocustomer_class" type="xs:string" />
+        <xs:element name="ocustomer_days_between_orders" type="xs:decimal" />
+        <xs:element name="ocustomer_last_order_date" type="xs:string" />
+        <xs:element name="ocustomer_days_past_due" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_ytd_sales" type="xs:decimal" />
+        <xs:element name="ocustomer_thirty_day_sales" type="xs:decimal" />
+        <xs:element name="ocustomer_180_day_sales" type="xs:decimal" />
+        <xs:element name="ocustomer_365_day_sales" type="xs:decimal" />
+        <xs:element name="ocustomer_auto_email_invoice" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_auto_mail_invoice" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_auto_fax_invoice" />
+        <xs:element name="ocustomer_store_count" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_is_priority" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_url" type="xs:string" />
+        <xs:element name="ocustomer_nickname" type="xs:string" />
+        <xs:element name="ocustomer_temperature" type="xs:string" />
+        <xs:element name="ocustomer_is_taxed" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_rating" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_tax_exempt_state_id" />
+        <xs:element name="ocustomer_tax_exempt_federal_id" />
+        <xs:element name="ocustomer_notify_on_dropship" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_send_invoice_reminders" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_company_size" />
+        <xs:element name="ocustomer_company_industry" />
+        <xs:element name="ocustomer_auto_email_statement" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_is_international" type="xs:unsignedByte" />
+        <xs:element name="ocustomer_hide_pricing" />
+        <xs:element name="sap_sales_organization_id" type="xs:unsignedByte" />
+        <xs:element name="billing_address">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ocustomer_address_id" type="xs:unsignedShort" />
+              <xs:element name="ocustomer_address_type_id" type="xs:unsignedByte" />
+              <xs:element name="ocustomer_id" type="xs:unsignedInt" />
+              <xs:element name="olead_id" />
+              <xs:element name="oaddress_type" type="xs:unsignedByte" />
+              <xs:element name="oaddress_name" type="xs:string" />
+              <xs:element name="oaddress_street_1" type="xs:string" />
+              <xs:element name="oaddress_street_2" />
+              <xs:element name="oaddress_street_3" />
+              <xs:element name="oaddress_street_4" />
+              <xs:element name="oaddress_locality" type="xs:string" />
+              <xs:element name="oaddress_region" type="xs:string" />
+              <xs:element name="oaddress_postcode" type="xs:unsignedInt" />
+              <xs:element name="oaddress_country" type="xs:string" />
+              <xs:element name="ofulfillment_center_code" />
+              <xs:element name="oaddress_contact" type="xs:string" />
+              <xs:element name="oaddress_phone" type="xs:unsignedLong" />
+              <xs:element name="oaddress_fax" />
+              <xs:element name="oaddress_email_to" type="xs:string" />
+              <xs:element name="oaddress_email_cc" />
+              <xs:element name="oaddress_email_bcc" />
+              <xs:element name="oaddress_url_1" />
+              <xs:element name="oaddress_url_2" />
+              <xs:element name="oaddress_url_3" />
+              <xs:element name="oaddress_url_4" />
+              <xs:element name="oaddress_url_5" />
+              <xs:element name="oaddress_external_id" type="xs:unsignedShort" />
+              <xs:element name="oaddress_default" type="xs:unsignedByte" />
+              <xs:element name="oaddress_active" type="xs:unsignedByte" />
+              <xs:element name="oaddress_notes" />
+              <xs:element name="OCDT" type="xs:string" />
+              <xs:element name="OCU" type="xs:unsignedByte" />
+              <xs:element name="OMDT" type="xs:string" />
+              <xs:element name="OMU" type="xs:unsignedShort" />
+              <xs:element name="oaddress_is_billing" type="xs:unsignedByte" />
+              <xs:element name="oaddress_is_shipping" type="xs:unsignedByte" />
+              <xs:element name="ocountry_id" type="xs:unsignedByte" />
+              <xs:element name="country">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ocountry_id" type="xs:unsignedByte" />
+                    <xs:element name="ocountry_code" type="xs:string" />
+                    <xs:element name="ocountry_name" type="xs:string" />
+                    <xs:element name="OCU" />
+                    <xs:element name="OMU" />
+                    <xs:element name="OCDT" type="xs:string" />
+                    <xs:element name="OMDT" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

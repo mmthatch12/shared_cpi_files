@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="INVOIC02">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDOC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="EDI_DC40">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="TABNAM" type="xs:string" />
+                    <xs:element minOccurs="0" name="MANDT" type="xs:string" />
+                    <xs:element minOccurs="0" name="DOCNUM" type="xs:string" />
+                    <xs:element minOccurs="0" name="DIRECT" type="xs:string" />
+                    <xs:element minOccurs="0" name="IDOCTYP" type="xs:string" />
+                    <xs:element minOccurs="0" name="MESTYP" type="xs:string" />
+                    <xs:element minOccurs="0" name="SNDPOR" type="xs:string" />
+                    <xs:element minOccurs="0" name="SNDPRT" type="xs:string" />
+                    <xs:element minOccurs="0" name="SNDPRN" type="xs:string" />
+                    <xs:element minOccurs="0" name="RCVPOR" type="xs:string" />
+                    <xs:element minOccurs="0" name="RCVPRT" type="xs:string" />
+                    <xs:element minOccurs="0" name="RCVPFC" type="xs:string" />
+                    <xs:element minOccurs="0" name="RCVPRN" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="BEGIN" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="E1EDK01">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="CURCY" type="xs:string" />
+                    <xs:element minOccurs="0" name="BSART" type="xs:string" />
+                    <xs:element minOccurs="0" name="BELNR" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="E1EDKA1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="PARVW" type="xs:string" />
+                    <xs:element minOccurs="0" name="PARTN" type="xs:string" />
+                    <xs:element minOccurs="0" name="NAME1" type="xs:string" />
+                    <xs:element minOccurs="0" name="STRAS" type="xs:string" />
+                    <xs:element minOccurs="0" name="STRS2" type="xs:string" />
+                    <xs:element minOccurs="0" name="ORT01" type="xs:string" />
+                    <xs:element minOccurs="0" name="COUNC" type="xs:string" />
+                    <xs:element minOccurs="0" name="PSTLZ" type="xs:string" />
+                    <xs:element minOccurs="0" name="LAND1" type="xs:string" />
+                    <xs:element minOccurs="0" name="SPRAS" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="E1EDK02">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="BELNR" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="E1EDK03">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="IDDAT" type="xs:string" />
+                    <xs:element minOccurs="0" name="DATUM" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="E1EDP01">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="POSEX" type="xs:string" />
+                    <xs:element minOccurs="0" name="MENGE" type="xs:string" />
+                    <xs:element minOccurs="0" name="MENEE" type="xs:string" />
+                    <xs:element minOccurs="0" name="E1EDP26">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="BETRG" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="SEGMENT" type="xs:string" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="E1EDS01">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="SUMID" />
+                    <xs:element minOccurs="0" name="SUMME" type="xs:string" />
+                    <xs:element minOccurs="0" name="WAERQ" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="BEGIN" type="xs:string" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Invoice>
+	<oinvoice_id>17189332</oinvoice_id>
+	<ocustomer_id/>
+	<oorder_id>22134401</oorder_id>
+	<oshipment_id/>
+	<sop_number/>
+	<oinvoice_status>0</oinvoice_status>
+	<oinvoice_date>2022-01-24 09:59:58</oinvoice_date>
+	<oinvoice_subtotal>275</oinvoice_subtotal>
+	<oinvoice_shipping>0</oinvoice_shipping>
+	<oinvoice_shipping_estimate>0</oinvoice_shipping_estimate>
+	<oinvoice_shipping_discount>0</oinvoice_shipping_discount>
+	<oinvoice_shipping_discount_total>0</oinvoice_shipping_discount_total>
+	<oinvoice_tax>0</oinvoice_tax>
+	<oinvoice_discount>0</oinvoice_discount>
+	<oinvoice_discount_total>0</oinvoice_discount_total>
+	<oinvoice_total>275</oinvoice_total>
+	<oinvoice_amount_unpaid>275</oinvoice_amount_unpaid>
+	<oinvoice_type>0</oinvoice_type>
+	<opayment_auth_id>0</opayment_auth_id>
+	<omail_id>1</omail_id>
+	<olob_id>1</olob_id>
+	<ofax_id/>
+	<oinvoice_shipping_override/>
+	<oinvoice_is_posted/>
+	<oinvoice_gp_post_date/>
+	<oinvoice_closed>0</oinvoice_closed>
+	<oinvoice_due_date>2022-02-23 09:59:58</oinvoice_due_date>
+	<oinvoice_is_paid>0</oinvoice_is_paid>
+	<OCDT>2022-01-23 15:00:18</OCDT>
+	<OCU>693</OCU>
+	<OMDT>2022-07-26 12:01:20</OMDT>
+	<OMU>75</OMU>
+	<posted_date/>
+	<is_posted_to_sap>1</is_posted_to_sap>
+	<sales_tax_sync_status>0</sales_tax_sync_status>
+	<oinvoice_is_notified/>
+	<oinvoice_note/>
+	<oinvoice_amount_unpaid_override/>
+	<oinvoice_fees_total>0.00000</oinvoice_fees_total>
+	<cogs_posted_to_sap>1</cogs_posted_to_sap>
+	<sap_document_id>CVBI_15171</sap_document_id>
+	<invoice_items>
+		<oinvoice_item_id>22737455</oinvoice_item_id>
+		<oinvoice_id>17189332</oinvoice_id>
+		<oorder_item_id>24008516</oorder_item_id>
+		<oproduct_id>1193</oproduct_id>
+		<oinvoice_item_quantity>1</oinvoice_item_quantity>
+		<oinvoice_item_price>275.00000</oinvoice_item_price>
+		<oinvoice_item_amount>275.00000</oinvoice_item_amount>
+		<oinvoice_item_sequence/>
+		<OCU>1553</OCU>
+		<OCDT>2022-01-23 15:00:18</OCDT>
+		<OMU>75</OMU>
+		<OMDT>2022-07-26 12:01:08</OMDT>
+		<material_cost_total>0.00000</material_cost_total>
+		<total_cogs>0.00000</total_cogs>
+		<freight_cost_total>0.00000</freight_cost_total>
+		<duties_cost_total>0.00000</duties_cost_total>
+		<overhead_cost_total>0.00000</overhead_cost_total>
+	</invoice_items>
+	<customer>
+		<ocustomer_id>1423457</ocustomer_id>
+		<oprice_list_id>8</oprice_list_id>
+		<oentity_id>1</oentity_id>
+		<oterritory_id>7</oterritory_id>
+		<oterritory_state_id>58</oterritory_state_id>
+		<ocustomer_status_id>1</ocustomer_status_id>
+		<ocustomer_rep_id>35</ocustomer_rep_id>
+		<ouser_sales_person_id>255</ouser_sales_person_id>
+		<ocustomer_company>Test Company</ocustomer_company>
+		<ocustomer_company_type/>
+		<ocustomer_parent_co/>
+		<ocustomer_contact>TONYA C DORSEY</ocustomer_contact>
+		<ocustomer_phone>8036994642</ocustomer_phone>
+		<ocustomer_fax>1 (234) 124-3124</ocustomer_fax>
+		<ocustomer_email>online@maloufsleep.com</ocustomer_email>
+		<ocustomer_rep></ocustomer_rep>
+		<ocustomer_federal_id/>
+		<ocustomer_utah_id/>
+		<ocustomer_delivery/>
+		<slug/>
+		<order_variable/>
+		<parent_id/>
+		<OCDT>2016-03-15 13:27:14</OCDT>
+		<OCU>0</OCU>
+		<OMDT>2022-10-28 14:09:39</OMDT>
+		<OMU>2249</OMU>
+		<ocustomer_type>wholesale</ocustomer_type>
+		<ocustomer_notes/>
+		<ship_oaddress_id>22534</ship_oaddress_id>
+		<bill_oaddress_id>22534</bill_oaddress_id>
+		<ocustomer_cim_token>276487914</ocustomer_cim_token>
+		<ocustomer_stripe_customer_token/>
+		<ocustomer_stripe_card_token/>
+		<ocustomer_stripe_token/>
+		<ocustomer_external_id>TEST</ocustomer_external_id>
+		<ocustomer_channels>wholesale</ocustomer_channels>
+		<ocustomer_assigned_ouser_id/>
+		<ocustomer_credit_limit>1000</ocustomer_credit_limit>
+		<ocustomer_maximum_write_off/>
+		<ocustomer_minimum_payment>0</ocustomer_minimum_payment>
+		<ocustomer_finance_charge>0</ocustomer_finance_charge>
+		<ocustomer_balance_type/>
+		<ocustomer_price_level>BASE</ocustomer_price_level>
+		<ocustomer_due_date_grace_period>0</ocustomer_due_date_grace_period>
+		<ocustomer_discount_grace_period>0</ocustomer_discount_grace_period>
+		<ocustomer_payment_terms>Net 30</ocustomer_payment_terms>
+		<opayment_term_id>7</opayment_term_id>
+		<ocustomer_trade_discount_percent>0</ocustomer_trade_discount_percent>
+		<ocustomer_is_active>true</ocustomer_is_active>
+		<ocustomer_is_hold>false</ocustomer_is_hold>
+		<ocusotmer_class>BRINDLE</ocusotmer_class>
+		<ocustomer_bank_account_key/>
+		<ocustomer_receivable_key/>
+		<ocustomer_sales_key/>
+		<ocustomer_cost_of_goods_sold_key/>
+		<ocustomer_inventory_account_key/>
+		<default_oaddress_id/>
+		<ocustomer_state>UT</ocustomer_state>
+		<ocustomer_phone_number/>
+		<ocustomer_created_on/>
+		<ocustomer_class>MALOUF</ocustomer_class>
+		<ocustomer_days_between_orders>19.00</ocustomer_days_between_orders>
+		<ocustomer_last_order_date>2019-09-04 12:00:00</ocustomer_last_order_date>
+		<ocustomer_days_past_due>0</ocustomer_days_past_due>
+		<ocustomer_ytd_sales>0.00</ocustomer_ytd_sales>
+		<ocustomer_thirty_day_sales>0.00</ocustomer_thirty_day_sales>
+		<ocustomer_180_day_sales>60.00</ocustomer_180_day_sales>
+		<ocustomer_365_day_sales>908.00</ocustomer_365_day_sales>
+		<ocustomer_auto_email_invoice>1</ocustomer_auto_email_invoice>
+		<ocustomer_auto_mail_invoice>0</ocustomer_auto_mail_invoice>
+		<ocustomer_auto_fax_invoice/>
+		<ocustomer_store_count>1</ocustomer_store_count>
+		<ocustomer_is_priority>0</ocustomer_is_priority>
+		<ocustomer_url>http://www.maloufsleep.com</ocustomer_url>
+		<ocustomer_nickname>Malouf Test Account</ocustomer_nickname>
+		<ocustomer_temperature>warm</ocustomer_temperature>
+		<ocustomer_is_taxed>0</ocustomer_is_taxed>
+		<ocustomer_rating>5</ocustomer_rating>
+		<ocustomer_tax_exempt_state_id></ocustomer_tax_exempt_state_id>
+		<ocustomer_tax_exempt_federal_id/>
+		<ocustomer_notify_on_dropship>1</ocustomer_notify_on_dropship>
+		<ocustomer_send_invoice_reminders>0</ocustomer_send_invoice_reminders>
+		<ocustomer_company_size/>
+		<ocustomer_company_industry/>
+		<ocustomer_auto_email_statement>1</ocustomer_auto_email_statement>
+		<ocustomer_is_international>1</ocustomer_is_international>
+		<ocustomer_hide_pricing/>
+		<sap_sales_organization_id>7</sap_sales_organization_id>
+		<billing_address>
+			<ocustomer_address_id>22534</ocustomer_address_id>
+			<ocustomer_address_type_id>3</ocustomer_address_type_id>
+			<ocustomer_id>1423457</ocustomer_id>
+			<olead_id/>
+			<oaddress_type>0</oaddress_type>
+			<oaddress_name>Malouf Test</oaddress_name>
+			<oaddress_street_1>1525 W. 2960 S.</oaddress_street_1>
+			<oaddress_street_2></oaddress_street_2>
+			<oaddress_street_3></oaddress_street_3>
+			<oaddress_street_4></oaddress_street_4>
+			<oaddress_locality>Logan</oaddress_locality>
+			<oaddress_region>UT</oaddress_region>
+			<oaddress_postcode>84321</oaddress_postcode>
+			<oaddress_country>US</oaddress_country>
+			<ofulfillment_center_code/>
+			<oaddress_contact>Cameron Bird</oaddress_contact>
+			<oaddress_phone>8016452857</oaddress_phone>
+			<oaddress_fax></oaddress_fax>
+			<oaddress_email_to>cameron@maloufsleep.com</oaddress_email_to>
+			<oaddress_email_cc></oaddress_email_cc>
+			<oaddress_email_bcc></oaddress_email_bcc>
+			<oaddress_url_1></oaddress_url_1>
+			<oaddress_url_2></oaddress_url_2>
+			<oaddress_url_3></oaddress_url_3>
+			<oaddress_url_4></oaddress_url_4>
+			<oaddress_url_5></oaddress_url_5>
+			<oaddress_external_id>22534</oaddress_external_id>
+			<oaddress_default>0</oaddress_default>
+			<oaddress_active>1</oaddress_active>
+			<oaddress_notes/>
+			<OCDT>2017-04-20 10:09:48</OCDT>
+			<OCU>0</OCU>
+			<OMDT>2022-08-18 14:05:01</OMDT>
+			<OMU>2249</OMU>
+			<oaddress_is_billing>0</oaddress_is_billing>
+			<oaddress_is_shipping>0</oaddress_is_shipping>
+			<ocountry_id>1</ocountry_id>
+			<country>
+				<ocountry_id>1</ocountry_id>
+				<ocountry_code>US</ocountry_code>
+				<ocountry_name>United States</ocountry_name>
+				<OCU/>
+				<OMU/>
+				<OCDT>2020-09-09 09:29:23</OCDT>
+				<OMDT/>
+			</country>
+		</billing_address>
+	</customer>
+</Invoice>

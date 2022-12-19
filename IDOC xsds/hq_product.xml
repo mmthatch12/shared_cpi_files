@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+	<oproduct_id>327</oproduct_id>
+	<oproduct_signature></oproduct_signature>
+	<oproduct_default_location>1</oproduct_default_location>
+	<oproduct_name>Lucid 12" Gel Memory Foam Mattress, Plush</oproduct_name>
+	<oproduct_sku>LU1245GFPARENT</oproduct_sku>
+	<oproduct_upc/>
+	<oproduct_asin_us>B07MVZKX54</oproduct_asin_us>
+	<oproduct_asin_ca>B008TVY4IG</oproduct_asin_ca>
+	<oproduct_list_price>1199.99</oproduct_list_price>
+	<oproduct_sell_price>351.99</oproduct_sell_price>
+	<oproduct_quantity>34</oproduct_quantity>
+	<oproduct_channels>amazon-ca,linenspa-us,ebay,rakuten,reports,wayfair,walmart,jet,zola,walmart-1p,product,home-depot,groupon,jcpenney,shop-com,vip,google-express</oproduct_channels>
+	<oproduct_wholesale_price/>
+	<oproduct_case_pack>1</oproduct_case_pack>
+	<oproduct_fulfillment_method>FBM</oproduct_fulfillment_method>
+	<oproduct_price_change>2014-07-02 10:55:16</oproduct_price_change>
+	<oproduct_weight>9</oproduct_weight>
+	<oproduct_average_cost/>
+	<oproduct_purchase_cost/>
+	<oproduct_estimated_freight_cost/>
+	<oproduct_duties/>
+	<obrand_id>7</obrand_id>
+	<oproduct_parent_id>0</oproduct_parent_id>
+	<oproduct_is_parent>1</oproduct_is_parent>
+	<oproduct_variation_types>size</oproduct_variation_types>
+	<oproduct_qty_per_container/>
+	<oproduct_target_days_left/>
+	<oproduct_class>MALOUF</oproduct_class>
+	<oproduct_type>Mattress</oproduct_type>
+	<order_variable>0</order_variable>
+	<oproduct_master_id>0</oproduct_master_id>
+	<oproduct_master_parent_id>0</oproduct_master_parent_id>
+	<oproduct_gtin/>
+	<oproduct_casepack_upc/>
+	<slug>12-inch-gel-memory-foam-mattress-by-lucid</slug>
+	<oproduct_order>160</oproduct_order>
+	<parent_id>0</parent_id>
+	<oproduct_is_noninventory>0</oproduct_is_noninventory>
+	<oproduct_upc_new/>
+	<oproduct_gtin_new/>
+	<oproduct_casepack_upc_new/>
+	<oproduct_freight_class>100</oproduct_freight_class>
+	<oproduct_status_id>1</oproduct_status_id>
+	<oproduct_status_changed/>
+	<oproduct_hts_code/>
+	<oproduct_tier>D</oproduct_tier>
+	<oproduct_amr_is_obsolete>0</oproduct_amr_is_obsolete>
+	<oproducts_parcel_cost/>
+	<oproducts_additional_handling/>
+	<oproducts_over_max/>
+	<oproducts_large_pack/>
+	<oproducts_ltl_cost>30.3977083333333</oproducts_ltl_cost>
+	<oproducts_transfer_cost>7.45722222222222</oproducts_transfer_cost>
+	<oproduct_box_is_determined>0</oproduct_box_is_determined>
+	<oproduct_pallet_size/>
+	<oproduct_qty_per_pallet/>
+	<oproduct_gsp>0</oproduct_gsp>
+	<oproduct_usmca>0</oproduct_usmca>
+	<oproduct_tsca>0</oproduct_tsca>
+	<oproduct_cotton_fee>0</oproduct_cotton_fee>
+	<oproduct_lacey>0</oproduct_lacey>
+	<oproduct_is_filled>0</oproduct_is_filled>
+	<oproduct_is_visible>1</oproduct_is_visible>
+	<oproducts_landed_is_std_cost>0</oproducts_landed_is_std_cost>
+	<oproduct_designation_id>11</oproduct_designation_id>
+	<oproduct_shipping_method/>
+	<nmfc/>
+	<class/>
+	<subclass/>
+	<OCDT>2012-11-12 16:37:05</OCDT>
+	<OCU>6</OCU>
+	<OMDT>2021-08-02 09:30:01</OMDT>
+	<OMU>614</OMU>
+	<oproduct_external_id/>
+	<oproduct_is_tax_exempt/>
+</root>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="MATMAS05">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDOC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="EDI_DC40">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="TABNAM" type="xs:string" />
+                    <xs:element minOccurs="0" name="MANDT" type="xs:string" />
+                    <xs:element minOccurs="0" name="DOCNUM" />
+                    <xs:element minOccurs="0" name="DIRECT" type="xs:string" />
+                    <xs:element minOccurs="0" name="IDOCTYP" type="xs:string" />
+                    <xs:element minOccurs="0" name="MESTYP" type="xs:string" />
+                    <xs:element minOccurs="0" name="SNDPOR" type="xs:string" />
+                    <xs:element minOccurs="0" name="SNDPRT" type="xs:string" />
+                    <xs:element minOccurs="0" name="SNDPRN" type="xs:string" />
+                    <xs:element minOccurs="0" name="RCVPOR" type="xs:string" />
+                    <xs:element minOccurs="0" name="RCVPRT" type="xs:string" />
+                    <xs:element minOccurs="0" name="RCVPFC" type="xs:string" />
+                    <xs:element minOccurs="0" name="RCVPRN" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="E1MARAM">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="MATNR" type="xs:string" />
+                    <xs:element minOccurs="0" name="MBRSH" type="xs:string" />
+                    <xs:element minOccurs="0" name="MTART" type="xs:string" />
+                    <xs:element minOccurs="0" name="NORMT" type="xs:string" />
+                    <xs:element minOccurs="0" name="CWM" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="BEGIN" type="xs:string" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DEBMDM05">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="IDOC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="EDI_DC40">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="TABNAM" type="xs:string" />
+                    <xs:element minOccurs="0" name="MANDT" type="xs:unsignedByte" />
+                    <xs:element minOccurs="0" name="DOCNUM" type="xs:unsignedInt" />
+                    <xs:element minOccurs="0" name="DIRECT" type="xs:unsignedByte" />
+                    <xs:element minOccurs="0" name="IDOCTYP" type="xs:string" />
+                    <xs:element minOccurs="0" name="MESTYP" type="xs:string" />
+                    <xs:element minOccurs="0" name="SNDPOR" type="xs:string" />
+                    <xs:element minOccurs="0" name="SNDPRT" type="xs:string" />
+                    <xs:element minOccurs="0" name="SNDPRN" type="xs:string" />
+                    <xs:element minOccurs="0" name="RCVPOR" type="xs:string" />
+                    <xs:element minOccurs="0" name="RCVPRT" type="xs:string" />
+                    <xs:element minOccurs="0" name="RCVPFC" type="xs:string" />
+                    <xs:element minOccurs="0" name="RCVPRN" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="optional" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="E1KNA1M">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="KUNNR" type="xs:unsignedInt" />
+                    <xs:element minOccurs="0" name="LAND1" type="xs:string" />
+                    <xs:element minOccurs="0" name="NAME1" type="xs:string" />
+                    <xs:element minOccurs="0" name="ORT01" type="xs:string" />
+                    <xs:element minOccurs="0" name="PSTLZ" type="xs:unsignedInt" />
+                    <xs:element minOccurs="0" name="REGIO" type="xs:string" />
+                    <xs:element minOccurs="0" name="STRAS" type="xs:string" />
+                    <xs:element minOccurs="0" name="TELF1" type="xs:string" />
+                    <xs:element minOccurs="0" name="KATR10" type="xs:unsignedByte" />
+                  </xs:sequence>
+                  <xs:attribute name="SEGMENT" type="xs:unsignedByte" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="BEGIN" type="xs:unsignedByte" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
