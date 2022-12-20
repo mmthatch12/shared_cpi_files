@@ -106,6 +106,7 @@
                     <xs:element minOccurs="0" maxOccurs="unbounded" name="E1STPOM">
                       <xs:complexType>
                         <xs:sequence>
+                          <xs:element minOccurs="0" name="POSTP" type="xs:string" />
                           <xs:element minOccurs="0" name="STLKN" type="xs:string" />
                           <xs:element minOccurs="0" name="ID_ITM_CTG" />
                           <xs:element minOccurs="0" name="ID_CL_TYPE" />
