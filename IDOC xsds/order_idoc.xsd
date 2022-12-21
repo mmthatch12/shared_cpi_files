@@ -1,0 +1,3745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ <xs:element name="ORDERS01">
+  <xs:annotation>
+   <xs:documentation>Purchasing/Sales</xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element minOccurs="0" name="IDOC">
+     <xs:complexType>
+      <xs:sequence>
+       <xs:element minOccurs="0" name="EDI_DC40">
+        <xs:annotation>
+         <xs:documentation>IDoc control record for the interface to the external system</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element name="TABNAM" type="xs:string" fixed="EDI_DC40">
+           <xs:annotation>
+            <xs:documentation>Name of Table Structure</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="MANDT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Client</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="DOCNUM" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDoc number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="16"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="DOCREL" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>SAP Release for IDoc</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="4"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="STATUS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Status of IDoc</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="2"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="DIRECT">
+           <xs:annotation>
+            <xs:documentation>Direction</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:enumeration value="1">
+              <xs:annotation>
+               <xs:documentation>Outbound</xs:documentation>
+              </xs:annotation>
+             </xs:enumeration>
+             <xs:enumeration value="2">
+              <xs:annotation>
+               <xs:documentation>Inbound</xs:documentation>
+              </xs:annotation>
+             </xs:enumeration>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="OUTMOD" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Output mode</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="EXPRSS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Overriding in inbound processing</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="TEST" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Test flag</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="IDOCTYP" type="xs:string" fixed="ORDERS01">
+           <xs:annotation>
+            <xs:documentation>Name of basic type</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="CIMTYP" minOccurs="0" type="xs:string" fixed="">
+           <xs:annotation>
+            <xs:documentation>Extension (defined by customer)</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="MESTYP" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Message type</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="30"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MESCOD" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Message code</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MESFCT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Message Function</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="STD" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>EDI standard, flag</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="STDVRS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>EDI standard, version and release</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="6"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="STDMES" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>EDI message type</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="6"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="SNDPOR">
+           <xs:annotation>
+            <xs:documentation>Sender port (SAP System, external subsystem)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="10"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="SNDPRT">
+           <xs:annotation>
+            <xs:documentation>Partner type of sender</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="2"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="SNDPFC" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Partner Function of Sender</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="2"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="SNDPRN">
+           <xs:annotation>
+            <xs:documentation>Partner Number of Sender</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="10"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="SNDSAD" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Sender address (SADR)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="21"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="SNDLAD" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Logical address of sender</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="70"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="RCVPOR">
+           <xs:annotation>
+            <xs:documentation>Receiver port</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="10"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="RCVPRT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Partner Type of Receiver</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="2"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="RCVPFC" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Partner Function of Receiver</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="2"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="RCVPRN">
+           <xs:annotation>
+            <xs:documentation>Partner Number of Receiver</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="10"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="RCVSAD" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Recipient address (SADR)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="21"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="RCVLAD" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Logical Address of Receiver</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="70"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="CREDAT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Created On</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="8"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="CRETIM" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Created at</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="6"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="REFINT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Transmission file (EDI Interchange)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="14"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="REFGRP" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Message group (EDI Message Group)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="14"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="REFMES" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Message (EDI Message)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="14"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ARCKEY" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Key for external message archive</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="70"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="SERIAL" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Serialization</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="20"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+         </xs:sequence>
+         <xs:attribute name="SEGMENT" use="required">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:attribute>
+        </xs:complexType>
+       </xs:element>
+       <xs:element name="E1EDK01">
+        <xs:annotation>
+         <xs:documentation>IDoc: Document header general data</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element name="ACTION" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Action code for the whole EDI message</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="KZABS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Flag: order acknowledgment required</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="CURCY" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Currency</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="HWAER" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>EDI local currency</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="WKURS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Exchange rate</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="12"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ZTERM" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Terms of payment key</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="17"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="KUNDEUINR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>VAT Registration Number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="20"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="EIGENUINR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>VAT Registration Number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="20"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="BSART" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Document Type</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="4"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="BELNR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC document number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="NTGEW" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Net weight</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="18"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="BRGEW" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Net weight</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="18"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="GEWEI" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Weight unit</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="FKART_RL" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Invoice List Type</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="4"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ABLAD" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Unloading Point</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="25"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="BSTZD" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Purchase order number supplement</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="4"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="VSART" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Shipping Conditions</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="2"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="VSART_BEZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Shipping Type Description</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="20"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="RECIPNT_NO" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Number of recipient (for control by the ALE model)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="10"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="KZAZU" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Order Combination Indicator</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="AUTLF" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Complete Delivery Defined for Each Sales Order?</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="AUGRU" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Order Reason (Reason for the Business Transaction)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="AUGRU_BEZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Description</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="40"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ABRVW" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Usage Indicator</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ABRVW_BEZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Description</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="20"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="FKTYP" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Billing Category</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="LIFSK" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Delivery Block (Document Header)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="2"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="LIFSK_BEZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Description</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="20"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="EMPST" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Receiving Point</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="25"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ABTNR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Department number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="4"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="DELCO" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Agreed Delivery Time</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="WKURS_M" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Indirectly quoted exchange rate in an IDoc segment</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="12"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="LANDTX" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Tax Departure Country</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="STCEG_L" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Country of Sales Tax ID Number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+         </xs:sequence>
+         <xs:attribute name="SEGMENT" use="required">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:attribute>
+        </xs:complexType>
+       </xs:element>
+       <xs:element name="E1EDK14" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation>IDoc: Document Header Organizational Data</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element name="QUALF" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC qualifer organization</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ORGID" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC organization</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+         </xs:sequence>
+         <xs:attribute name="SEGMENT" use="required">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:attribute>
+        </xs:complexType>
+       </xs:element>
+       <xs:element name="E1EDK03" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation>IDoc: Document header date segment</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element name="IDDAT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Qualifier for IDOC date segment</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="DATUM" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC: Date</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="8"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="UZEIT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC: Time</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="6"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+         </xs:sequence>
+         <xs:attribute name="SEGMENT" use="required">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:attribute>
+        </xs:complexType>
+       </xs:element>
+       <xs:element name="E1EDK04" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation>IDoc: Document header taxes</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element name="MWSKZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>VAT indicator</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="7"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MSATZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>VAT rate</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="17"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MWSBT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Value added tax amount</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="18"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="TXJCD" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Tax Jurisdiction</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="15"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="KTEXT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Text Field</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="50"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+         </xs:sequence>
+         <xs:attribute name="SEGMENT" use="required">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:attribute>
+        </xs:complexType>
+       </xs:element>
+       <xs:element name="E1EDK05" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation>IDoc: Document header conditions</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element name="ALCKZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Surcharge or discount indicator</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="KSCHL" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Condition type (coded)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="4"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="KOTXT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Condition text</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="80"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="BETRG" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Fixed surcharge/discount on total gross</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="18"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="KPERC" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Condition percentage rate</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="8"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="KRATE" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Condition record per unit</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="15"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="UPRBS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Price unit</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="9"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MEAUN" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Unit of measurement</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="KOBTR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDoc condition end amount</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="18"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MWSKZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>VAT indicator</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="7"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MSATZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>VAT rate</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="17"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="KOEIN" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Currency</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+         </xs:sequence>
+         <xs:attribute name="SEGMENT" use="required">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:attribute>
+        </xs:complexType>
+       </xs:element>
+       <xs:element name="E1EDKA1" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation>IDoc: Document Header Partner Information</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element name="PARVW" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Partner function (e.g. sold-to party, ship-to party, ...)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PARTN" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Partner number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="17"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="LIFNR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Supplier Number at Customer Location</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="17"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="NAME1" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Name 1</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="NAME2" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Name 2</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="NAME3" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Name 3</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="NAME4" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Name 4</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="STRAS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Street and house number 1</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="STRS2" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Street and house number 2</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PFACH" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>PO Box</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ORT01" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>City</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="COUNC" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>County code</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="9"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PSTLZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Postal code</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="9"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PSTL2" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>P.O. Box postal code</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="9"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="LAND1" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Country Key</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ABLAD" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Unloading Point</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PERNR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Contact person&apos;s personnel number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="30"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PARNR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Contact person&apos;s number (not personnel number)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="30"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="TELF1" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>1st telephone number of contact person</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="25"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="TELF2" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>2nd telephone number of contact person</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="25"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="TELBX" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Telebox number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="25"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="TELFX" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Fax number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="25"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="TELTX" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Teletex number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="25"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="TELX1" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Telex number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="25"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="SPRAS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Language key</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ANRED" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Form of Address</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="15"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ORT02" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>District</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="HAUSN" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>House number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="6"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="STOCK" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Floor</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="6"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="REGIO" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Region</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PARGE" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Partner&apos;s gender</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ISOAL" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Country ISO code</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="2"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ISONU" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Country ISO code</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="2"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="FCODE" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Company key (France)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="20"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="IHREZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Your reference (Partner)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="30"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="BNAME" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDoc user name</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PAORG" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC organization code</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="30"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ORGTX" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDoc organization code text</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PAGRU" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDoc group code</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="30"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="KNREF" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Customer description of partner (plant, storage location)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="30"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ILNNR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Character field, length 70</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="70"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PFORT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>PO Box city</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="SPRAS_ISO" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>2-Character SAP Language Code</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="2"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="TITLE" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Title</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="15"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+         </xs:sequence>
+         <xs:attribute name="SEGMENT" use="required">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:attribute>
+        </xs:complexType>
+       </xs:element>
+       <xs:element name="E1EDK02" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation>IDoc: Document header reference data</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element name="QUALF" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC qualifier reference document</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="BELNR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC document number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="POSNR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Item number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="6"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="DATUM" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC: Date</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="8"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="UZEIT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC: Time</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="6"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+         </xs:sequence>
+         <xs:attribute name="SEGMENT" use="required">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:attribute>
+        </xs:complexType>
+       </xs:element>
+       <xs:element name="E1EDK17" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation>IDoc: Document Header Terms of Delivery</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element name="QUALF" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC qualifier: Terms of delivery</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="LKOND" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC delivery condition code</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="LKTEXT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC delivery condition text</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="70"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+         </xs:sequence>
+         <xs:attribute name="SEGMENT" use="required">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:attribute>
+        </xs:complexType>
+       </xs:element>
+       <xs:element name="E1EDK18" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation>IDoc: Document Header Terms of Payment</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element name="QUALF" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC qualifier: Terms of payment</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="TAGE" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC Number of days</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="8"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PRZNT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC percentage for terms of payment</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="8"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ZTERM_TXT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Text line</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="70"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+         </xs:sequence>
+         <xs:attribute name="SEGMENT" use="required">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:attribute>
+        </xs:complexType>
+       </xs:element>
+       <xs:element name="E1EDKT1" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation>IDoc: Document Header Text Identification</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element name="TDID" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Text ID</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="4"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="TSSPRAS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Language Key</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="TSSPRAS_ISO" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>2-Character SAP Language Code</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="2"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="TDOBJECT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Texts: application object</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="10"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="TDOBNAME" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Name</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="70"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="E1EDKT2" minOccurs="0" maxOccurs="unbounded">
+           <xs:annotation>
+            <xs:documentation>IDoc: Document Header Texts</xs:documentation>
+           </xs:annotation>
+           <xs:complexType>
+            <xs:sequence>
+             <xs:element name="TDLINE" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Text line</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="70"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="TDFORMAT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Tag column</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="2"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+            </xs:sequence>
+            <xs:attribute name="SEGMENT" use="required">
+             <xs:simpleType>
+              <xs:restriction base="xs:string">
+               <xs:enumeration value="1"/>
+              </xs:restriction>
+             </xs:simpleType>
+            </xs:attribute>
+           </xs:complexType>
+          </xs:element>
+         </xs:sequence>
+         <xs:attribute name="SEGMENT" use="required">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:attribute>
+        </xs:complexType>
+       </xs:element>
+       <xs:element name="E1EDP01" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation>IDoc: Document Item General Data</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element name="POSEX" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Item number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="6"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ACTION" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Action code for the item</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PSTYP" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Item Category</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="KZABS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Flag: order acknowledgment required</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MENGE" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Quantity</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="15"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MENEE" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Unit of measure</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="BMNG2" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Quantity in price unit</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="15"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PMENE" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Price Unit of Measure</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ABFTZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Agreed cumulative quantity</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="7"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="VPREI" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Price (net)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="15"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PEINH" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Price unit</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="9"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="NETWR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Item value (net)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="18"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ANETW" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Absolute net value of item</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="18"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="SKFBP" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Amount qualifying for cash discount</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="18"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="NTGEW" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Net weight</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="18"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="GEWEI" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Weight unit</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="EINKZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Flag: More than one schedule line for the item</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="CURCY" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Currency</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PREIS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Gross price</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="18"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MATKL" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC material class</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="9"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="UEPOS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Higher-Level Item in BOM Structures</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="6"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="GRKOR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Delivery group (items delivered together)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="EVERS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Shipping instructions</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="7"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="BPUMN" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Denominator for Conv. of Order Price Unit into Order Unit</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="6"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="BPUMZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Numerator for Conversion of Order Price Unit into Order Unit</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="6"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ABGRU" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Reason for Rejection of Sales Documents</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="2"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ABGRT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Description</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="40"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ANTLF" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Maximum number of partial deliveries allowed per item</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="FIXMG" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Delivery Date and Quantity Fixed</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="KZAZU" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Order Combination Indicator</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="BRGEW" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Total weight</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="18"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="PSTYV" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Sales document item category</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="4"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="EMPST" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Receiving Point</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="25"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ABTNR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Department number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="4"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ABRVW" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Usage Indicator</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="WERKS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Plant</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="4"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="LPRIO" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Delivery Priority</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="2"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="LPRIO_BEZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Description</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="20"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ROUTE" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Route</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="6"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="ROUTE_BEZ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Description</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="40"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="LGORT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Storage location</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="4"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="VSTEL" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Shipping Point / Receiving Point</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="4"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="DELCO" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Agreed Delivery Time</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MATNR" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IDOC material ID</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="35"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="VALTG" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Additional Value Days</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="2"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="HIPOS" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Superior item in an item hierarchy</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="6"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="HIEVW" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Use of Hierarchy Item</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="POSGUID" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>ATP: Encryption of DELNR and DELPS</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="22"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MATNR_EXTERNAL" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Material Number</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="40"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MATNR_VERSION" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Version Number for MATNR Field</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="10"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MATNR_GUID" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>External GUID for MATNR Field</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="32"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="IUID_RELEVANT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>IUID-Relevant</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="1"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="SGT_RCAT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Requirement Segment</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="16"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="SGT_SCAT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Stock Segment</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="16"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="HANDOVERLOC" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Location for a physical handover of goods</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="10"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="MATNR_LONG" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Material No.</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="40"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="REQ_SEG_LONG" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Requirement Segment</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="40"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="STK_SEG_LONG" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Stock Segment</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="40"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="EXPECTED_VALUE" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Currency amount for BAPIS (with 9 decimal places)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="31"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="LIMIT_AMOUNT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Currency amount for BAPIS (with 9 decimal places)</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="31"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="E1EDP02" minOccurs="0" maxOccurs="unbounded">
+           <xs:annotation>
+            <xs:documentation>IDoc: Document Item Reference Data</xs:documentation>
+           </xs:annotation>
+           <xs:complexType>
+            <xs:sequence>
+             <xs:element name="QUALF" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC qualifier reference document</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="BELNR" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC document number</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="ZEILE" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Item number</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="6"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="DATUM" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC: Date</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="8"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="UZEIT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC: Time</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="6"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="BSARK" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC organization</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="IHREZ" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Your reference (Partner)</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="30"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="RMA" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Order Acknowledgment Number</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="20"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="REASON" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Order Reason (Reason for the Business Transaction)</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="RSNTXT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Description</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="40"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+            </xs:sequence>
+            <xs:attribute name="SEGMENT" use="required">
+             <xs:simpleType>
+              <xs:restriction base="xs:string">
+               <xs:enumeration value="1"/>
+              </xs:restriction>
+             </xs:simpleType>
+            </xs:attribute>
+           </xs:complexType>
+          </xs:element>
+          <xs:element name="E1EDP03" minOccurs="0" maxOccurs="unbounded">
+           <xs:annotation>
+            <xs:documentation>IDoc: Document Item Date Segment</xs:documentation>
+           </xs:annotation>
+           <xs:complexType>
+            <xs:sequence>
+             <xs:element name="IDDAT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Qualifier for IDOC date segment</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="DATUM" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Date</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="8"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="UZEIT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Time</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="6"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+            </xs:sequence>
+            <xs:attribute name="SEGMENT" use="required">
+             <xs:simpleType>
+              <xs:restriction base="xs:string">
+               <xs:enumeration value="1"/>
+              </xs:restriction>
+             </xs:simpleType>
+            </xs:attribute>
+           </xs:complexType>
+          </xs:element>
+          <xs:element name="E1EDP04" minOccurs="0" maxOccurs="unbounded">
+           <xs:annotation>
+            <xs:documentation>IDoc: Document Item Taxes</xs:documentation>
+           </xs:annotation>
+           <xs:complexType>
+            <xs:sequence>
+             <xs:element name="MWSKZ" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>VAT indicator</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="7"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="MSATZ" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>VAT rate</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="17"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="MWSBT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Value added tax amount</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="18"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="TXJCD" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Tax Jurisdiction</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="15"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="KTEXT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Text Field</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="TXDAT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Date for Determining Tax Rates</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="8"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+            </xs:sequence>
+            <xs:attribute name="SEGMENT" use="required">
+             <xs:simpleType>
+              <xs:restriction base="xs:string">
+               <xs:enumeration value="1"/>
+              </xs:restriction>
+             </xs:simpleType>
+            </xs:attribute>
+           </xs:complexType>
+          </xs:element>
+          <xs:element name="E1EDP05" minOccurs="0" maxOccurs="unbounded">
+           <xs:annotation>
+            <xs:documentation>IDoc: Document Item Conditions</xs:documentation>
+           </xs:annotation>
+           <xs:complexType>
+            <xs:sequence>
+             <xs:element name="ALCKZ" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Surcharge or discount indicator</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="KSCHL" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Condition type (coded)</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="4"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="KOTXT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Condition text</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="80"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="BETRG" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Fixed surcharge/discount on total gross</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="18"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="KPERC" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Condition percentage rate</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="8"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="KRATE" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Condition record per unit</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="15"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="UPRBS" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Price unit</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="9"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="MEAUN" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Unit of measurement</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="KOBTR" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDoc condition end amount</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="18"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="MENGE" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Price scale quantity (SPEC2000)</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="15"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="PREIS" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Price by unit of measure (SPEC2000)</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="15"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="MWSKZ" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>VAT indicator</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="7"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="MSATZ" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>VAT rate</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="17"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="KOEIN" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Currency</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="CURTP" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Currency type and valuation view</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="2"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="KOBAS" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Base value to which condition refers</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="18"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+            </xs:sequence>
+            <xs:attribute name="SEGMENT" use="required">
+             <xs:simpleType>
+              <xs:restriction base="xs:string">
+               <xs:enumeration value="1"/>
+              </xs:restriction>
+             </xs:simpleType>
+            </xs:attribute>
+           </xs:complexType>
+          </xs:element>
+          <xs:element name="E1EDP20" minOccurs="0" maxOccurs="unbounded">
+           <xs:annotation>
+            <xs:documentation>IDoc schedule lines</xs:documentation>
+           </xs:annotation>
+           <xs:complexType>
+            <xs:sequence>
+             <xs:element name="WMENG" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Scheduled quantity</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="15"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="AMENG" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Previous scheduled quantity</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="15"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="EDATU" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC: Date</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="8"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="EZEIT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC: Time</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="6"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="EDATU_OLD" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC: Date</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="8"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="EZEIT_OLD" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC: Time</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="6"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="ACTION" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Action code for the item</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="HANDOVERDATE" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC: Date</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="8"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="HANDOVERTIME" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC: Time</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="6"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+            </xs:sequence>
+            <xs:attribute name="SEGMENT" use="required">
+             <xs:simpleType>
+              <xs:restriction base="xs:string">
+               <xs:enumeration value="1"/>
+              </xs:restriction>
+             </xs:simpleType>
+            </xs:attribute>
+           </xs:complexType>
+          </xs:element>
+          <xs:element name="E1EDPA1" minOccurs="0" maxOccurs="unbounded">
+           <xs:annotation>
+            <xs:documentation>IDoc: Doc.item partner information</xs:documentation>
+           </xs:annotation>
+           <xs:complexType>
+            <xs:sequence>
+             <xs:element name="PARVW" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Partner function (e.g. sold-to party, ship-to party, ...)</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="PARTN" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Partner number</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="17"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="LIFNR" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Supplier Number at Customer Location</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="17"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="NAME1" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Name 1</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="NAME2" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Name 2</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="NAME3" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Name 3</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="NAME4" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Name 4</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="STRAS" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Street and house number 1</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="STRS2" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Street and house number 2</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="PFACH" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>PO Box</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="ORT01" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>City</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="COUNC" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>County code</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="9"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="PSTLZ" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Postal code</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="9"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="PSTL2" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>P.O. Box postal code</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="9"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="LAND1" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Country Key</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="ABLAD" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Unloading Point</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="PERNR" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Contact person&apos;s personnel number</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="30"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="PARNR" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Contact person&apos;s number (not personnel number)</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="30"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="TELF1" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>1st telephone number of contact person</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="25"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="TELF2" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>2nd telephone number of contact person</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="25"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="TELBX" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Telebox number</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="25"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="TELFX" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Fax number</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="25"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="TELTX" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Teletex number</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="25"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="TELX1" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Telex number</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="25"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="SPRAS" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Language key</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="1"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="ANRED" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Form of Address</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="15"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="ORT02" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>District</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="HAUSN" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>House number</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="6"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="STOCK" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Floor</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="6"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="REGIO" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Region</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="PARGE" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Partner&apos;s gender</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="1"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="ISOAL" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Country ISO code</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="2"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="ISONU" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Country ISO code</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="2"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="FCODE" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Company key (France)</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="20"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="IHREZ" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Your reference (Partner)</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="30"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="BNAME" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDoc user name</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="PAORG" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC organization code</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="30"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="ORGTX" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDoc organization code text</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="PAGRU" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDoc group code</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="30"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="KNREF" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Customer description of partner (plant, storage location)</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="30"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="ILNNR" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Character field, length 70</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="70"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="PFORT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>PO Box city</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="SPRAS_ISO" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>2-Character SAP Language Code</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="2"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="TITLE" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Title</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="15"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+            </xs:sequence>
+            <xs:attribute name="SEGMENT" use="required">
+             <xs:simpleType>
+              <xs:restriction base="xs:string">
+               <xs:enumeration value="1"/>
+              </xs:restriction>
+             </xs:simpleType>
+            </xs:attribute>
+           </xs:complexType>
+          </xs:element>
+          <xs:element name="E1EDP19" minOccurs="0" maxOccurs="unbounded">
+           <xs:annotation>
+            <xs:documentation>IDoc: Document Item Object Identification</xs:documentation>
+           </xs:annotation>
+           <xs:complexType>
+            <xs:sequence>
+             <xs:element name="QUALF" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC object identification such as material no.,customer</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="IDTNR" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC material ID</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="35"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="KTEXT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC short text</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="70"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="MFRPN" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Manufacturer part number</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="42"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="MFRNR" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Manufacturer number</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="10"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="IDTNR_EXTERNAL" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Length of Material (Future Development) for Field IDTNR</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="40"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="IDTNR_VERSION" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Version Number (Future Development) for Field IDTNR</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="10"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="IDTNR_GUID" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>External GUID (Future Development) for Field IDTNR</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="32"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="IDTNR_LONG" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC material ID</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="40"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+            </xs:sequence>
+            <xs:attribute name="SEGMENT" use="required">
+             <xs:simpleType>
+              <xs:restriction base="xs:string">
+               <xs:enumeration value="1"/>
+              </xs:restriction>
+             </xs:simpleType>
+            </xs:attribute>
+           </xs:complexType>
+          </xs:element>
+          <xs:element name="E1EDP17" minOccurs="0" maxOccurs="unbounded">
+           <xs:annotation>
+            <xs:documentation>IDoc: Document item terms of delivery</xs:documentation>
+           </xs:annotation>
+           <xs:complexType>
+            <xs:sequence>
+             <xs:element name="QUALF" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC qualifier: Terms of delivery</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="LKOND" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC delivery condition code</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="LKTEXT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC delivery condition text</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="70"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="LPRIO" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Delivery Priority</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="2"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+            </xs:sequence>
+            <xs:attribute name="SEGMENT" use="required">
+             <xs:simpleType>
+              <xs:restriction base="xs:string">
+               <xs:enumeration value="1"/>
+              </xs:restriction>
+             </xs:simpleType>
+            </xs:attribute>
+           </xs:complexType>
+          </xs:element>
+          <xs:element name="E1EDP18" minOccurs="0" maxOccurs="unbounded">
+           <xs:annotation>
+            <xs:documentation>IDoc: Document Item Terms of Payment</xs:documentation>
+           </xs:annotation>
+           <xs:complexType>
+            <xs:sequence>
+             <xs:element name="QUALF" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC qualifier: Terms of payment</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="TAGE" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC Number of days</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="8"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="PRZNT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC percentage for terms of payment</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="8"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="ZTERM_TXT" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Text line</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="70"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+            </xs:sequence>
+            <xs:attribute name="SEGMENT" use="required">
+             <xs:simpleType>
+              <xs:restriction base="xs:string">
+               <xs:enumeration value="1"/>
+              </xs:restriction>
+             </xs:simpleType>
+            </xs:attribute>
+           </xs:complexType>
+          </xs:element>
+          <xs:element name="E1EDPT1" minOccurs="0" maxOccurs="unbounded">
+           <xs:annotation>
+            <xs:documentation>IDoc: Document Item Text Identification</xs:documentation>
+           </xs:annotation>
+           <xs:complexType>
+            <xs:sequence>
+             <xs:element name="TDID" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Text ID</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="4"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="TSSPRAS" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>Language Key</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="TSSPRAS_ISO" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>2-Character SAP Language Code</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="2"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="E1EDPT2" minOccurs="0" maxOccurs="unbounded">
+              <xs:annotation>
+               <xs:documentation>IDoc: Document Item Texts</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+               <xs:sequence>
+                <xs:element name="TDLINE" minOccurs="0">
+                 <xs:annotation>
+                  <xs:documentation>Text line</xs:documentation>
+                 </xs:annotation>
+                 <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:maxLength value="70"/>
+                  </xs:restriction>
+                 </xs:simpleType>
+                </xs:element>
+                <xs:element name="TDFORMAT" minOccurs="0">
+                 <xs:annotation>
+                  <xs:documentation>Tag column</xs:documentation>
+                 </xs:annotation>
+                 <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                   <xs:maxLength value="2"/>
+                  </xs:restriction>
+                 </xs:simpleType>
+                </xs:element>
+               </xs:sequence>
+               <xs:attribute name="SEGMENT" use="required">
+                <xs:simpleType>
+                 <xs:restriction base="xs:string">
+                  <xs:enumeration value="1"/>
+                 </xs:restriction>
+                </xs:simpleType>
+               </xs:attribute>
+              </xs:complexType>
+             </xs:element>
+            </xs:sequence>
+            <xs:attribute name="SEGMENT" use="required">
+             <xs:simpleType>
+              <xs:restriction base="xs:string">
+               <xs:enumeration value="1"/>
+              </xs:restriction>
+             </xs:simpleType>
+            </xs:attribute>
+           </xs:complexType>
+          </xs:element>
+         </xs:sequence>
+         <xs:attribute name="SEGMENT" use="required">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:attribute>
+        </xs:complexType>
+       </xs:element>
+       <xs:element name="E1EDS01" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation>IDoc: Summary segment general</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element name="SUMID" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Qualifier for totals segment for shipping notification</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="SUMME" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Total value of sum segment</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="18"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="SUNIT" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Total value unit for totals segment in the shipping notif.</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="WAERQ" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Currency</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="3"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+         </xs:sequence>
+         <xs:attribute name="SEGMENT" use="required">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:attribute>
+        </xs:complexType>
+       </xs:element>
+       <xs:element name="E1IDOCENHANCEMENT" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+         <xs:documentation>Segment for Dynamic Enhancement of IDoc Types</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+         <xs:sequence>
+          <xs:element name="IDENTIFIER" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Data Containers for Enhancement of IDoc Types</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="30"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+          <xs:element name="DATA" minOccurs="0">
+           <xs:annotation>
+            <xs:documentation>Data Container for IDoc Enhancement</xs:documentation>
+           </xs:annotation>
+           <xs:simpleType>
+            <xs:restriction base="xs:string">
+             <xs:maxLength value="970"/>
+            </xs:restriction>
+           </xs:simpleType>
+          </xs:element>
+         </xs:sequence>
+         <xs:attribute name="SEGMENT" use="required">
+          <xs:simpleType>
+           <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+           </xs:restriction>
+          </xs:simpleType>
+         </xs:attribute>
+        </xs:complexType>
+       </xs:element>
+      </xs:sequence>
+      <xs:attribute name="BEGIN" use="required">
+       <xs:simpleType>
+        <xs:restriction base="xs:string">
+         <xs:enumeration value="1"/>
+        </xs:restriction>
+       </xs:simpleType>
+      </xs:attribute>
+     </xs:complexType>
+    </xs:element>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+</xs:schema>
