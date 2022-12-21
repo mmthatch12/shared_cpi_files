@@ -1,0 +1,718 @@
+
+Structure of basic type ORDERS01 
+Purchasing/Sales 
+
+	•	E1EDK01 : IDoc: Document header general data 
+Status: Required , min. number : 1 , max. number : 1 
+Structure 
+	•	E1EDK14 : IDoc: Document Header Organizational Data 
+Status: Optional , min. number : 1 , max. number : 12 
+Structure 
+	•	E1EDK03 : IDoc: Document header date segment 
+Status: Optional , min. number : 1 , max. number : 10 
+Structure 
+	•	E1EDK04 : IDoc: Document header taxes 
+Status: Optional , min. number : 1 , max. number : 10 
+Structure 
+	•	E1EDK05 : IDoc: Document header conditions 
+Status: Optional , min. number : 1 , max. number : 16 
+Structure 
+	•	E1EDKA1 : IDoc: Document Header Partner Information 
+Status: Optional , min. number : 1 , max. number : 99 
+Structure 
+	•	E1EDK02 : IDoc: Document header reference data 
+Status: Optional , min. number : 1 , max. number : 10 
+Structure 
+	•	E1EDK17 : IDoc: Document Header Terms of Delivery 
+Status: Optional , min. number : 1 , max. number : 4 
+Structure 
+	•	E1EDK18 : IDoc: Document Header Terms of Payment 
+Status: Optional , min. number : 1 , max. number : 3 
+Structure 
+	•	E1EDKT1 : IDoc: Document Header Text Identification 
+Status: Optional , min. number : 1 , max. number : 99 
+Structure 
+	◦	E1EDKT2 : IDoc: Document Header Texts 
+Status: Optional , min. number : 1 , max. number : 9999999999 
+Structure 
+	•	E1EDP01 : IDoc: Document Item General Data 
+Status: Optional , min. number : 1 , max. number : 999999 
+Structure 
+	◦	E1EDP02 : IDoc: Document Item Reference Data 
+Status: Optional , min. number : 1 , max. number : 10 
+Structure 
+	◦	E1EDP03 : IDoc: Document Item Date Segment 
+Status: Optional , min. number : 1 , max. number : 10 
+Structure 
+	◦	E1EDP04 : IDoc: Document Item Taxes 
+Status: Optional , min. number : 1 , max. number : 10 
+Structure 
+	◦	E1EDP05 : IDoc: Document Item Conditions 
+Status: Optional , min. number : 1 , max. number : 16 
+Structure 
+	◦	E1EDP20 : IDoc schedule lines 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+	◦	E1EDPA1 : IDoc: Doc.item partner information 
+Status: Optional , min. number : 1 , max. number : 8 
+Structure 
+	◦	E1EDP19 : IDoc: Document Item Object Identification 
+Status: Optional , min. number : 1 , max. number : 5 
+Structure 
+	◦	E1EDP17 : IDoc: Document item terms of delivery 
+Status: Optional , min. number : 1 , max. number : 5 
+Structure 
+	◦	E1EDP18 : IDoc: Document Item Terms of Payment 
+Status: Optional , min. number : 1 , max. number : 3 
+Structure 
+	◦	E1EDPT1 : IDoc: Document Item Text Identification 
+Status: Optional , min. number : 1 , max. number : 9999999999 
+Structure 
+	▪	E1EDPT2 : IDoc: Document Item Texts 
+Status: Optional , min. number : 1 , max. number : 9999999999 
+Structure 
+	•	E1EDS01 : IDoc: Summary segment general 
+Status: Optional , min. number : 1 , max. number : 5 
+Structure 
+
+Segment structures 
+
+	•	E1EDK01 : IDoc: Document header general data 
+Segment definition E2EDK01006 Released since Release 755 , Segment length: 0363 
+	1.	ACTION : Action code for the whole EDI message 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	KZABS : Flag: order acknowledgment required 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 002, Offset : 0066. external length : 000001
+	3.	CURCY : Currency 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 003, Offset : 0067. external length : 000003
+	4.	HWAER : EDI local currency 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 004, Offset : 0070. external length : 000003
+	5.	WKURS : Exchange rate 
+internal data type : CHAR Internal length : 000012 characters Position in segment : 005, Offset : 0073. external length : 000012
+	6.	ZTERM : Terms of payment key 
+internal data type : CHAR Internal length : 000017 characters Position in segment : 006, Offset : 0085. external length : 000017
+	7.	KUNDEUINR : VAT Registration Number 
+internal data type : CHAR Internal length : 000020 characters Position in segment : 007, Offset : 0102. external length : 000020
+	8.	EIGENUINR : VAT Registration Number 
+internal data type : CHAR Internal length : 000020 characters Position in segment : 008, Offset : 0122. external length : 000020
+	9.	BSART : Document Type 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 009, Offset : 0142. external length : 000004
+	10.	BELNR : IDOC document number 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 010, Offset : 0146. external length : 000035
+	11.	NTGEW : Net weight 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 011, Offset : 0181. external length : 000018
+	12.	BRGEW : Net weight 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 012, Offset : 0199. external length : 000018
+	13.	GEWEI : Weight unit 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 013, Offset : 0217. external length : 000003
+	14.	FKART_RL : Invoice List Type 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 014, Offset : 0220. external length : 000004
+	15.	ABLAD : Unloading Point 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 015, Offset : 0224. external length : 000025
+	16.	BSTZD : Purchase order number supplement 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 016, Offset : 0249. external length : 000004
+	17.	VSART : Shipping Conditions 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 017, Offset : 0253. external length : 000002
+	18.	VSART_BEZ : Shipping Type Description 
+internal data type : CHAR Internal length : 000020 characters Position in segment : 018, Offset : 0255. external length : 000020
+	19.	RECIPNT_NO : Number of recipient (for control by the ALE model) 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 019, Offset : 0275. external length : 000010
+	20.	KZAZU : Order Combination Indicator 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 020, Offset : 0285. external length : 000001
+	21.	AUTLF : Complete Delivery Defined for Each Sales Order? 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 021, Offset : 0286. external length : 000001
+	22.	AUGRU : Order Reason (Reason for the Business Transaction) 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 022, Offset : 0287. external length : 000003
+	23.	AUGRU_BEZ : Description 
+internal data type : CHAR Internal length : 000040 characters Position in segment : 023, Offset : 0290. external length : 000040
+	24.	ABRVW : Usage Indicator 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 024, Offset : 0330. external length : 000003
+	25.	ABRVW_BEZ : Description 
+internal data type : CHAR Internal length : 000020 characters Position in segment : 025, Offset : 0333. external length : 000020
+	26.	FKTYP : Billing Category 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 026, Offset : 0353. external length : 000001
+	27.	LIFSK : Delivery Block (Document Header) 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 027, Offset : 0354. external length : 000002
+	28.	LIFSK_BEZ : Description 
+internal data type : CHAR Internal length : 000020 characters Position in segment : 028, Offset : 0356. external length : 000020
+	29.	EMPST : Receiving Point 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 029, Offset : 0376. external length : 000025
+	30.	ABTNR : Department number 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 030, Offset : 0401. external length : 000004
+	31.	DELCO : Agreed Delivery Time 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 031, Offset : 0405. external length : 000003
+	32.	WKURS_M : Indirectly quoted exchange rate in an IDoc segment 
+internal data type : CHAR Internal length : 000012 characters Position in segment : 032, Offset : 0408. external length : 000012
+	33.	LANDTX : Tax Departure Country 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 033, Offset : 0420. external length : 000003
+	34.	STCEG_L : Country of Sales Tax ID Number 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 034, Offset : 0423. external length : 000003
+	•	E1EDK14 : IDoc: Document Header Organizational Data 
+Segment definition E2EDK14 Released since Release 30A , Segment length: 0038 
+	1.	QUALF : IDOC qualifer organization 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	ORGID : IDOC organization 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 002, Offset : 0066. external length : 000035
+	•	E1EDK03 : IDoc: Document header date segment 
+Segment definition E2EDK03 Released since Release 30A , Segment length: 0017 
+	1.	IDDAT : Qualifier for IDOC date segment 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	DATUM : IDOC: Date 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 002, Offset : 0066. external length : 000008
+	3.	UZEIT : IDOC: Time 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 003, Offset : 0074. external length : 000006
+	•	E1EDK04 : IDoc: Document header taxes 
+Segment definition E2EDK04001 Released since Release 40B , Segment length: 0107 
+	1.	MWSKZ : VAT indicator 
+internal data type : CHAR Internal length : 000007 characters Position in segment : 001, Offset : 0063. external length : 000007
+	2.	MSATZ : VAT rate 
+internal data type : CHAR Internal length : 000017 characters Position in segment : 002, Offset : 0070. external length : 000017
+	3.	MWSBT : Value added tax amount 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 003, Offset : 0087. external length : 000018
+	4.	TXJCD : Tax Jurisdiction 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 004, Offset : 0105. external length : 000015
+	5.	KTEXT : Text Field 
+internal data type : CHAR Internal length : 000050 characters Position in segment : 005, Offset : 0120. external length : 000050
+	•	E1EDK05 : IDoc: Document header conditions 
+Segment definition E2EDK05001 Released since Release 40A , Segment length: 0185 
+	1.	ALCKZ : Surcharge or discount indicator 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	KSCHL : Condition type (coded) 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 002, Offset : 0066. external length : 000004
+	3.	KOTXT : Condition text 
+internal data type : CHAR Internal length : 000080 characters Position in segment : 003, Offset : 0070. external length : 000080
+	4.	BETRG : Fixed surcharge/discount on total gross 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 004, Offset : 0150. external length : 000018
+	5.	KPERC : Condition percentage rate 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 005, Offset : 0168. external length : 000008
+	6.	KRATE : Condition record per unit 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 006, Offset : 0176. external length : 000015
+	7.	UPRBS : Price unit 
+internal data type : CHAR Internal length : 000009 characters Position in segment : 007, Offset : 0191. external length : 000009
+	8.	MEAUN : Unit of measurement 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 008, Offset : 0200. external length : 000003
+	9.	KOBTR : IDoc condition end amount 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 009, Offset : 0203. external length : 000018
+	10.	MWSKZ : VAT indicator 
+internal data type : CHAR Internal length : 000007 characters Position in segment : 010, Offset : 0221. external length : 000007
+	11.	MSATZ : VAT rate 
+internal data type : CHAR Internal length : 000017 characters Position in segment : 011, Offset : 0228. external length : 000017
+	12.	KOEIN : Currency 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 012, Offset : 0245. external length : 000003
+	•	E1EDKA1 : IDoc: Document Header Partner Information 
+Segment definition E2EDKA1003 Released since Release 45A , Segment length: 0995 
+	1.	PARVW : Partner function (e.g. sold-to party, ship-to party, ...) 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	PARTN : Partner number 
+internal data type : CHAR Internal length : 000017 characters Position in segment : 002, Offset : 0066. external length : 000017
+	3.	LIFNR : Supplier Number at Customer Location 
+internal data type : CHAR Internal length : 000017 characters Position in segment : 003, Offset : 0083. external length : 000017
+	4.	NAME1 : Name 1 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 004, Offset : 0100. external length : 000035
+	5.	NAME2 : Name 2 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 005, Offset : 0135. external length : 000035
+	6.	NAME3 : Name 3 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 006, Offset : 0170. external length : 000035
+	7.	NAME4 : Name 4 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 007, Offset : 0205. external length : 000035
+	8.	STRAS : Street and house number 1 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 008, Offset : 0240. external length : 000035
+	9.	STRS2 : Street and house number 2 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 009, Offset : 0275. external length : 000035
+	10.	PFACH : PO Box 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 010, Offset : 0310. external length : 000035
+	11.	ORT01 : City 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 011, Offset : 0345. external length : 000035
+	12.	COUNC : County code 
+internal data type : CHAR Internal length : 000009 characters Position in segment : 012, Offset : 0380. external length : 000009
+	13.	PSTLZ : Postal code 
+internal data type : CHAR Internal length : 000009 characters Position in segment : 013, Offset : 0389. external length : 000009
+	14.	PSTL2 : P.O. Box postal code 
+internal data type : CHAR Internal length : 000009 characters Position in segment : 014, Offset : 0398. external length : 000009
+	15.	LAND1 : Country Key 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 015, Offset : 0407. external length : 000003
+	16.	ABLAD : Unloading Point 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 016, Offset : 0410. external length : 000035
+	17.	PERNR : Contact person's personnel number 
+internal data type : CHAR Internal length : 000030 characters Position in segment : 017, Offset : 0445. external length : 000030
+	18.	PARNR : Contact person's number (not personnel number) 
+internal data type : CHAR Internal length : 000030 characters Position in segment : 018, Offset : 0475. external length : 000030
+	19.	TELF1 : 1st telephone number of contact person 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 019, Offset : 0505. external length : 000025
+	20.	TELF2 : 2nd telephone number of contact person 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 020, Offset : 0530. external length : 000025
+	21.	TELBX : Telebox number 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 021, Offset : 0555. external length : 000025
+	22.	TELFX : Fax number 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 022, Offset : 0580. external length : 000025
+	23.	TELTX : Teletex number 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 023, Offset : 0605. external length : 000025
+	24.	TELX1 : Telex number 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 024, Offset : 0630. external length : 000025
+	25.	SPRAS : Language key 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 025, Offset : 0655. external length : 000001
+	26.	ANRED : Form of Address 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 026, Offset : 0656. external length : 000015
+	27.	ORT02 : District 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 027, Offset : 0671. external length : 000035
+	28.	HAUSN : House number 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 028, Offset : 0706. external length : 000006
+	29.	STOCK : Floor 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 029, Offset : 0712. external length : 000006
+	30.	REGIO : Region 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 030, Offset : 0718. external length : 000003
+	31.	PARGE : Partner's gender 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 031, Offset : 0721. external length : 000001
+	32.	ISOAL : Country ISO code 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 032, Offset : 0722. external length : 000002
+	33.	ISONU : Country ISO code 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 033, Offset : 0724. external length : 000002
+	34.	FCODE : Company key (France) 
+internal data type : CHAR Internal length : 000020 characters Position in segment : 034, Offset : 0726. external length : 000020
+	35.	IHREZ : Your reference (Partner) 
+internal data type : CHAR Internal length : 000030 characters Position in segment : 035, Offset : 0746. external length : 000030
+	36.	BNAME : IDoc user name 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 036, Offset : 0776. external length : 000035
+	37.	PAORG : IDOC organization code 
+internal data type : CHAR Internal length : 000030 characters Position in segment : 037, Offset : 0811. external length : 000030
+	38.	ORGTX : IDoc organization code text 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 038, Offset : 0841. external length : 000035
+	39.	PAGRU : IDoc group code 
+internal data type : CHAR Internal length : 000030 characters Position in segment : 039, Offset : 0876. external length : 000030
+	40.	KNREF : Customer description of partner (plant, storage location) 
+internal data type : CHAR Internal length : 000030 characters Position in segment : 040, Offset : 0906. external length : 000030
+	41.	ILNNR : Character field, length 70 
+internal data type : CHAR Internal length : 000070 characters Position in segment : 041, Offset : 0936. external length : 000070
+	42.	PFORT : PO Box city 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 042, Offset : 1006. external length : 000035
+	43.	SPRAS_ISO : 2-Character SAP Language Code 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 043, Offset : 1041. external length : 000002
+	44.	TITLE : Title 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 044, Offset : 1043. external length : 000015
+	•	E1EDK02 : IDoc: Document header reference data 
+Segment definition E2EDK02 Released since Release 30A , Segment length: 0058 
+	1.	QUALF : IDOC qualifier reference document 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	BELNR : IDOC document number 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 002, Offset : 0066. external length : 000035
+	3.	POSNR : Item number 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 003, Offset : 0101. external length : 000006
+	4.	DATUM : IDOC: Date 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 004, Offset : 0107. external length : 000008
+	5.	UZEIT : IDOC: Time 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 005, Offset : 0115. external length : 000006
+	•	E1EDK17 : IDoc: Document Header Terms of Delivery 
+Segment definition E2EDK17 Released since Release 30A , Segment length: 0076 
+	1.	QUALF : IDOC qualifier: Terms of delivery 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	LKOND : IDOC delivery condition code 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 002, Offset : 0066. external length : 000003
+	3.	LKTEXT : IDOC delivery condition text 
+internal data type : CHAR Internal length : 000070 characters Position in segment : 003, Offset : 0069. external length : 000070
+	•	E1EDK18 : IDoc: Document Header Terms of Payment 
+Segment definition E2EDK18 Released since Release 30A , Segment length: 0089 
+	1.	QUALF : IDOC qualifier: Terms of payment 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	TAGE : IDOC Number of days 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 002, Offset : 0066. external length : 000008
+	3.	PRZNT : IDOC percentage for terms of payment 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 003, Offset : 0074. external length : 000008
+	4.	ZTERM_TXT : Text line 
+internal data type : CHAR Internal length : 000070 characters Position in segment : 004, Offset : 0082. external length : 000070
+	•	E1EDKT1 : IDoc: Document Header Text Identification 
+Segment definition E2EDKT1002 Released since Release 45A , Segment length: 0089 
+	1.	TDID : Text ID 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 001, Offset : 0063. external length : 000004
+	2.	TSSPRAS : Language Key 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 002, Offset : 0067. external length : 000003
+	3.	TSSPRAS_ISO : 2-Character SAP Language Code 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 003, Offset : 0070. external length : 000002
+	4.	TDOBJECT : Texts: application object 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 004, Offset : 0072. external length : 000010
+	5.	TDOBNAME : Name 
+internal data type : CHAR Internal length : 000070 characters Position in segment : 005, Offset : 0082. external length : 000070
+	•	E1EDKT2 : IDoc: Document Header Texts 
+Segment definition E2EDKT2001 Released since Release 40A , Segment length: 0072 
+	1.	TDLINE : Text line 
+internal data type : CHAR Internal length : 000070 characters Position in segment : 001, Offset : 0063. external length : 000070
+	2.	TDFORMAT : Tag column 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 002, Offset : 0133. external length : 000002
+	•	E1EDP01 : IDoc: Document Item General Data 
+Segment definition E2EDP01012 Released since Release 752 , Segment length: 0767 
+	1.	POSEX : Item number 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 001, Offset : 0063. external length : 000006
+	2.	ACTION : Action code for the item 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 002, Offset : 0069. external length : 000003
+	3.	PSTYP : Item Category 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 003, Offset : 0072. external length : 000001
+	4.	KZABS : Flag: order acknowledgment required 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 004, Offset : 0073. external length : 000001
+	5.	MENGE : Quantity 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 005, Offset : 0074. external length : 000015
+	6.	MENEE : Unit of measure 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 006, Offset : 0089. external length : 000003
+	7.	BMNG2 : Quantity in price unit 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 007, Offset : 0092. external length : 000015
+	8.	PMENE : Price Unit of Measure 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 008, Offset : 0107. external length : 000003
+	9.	ABFTZ : Agreed cumulative quantity 
+internal data type : CHAR Internal length : 000007 characters Position in segment : 009, Offset : 0110. external length : 000007
+	10.	VPREI : Price (net) 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 010, Offset : 0117. external length : 000015
+	11.	PEINH : Price unit 
+internal data type : CHAR Internal length : 000009 characters Position in segment : 011, Offset : 0132. external length : 000009
+	12.	NETWR : Item value (net) 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 012, Offset : 0141. external length : 000018
+	13.	ANETW : Absolute net value of item 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 013, Offset : 0159. external length : 000018
+	14.	SKFBP : Amount qualifying for cash discount 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 014, Offset : 0177. external length : 000018
+	15.	NTGEW : Net weight 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 015, Offset : 0195. external length : 000018
+	16.	GEWEI : Weight unit 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 016, Offset : 0213. external length : 000003
+	17.	EINKZ : Flag: More than one schedule line for the item 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 017, Offset : 0216. external length : 000001
+	18.	CURCY : Currency 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 018, Offset : 0217. external length : 000003
+	19.	PREIS : Gross price 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 019, Offset : 0220. external length : 000018
+	20.	MATKL : IDOC material class 
+internal data type : CHAR Internal length : 000009 characters Position in segment : 020, Offset : 0238. external length : 000009
+	21.	UEPOS : Higher-Level Item in BOM Structures 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 021, Offset : 0247. external length : 000006
+	22.	GRKOR : Delivery group (items delivered together) 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 022, Offset : 0253. external length : 000003
+	23.	EVERS : Shipping instructions 
+internal data type : CHAR Internal length : 000007 characters Position in segment : 023, Offset : 0256. external length : 000007
+	24.	BPUMN : Denominator for Conv. of Order Price Unit into Order Unit 
+internal data type : DEC  Internal length : 000005 characters No decimal places, without sign Position in segment : 024, Offset : 0263. external length : 000006
+	25.	BPUMZ : Numerator for Conversion of Order Price Unit into Order Unit 
+internal data type : DEC  Internal length : 000005 characters No decimal places, without sign Position in segment : 025, Offset : 0269. external length : 000006
+	26.	ABGRU : Reason for Rejection of Sales Documents 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 026, Offset : 0275. external length : 000002
+	27.	ABGRT : Description 
+internal data type : CHAR Internal length : 000040 characters Position in segment : 027, Offset : 0277. external length : 000040
+	28.	ANTLF : Maximum number of partial deliveries allowed per item 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 028, Offset : 0317. external length : 000001
+	29.	FIXMG : Delivery Date and Quantity Fixed 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 029, Offset : 0318. external length : 000001
+	30.	KZAZU : Order Combination Indicator 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 030, Offset : 0319. external length : 000001
+	31.	BRGEW : Total weight 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 031, Offset : 0320. external length : 000018
+	32.	PSTYV : Sales document item category 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 032, Offset : 0338. external length : 000004
+	33.	EMPST : Receiving Point 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 033, Offset : 0342. external length : 000025
+	34.	ABTNR : Department number 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 034, Offset : 0367. external length : 000004
+	35.	ABRVW : Usage Indicator 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 035, Offset : 0371. external length : 000003
+	36.	WERKS : Plant 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 036, Offset : 0374. external length : 000004
+	37.	LPRIO : Delivery Priority 
+internal data type : NUMC Internal length : 000002 characters Position in segment : 037, Offset : 0378. external length : 000002
+	38.	LPRIO_BEZ : Description 
+internal data type : CHAR Internal length : 000020 characters Position in segment : 038, Offset : 0380. external length : 000020
+	39.	ROUTE : Route 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 039, Offset : 0400. external length : 000006
+	40.	ROUTE_BEZ : Description 
+internal data type : CHAR Internal length : 000040 characters Position in segment : 040, Offset : 0406. external length : 000040
+	41.	LGORT : Storage location 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 041, Offset : 0446. external length : 000004
+	42.	VSTEL : Shipping Point / Receiving Point 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 042, Offset : 0450. external length : 000004
+	43.	DELCO : Agreed Delivery Time 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 043, Offset : 0454. external length : 000003
+	44.	MATNR : IDOC material ID 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 044, Offset : 0457. external length : 000035
+	45.	VALTG : Additional Value Days 
+internal data type : NUMC Internal length : 000002 characters Position in segment : 045, Offset : 0492. external length : 000002
+	46.	HIPOS : Superior item in an item hierarchy 
+internal data type : NUMC Internal length : 000006 characters Position in segment : 046, Offset : 0494. external length : 000006
+	47.	HIEVW : Use of Hierarchy Item 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 047, Offset : 0500. external length : 000001
+	48.	POSGUID : ATP: Encryption of DELNR and DELPS 
+internal data type : CHAR Internal length : 000022 characters Position in segment : 048, Offset : 0501. external length : 000022
+	49.	MATNR_EXTERNAL : Material Number 
+internal data type : CHAR Internal length : 000040 characters Position in segment : 049, Offset : 0523. external length : 000040
+	50.	MATNR_VERSION : Version Number for MATNR Field 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 050, Offset : 0563. external length : 000010
+	51.	MATNR_GUID : External GUID for MATNR Field 
+internal data type : CHAR Internal length : 000032 characters Position in segment : 051, Offset : 0573. external length : 000032
+	52.	IUID_RELEVANT : IUID-Relevant 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 052, Offset : 0605. external length : 000001
+	53.	SGT_RCAT : Requirement Segment 
+internal data type : CHAR Internal length : 000016 characters Position in segment : 053, Offset : 0606. external length : 000016
+	54.	SGT_SCAT : Stock Segment 
+internal data type : CHAR Internal length : 000016 characters Position in segment : 054, Offset : 0622. external length : 000016
+	55.	HANDOVERLOC : Location for a physical handover of goods 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 055, Offset : 0638. external length : 000010
+	56.	MATNR_LONG : Material No. 
+internal data type : CHAR Internal length : 000040 characters Position in segment : 056, Offset : 0648. external length : 000040
+	57.	REQ_SEG_LONG : Requirement Segment 
+internal data type : CHAR Internal length : 000040 characters Position in segment : 057, Offset : 0688. external length : 000040
+	58.	STK_SEG_LONG : Stock Segment 
+internal data type : CHAR Internal length : 000040 characters Position in segment : 058, Offset : 0728. external length : 000040
+	59.	EXPECTED_VALUE : Currency amount for BAPIS (with 9 decimal places) 
+internal data type : DEC  Internal length : 000028 characters 000009 decimal places, without sign Position in segment : 059, Offset : 0768. external length : 000031
+	60.	LIMIT_AMOUNT : Currency amount for BAPIS (with 9 decimal places) 
+internal data type : DEC  Internal length : 000028 characters 000009 decimal places, without sign Position in segment : 060, Offset : 0799. external length : 000031
+	•	E1EDP02 : IDoc: Document Item Reference Data 
+Segment definition E2EDP02002 Released since Release 751 , Segment length: 0186 
+	1.	QUALF : IDOC qualifier reference document 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	BELNR : IDOC document number 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 002, Offset : 0066. external length : 000035
+	3.	ZEILE : Item number 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 003, Offset : 0101. external length : 000006
+	4.	DATUM : IDOC: Date 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 004, Offset : 0107. external length : 000008
+	5.	UZEIT : IDOC: Time 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 005, Offset : 0115. external length : 000006
+	6.	BSARK : IDOC organization 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 006, Offset : 0121. external length : 000035
+	7.	IHREZ : Your reference (Partner) 
+internal data type : CHAR Internal length : 000030 characters Position in segment : 007, Offset : 0156. external length : 000030
+	8.	RMA : Order Acknowledgment Number 
+internal data type : CHAR Internal length : 000020 characters Position in segment : 008, Offset : 0186. external length : 000020
+	9.	REASON : Order Reason (Reason for the Business Transaction) 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 009, Offset : 0206. external length : 000003
+	10.	RSNTXT : Description 
+internal data type : CHAR Internal length : 000040 characters Position in segment : 010, Offset : 0209. external length : 000040
+	•	E1EDP03 : IDoc: Document Item Date Segment 
+Segment definition E2EDP03 Released since Release 30A , Segment length: 0017 
+	1.	IDDAT : Qualifier for IDOC date segment 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	DATUM : Date 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 002, Offset : 0066. external length : 000008
+	3.	UZEIT : Time 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 003, Offset : 0074. external length : 000006
+	•	E1EDP04 : IDoc: Document Item Taxes 
+Segment definition E2EDP04002 Not released , Segment length: 0115 
+	1.	MWSKZ : VAT indicator 
+internal data type : CHAR Internal length : 000007 characters Position in segment : 001, Offset : 0063. external length : 000007
+	2.	MSATZ : VAT rate 
+internal data type : CHAR Internal length : 000017 characters Position in segment : 002, Offset : 0070. external length : 000017
+	3.	MWSBT : Value added tax amount 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 003, Offset : 0087. external length : 000018
+	4.	TXJCD : Tax Jurisdiction 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 004, Offset : 0105. external length : 000015
+	5.	KTEXT : Text Field 
+internal data type : CHAR Internal length : 000050 characters Position in segment : 005, Offset : 0120. external length : 000050
+	6.	TXDAT : Date for Determining Tax Rates 
+internal data type : DATS Internal length : 000008 characters Position in segment : 006, Offset : 0170. external length : 000008
+	•	E1EDP05 : IDoc: Document Item Conditions 
+Segment definition E2EDP05002 Released since Release 46A , Segment length: 0235 
+	1.	ALCKZ : Surcharge or discount indicator 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	KSCHL : Condition type (coded) 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 002, Offset : 0066. external length : 000004
+	3.	KOTXT : Condition text 
+internal data type : CHAR Internal length : 000080 characters Position in segment : 003, Offset : 0070. external length : 000080
+	4.	BETRG : Fixed surcharge/discount on total gross 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 004, Offset : 0150. external length : 000018
+	5.	KPERC : Condition percentage rate 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 005, Offset : 0168. external length : 000008
+	6.	KRATE : Condition record per unit 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 006, Offset : 0176. external length : 000015
+	7.	UPRBS : Price unit 
+internal data type : CHAR Internal length : 000009 characters Position in segment : 007, Offset : 0191. external length : 000009
+	8.	MEAUN : Unit of measurement 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 008, Offset : 0200. external length : 000003
+	9.	KOBTR : IDoc condition end amount 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 009, Offset : 0203. external length : 000018
+	10.	MENGE : Price scale quantity (SPEC2000) 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 010, Offset : 0221. external length : 000015
+	11.	PREIS : Price by unit of measure (SPEC2000) 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 011, Offset : 0236. external length : 000015
+	12.	MWSKZ : VAT indicator 
+internal data type : CHAR Internal length : 000007 characters Position in segment : 012, Offset : 0251. external length : 000007
+	13.	MSATZ : VAT rate 
+internal data type : CHAR Internal length : 000017 characters Position in segment : 013, Offset : 0258. external length : 000017
+	14.	KOEIN : Currency 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 014, Offset : 0275. external length : 000003
+	15.	CURTP : Currency type and valuation view 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 015, Offset : 0278. external length : 000002
+	16.	KOBAS : Base value to which condition refers 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 016, Offset : 0280. external length : 000018
+	•	E1EDP20 : IDoc schedule lines 
+Segment definition E2EDP20002 Released since Release 740 , Segment length: 0075 
+	1.	WMENG : Scheduled quantity 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 001, Offset : 0063. external length : 000015
+	2.	AMENG : Previous scheduled quantity 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 002, Offset : 0078. external length : 000015
+	3.	EDATU : IDOC: Date 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 003, Offset : 0093. external length : 000008
+	4.	EZEIT : IDOC: Time 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 004, Offset : 0101. external length : 000006
+	5.	EDATU_OLD : IDOC: Date 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 005, Offset : 0107. external length : 000008
+	6.	EZEIT_OLD : IDOC: Time 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 006, Offset : 0115. external length : 000006
+	7.	ACTION : Action code for the item 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 007, Offset : 0121. external length : 000003
+	8.	HANDOVERDATE : IDOC: Date 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 008, Offset : 0124. external length : 000008
+	9.	HANDOVERTIME : IDOC: Time 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 009, Offset : 0132. external length : 000006
+	•	E1EDPA1 : IDoc: Doc.item partner information 
+Segment definition E2EDPA1003 Released since Release 45A , Segment length: 0995 
+	1.	PARVW : Partner function (e.g. sold-to party, ship-to party, ...) 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	PARTN : Partner number 
+internal data type : CHAR Internal length : 000017 characters Position in segment : 002, Offset : 0066. external length : 000017
+	3.	LIFNR : Supplier Number at Customer Location 
+internal data type : CHAR Internal length : 000017 characters Position in segment : 003, Offset : 0083. external length : 000017
+	4.	NAME1 : Name 1 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 004, Offset : 0100. external length : 000035
+	5.	NAME2 : Name 2 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 005, Offset : 0135. external length : 000035
+	6.	NAME3 : Name 3 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 006, Offset : 0170. external length : 000035
+	7.	NAME4 : Name 4 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 007, Offset : 0205. external length : 000035
+	8.	STRAS : Street and house number 1 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 008, Offset : 0240. external length : 000035
+	9.	STRS2 : Street and house number 2 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 009, Offset : 0275. external length : 000035
+	10.	PFACH : PO Box 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 010, Offset : 0310. external length : 000035
+	11.	ORT01 : City 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 011, Offset : 0345. external length : 000035
+	12.	COUNC : County code 
+internal data type : CHAR Internal length : 000009 characters Position in segment : 012, Offset : 0380. external length : 000009
+	13.	PSTLZ : Postal code 
+internal data type : CHAR Internal length : 000009 characters Position in segment : 013, Offset : 0389. external length : 000009
+	14.	PSTL2 : P.O. Box postal code 
+internal data type : CHAR Internal length : 000009 characters Position in segment : 014, Offset : 0398. external length : 000009
+	15.	LAND1 : Country Key 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 015, Offset : 0407. external length : 000003
+	16.	ABLAD : Unloading Point 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 016, Offset : 0410. external length : 000035
+	17.	PERNR : Contact person's personnel number 
+internal data type : CHAR Internal length : 000030 characters Position in segment : 017, Offset : 0445. external length : 000030
+	18.	PARNR : Contact person's number (not personnel number) 
+internal data type : CHAR Internal length : 000030 characters Position in segment : 018, Offset : 0475. external length : 000030
+	19.	TELF1 : 1st telephone number of contact person 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 019, Offset : 0505. external length : 000025
+	20.	TELF2 : 2nd telephone number of contact person 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 020, Offset : 0530. external length : 000025
+	21.	TELBX : Telebox number 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 021, Offset : 0555. external length : 000025
+	22.	TELFX : Fax number 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 022, Offset : 0580. external length : 000025
+	23.	TELTX : Teletex number 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 023, Offset : 0605. external length : 000025
+	24.	TELX1 : Telex number 
+internal data type : CHAR Internal length : 000025 characters Position in segment : 024, Offset : 0630. external length : 000025
+	25.	SPRAS : Language key 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 025, Offset : 0655. external length : 000001
+	26.	ANRED : Form of Address 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 026, Offset : 0656. external length : 000015
+	27.	ORT02 : District 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 027, Offset : 0671. external length : 000035
+	28.	HAUSN : House number 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 028, Offset : 0706. external length : 000006
+	29.	STOCK : Floor 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 029, Offset : 0712. external length : 000006
+	30.	REGIO : Region 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 030, Offset : 0718. external length : 000003
+	31.	PARGE : Partner's gender 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 031, Offset : 0721. external length : 000001
+	32.	ISOAL : Country ISO code 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 032, Offset : 0722. external length : 000002
+	33.	ISONU : Country ISO code 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 033, Offset : 0724. external length : 000002
+	34.	FCODE : Company key (France) 
+internal data type : CHAR Internal length : 000020 characters Position in segment : 034, Offset : 0726. external length : 000020
+	35.	IHREZ : Your reference (Partner) 
+internal data type : CHAR Internal length : 000030 characters Position in segment : 035, Offset : 0746. external length : 000030
+	36.	BNAME : IDoc user name 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 036, Offset : 0776. external length : 000035
+	37.	PAORG : IDOC organization code 
+internal data type : CHAR Internal length : 000030 characters Position in segment : 037, Offset : 0811. external length : 000030
+	38.	ORGTX : IDoc organization code text 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 038, Offset : 0841. external length : 000035
+	39.	PAGRU : IDoc group code 
+internal data type : CHAR Internal length : 000030 characters Position in segment : 039, Offset : 0876. external length : 000030
+	40.	KNREF : Customer description of partner (plant, storage location) 
+internal data type : CHAR Internal length : 000030 characters Position in segment : 040, Offset : 0906. external length : 000030
+	41.	ILNNR : Character field, length 70 
+internal data type : CHAR Internal length : 000070 characters Position in segment : 041, Offset : 0936. external length : 000070
+	42.	PFORT : PO Box city 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 042, Offset : 1006. external length : 000035
+	43.	SPRAS_ISO : 2-Character SAP Language Code 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 043, Offset : 1041. external length : 000002
+	44.	TITLE : Title 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 044, Offset : 1043. external length : 000015
+	•	E1EDP19 : IDoc: Document Item Object Identification 
+Segment definition E2EDP19003 Released since Release 751 , Segment length: 0282 
+	1.	QUALF : IDOC object identification such as material no.,customer 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	IDTNR : IDOC material ID 
+internal data type : CHAR Internal length : 000035 characters Position in segment : 002, Offset : 0066. external length : 000035
+	3.	KTEXT : IDOC short text 
+internal data type : CHAR Internal length : 000070 characters Position in segment : 003, Offset : 0101. external length : 000070
+	4.	MFRPN : Manufacturer part number 
+internal data type : CHAR Internal length : 000042 characters Position in segment : 004, Offset : 0171. external length : 000042
+	5.	MFRNR : Manufacturer number 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 005, Offset : 0213. external length : 000010
+	6.	IDTNR_EXTERNAL : Length of Material (Future Development) for Field IDTNR 
+internal data type : CHAR Internal length : 000040 characters Position in segment : 006, Offset : 0223. external length : 000040
+	7.	IDTNR_VERSION : Version Number (Future Development) for Field IDTNR 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 007, Offset : 0263. external length : 000010
+	8.	IDTNR_GUID : External GUID (Future Development) for Field IDTNR 
+internal data type : CHAR Internal length : 000032 characters Position in segment : 008, Offset : 0273. external length : 000032
+	9.	IDTNR_LONG : IDOC material ID 
+internal data type : CHAR Internal length : 000040 characters Position in segment : 009, Offset : 0305. external length : 000040
+	•	E1EDP17 : IDoc: Document item terms of delivery 
+Segment definition E2EDP17001 Released since Release 30D , Segment length: 0078 
+	1.	QUALF : IDOC qualifier: Terms of delivery 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	LKOND : IDOC delivery condition code 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 002, Offset : 0066. external length : 000003
+	3.	LKTEXT : IDOC delivery condition text 
+internal data type : CHAR Internal length : 000070 characters Position in segment : 003, Offset : 0069. external length : 000070
+	4.	LPRIO : Delivery Priority 
+internal data type : NUMC Internal length : 000002 characters Position in segment : 004, Offset : 0139. external length : 000002
+	•	E1EDP18 : IDoc: Document Item Terms of Payment 
+Segment definition E2EDP18001 Released since Release 45A , Segment length: 0089 
+	1.	QUALF : IDOC qualifier: Terms of payment 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	TAGE : IDOC Number of days 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 002, Offset : 0066. external length : 000008
+	3.	PRZNT : IDOC percentage for terms of payment 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 003, Offset : 0074. external length : 000008
+	4.	ZTERM_TXT : Text line 
+internal data type : CHAR Internal length : 000070 characters Position in segment : 004, Offset : 0082. external length : 000070
+	•	E1EDPT1 : IDoc: Document Item Text Identification 
+Segment definition E2EDPT1001 Released since Release 40A , Segment length: 0009 
+	1.	TDID : Text ID 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 001, Offset : 0063. external length : 000004
+	2.	TSSPRAS : Language Key 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 002, Offset : 0067. external length : 000003
+	3.	TSSPRAS_ISO : 2-Character SAP Language Code 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 003, Offset : 0070. external length : 000002
+	•	E1EDPT2 : IDoc: Document Item Texts 
+Segment definition E2EDPT2001 Released since Release 40A , Segment length: 0072 
+	1.	TDLINE : Text line 
+internal data type : CHAR Internal length : 000070 characters Position in segment : 001, Offset : 0063. external length : 000070
+	2.	TDFORMAT : Tag column 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 002, Offset : 0133. external length : 000002
+	•	E1EDS01 : IDoc: Summary segment general 
+Segment definition E2EDS01 Released since Release 30A , Segment length: 0027 
+	1.	SUMID : Qualifier for totals segment for shipping notification 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	SUMME : Total value of sum segment 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 002, Offset : 0066. external length : 000018
+	3.	SUNIT : Total value unit for totals segment in the shipping notif. 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 003, Offset : 0084. external length : 000003
+	4.	WAERQ : Currency 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 004, Offset : 0087. external length : 000003
+
+Info... 
+Automatically created HTML doc. created on 12/20/2022 at 16:53:45  Client 100  System S4M  Release 755  Lang. E  Transaction WE60 
+Display current status  Version 3 of IDoc record types : IDoc record types for SAP Release 4.0 
+ 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="Invoice">
+  <xs:element name="root">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="oinvoice_id" type="xs:string" />
@@ -23,8 +23,8 @@
         <xs:element minOccurs="0" name="oinvoice_amount_unpaid" type="xs:string" />
         <xs:element minOccurs="0" name="oinvoice_type" type="xs:string" />
         <xs:element minOccurs="0" name="opayment_auth_id" type="xs:string" />
-        <xs:element minOccurs="0" name="omail_id" type="xs:string" />
-        <xs:element minOccurs="0" name="olob_id" type="xs:string" />
+        <xs:element minOccurs="0" name="omail_id" />
+        <xs:element minOccurs="0" name="olob_id" />
         <xs:element minOccurs="0" name="ofax_id" />
         <xs:element minOccurs="0" name="oinvoice_shipping_override" />
         <xs:element minOccurs="0" name="oinvoice_is_posted" />
@@ -44,8 +44,8 @@
         <xs:element minOccurs="0" name="oinvoice_amount_unpaid_override" />
         <xs:element minOccurs="0" name="oinvoice_fees_total" type="xs:string" />
         <xs:element minOccurs="0" name="cogs_posted_to_sap" type="xs:string" />
-        <xs:element minOccurs="0" name="sap_document_id" type="xs:string" />
-        <xs:element minOccurs="0" name="invoice_items">
+        <xs:element minOccurs="0" name="sap_document_id" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="invoice_items">
           <xs:complexType>
             <xs:sequence>
               <xs:element minOccurs="0" name="oinvoice_item_id" type="xs:string" />
@@ -60,8 +60,8 @@
               <xs:element minOccurs="0" name="OCDT" type="xs:string" />
               <xs:element minOccurs="0" name="OMU" type="xs:string" />
               <xs:element minOccurs="0" name="OMDT" type="xs:string" />
-              <xs:element minOccurs="0" name="material_cost_total" type="xs:string" />
-              <xs:element minOccurs="0" name="total_cogs" type="xs:string" />
+              <xs:element minOccurs="0" name="material_cost_total" />
+              <xs:element minOccurs="0" name="total_cogs" />
               <xs:element minOccurs="0" name="freight_cost_total" type="xs:string" />
               <xs:element minOccurs="0" name="duties_cost_total" type="xs:string" />
               <xs:element minOccurs="0" name="overhead_cost_total" type="xs:string" />
@@ -72,20 +72,20 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element minOccurs="0" name="ocustomer_id" type="xs:string" />
-              <xs:element minOccurs="0" name="oprice_list_id" type="xs:string" />
+              <xs:element minOccurs="0" name="oprice_list_id" />
               <xs:element minOccurs="0" name="oentity_id" type="xs:string" />
-              <xs:element minOccurs="0" name="oterritory_id" type="xs:string" />
-              <xs:element minOccurs="0" name="oterritory_state_id" type="xs:string" />
+              <xs:element minOccurs="0" name="oterritory_id" />
+              <xs:element minOccurs="0" name="oterritory_state_id" />
               <xs:element minOccurs="0" name="ocustomer_status_id" type="xs:string" />
-              <xs:element minOccurs="0" name="ocustomer_rep_id" type="xs:string" />
-              <xs:element minOccurs="0" name="ouser_sales_person_id" type="xs:string" />
+              <xs:element minOccurs="0" name="ocustomer_rep_id" />
+              <xs:element minOccurs="0" name="ouser_sales_person_id" />
               <xs:element minOccurs="0" name="ocustomer_company" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_company_type" />
               <xs:element minOccurs="0" name="ocustomer_parent_co" />
-              <xs:element minOccurs="0" name="ocustomer_contact" type="xs:string" />
-              <xs:element minOccurs="0" name="ocustomer_phone" type="xs:string" />
-              <xs:element minOccurs="0" name="ocustomer_fax" type="xs:string" />
-              <xs:element minOccurs="0" name="ocustomer_email" type="xs:string" />
+              <xs:element minOccurs="0" name="ocustomer_contact" />
+              <xs:element minOccurs="0" name="ocustomer_phone" />
+              <xs:element minOccurs="0" name="ocustomer_fax" />
+              <xs:element minOccurs="0" name="ocustomer_email" />
               <xs:element minOccurs="0" name="ocustomer_rep" />
               <xs:element minOccurs="0" name="ocustomer_federal_id" />
               <xs:element minOccurs="0" name="ocustomer_utah_id" />
@@ -99,8 +99,8 @@
               <xs:element minOccurs="0" name="OMU" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_type" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_notes" />
-              <xs:element minOccurs="0" name="ship_oaddress_id" type="xs:string" />
-              <xs:element minOccurs="0" name="bill_oaddress_id" type="xs:string" />
+              <xs:element minOccurs="0" name="ship_oaddress_id" />
+              <xs:element minOccurs="0" name="bill_oaddress_id" />
               <xs:element minOccurs="0" name="ocustomer_cim_token" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_stripe_customer_token" />
               <xs:element minOccurs="0" name="ocustomer_stripe_card_token" />
@@ -110,30 +110,30 @@
               <xs:element minOccurs="0" name="ocustomer_assigned_ouser_id" />
               <xs:element minOccurs="0" name="ocustomer_credit_limit" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_maximum_write_off" />
-              <xs:element minOccurs="0" name="ocustomer_minimum_payment" type="xs:string" />
-              <xs:element minOccurs="0" name="ocustomer_finance_charge" type="xs:string" />
+              <xs:element minOccurs="0" name="ocustomer_minimum_payment" />
+              <xs:element minOccurs="0" name="ocustomer_finance_charge" />
               <xs:element minOccurs="0" name="ocustomer_balance_type" />
-              <xs:element minOccurs="0" name="ocustomer_price_level" type="xs:string" />
-              <xs:element minOccurs="0" name="ocustomer_due_date_grace_period" type="xs:string" />
-              <xs:element minOccurs="0" name="ocustomer_discount_grace_period" type="xs:string" />
+              <xs:element minOccurs="0" name="ocustomer_price_level" />
+              <xs:element minOccurs="0" name="ocustomer_due_date_grace_period" />
+              <xs:element minOccurs="0" name="ocustomer_discount_grace_period" />
               <xs:element minOccurs="0" name="ocustomer_payment_terms" type="xs:string" />
               <xs:element minOccurs="0" name="opayment_term_id" type="xs:string" />
-              <xs:element minOccurs="0" name="ocustomer_trade_discount_percent" type="xs:string" />
+              <xs:element minOccurs="0" name="ocustomer_trade_discount_percent" />
               <xs:element minOccurs="0" name="ocustomer_is_active" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_is_hold" type="xs:string" />
-              <xs:element minOccurs="0" name="ocusotmer_class" type="xs:string" />
+              <xs:element minOccurs="0" name="ocusotmer_class" />
               <xs:element minOccurs="0" name="ocustomer_bank_account_key" />
               <xs:element minOccurs="0" name="ocustomer_receivable_key" />
               <xs:element minOccurs="0" name="ocustomer_sales_key" />
               <xs:element minOccurs="0" name="ocustomer_cost_of_goods_sold_key" />
               <xs:element minOccurs="0" name="ocustomer_inventory_account_key" />
               <xs:element minOccurs="0" name="default_oaddress_id" />
-              <xs:element minOccurs="0" name="ocustomer_state" type="xs:string" />
+              <xs:element minOccurs="0" name="ocustomer_state" />
               <xs:element minOccurs="0" name="ocustomer_phone_number" />
               <xs:element minOccurs="0" name="ocustomer_created_on" />
               <xs:element minOccurs="0" name="ocustomer_class" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_days_between_orders" type="xs:string" />
-              <xs:element minOccurs="0" name="ocustomer_last_order_date" type="xs:string" />
+              <xs:element minOccurs="0" name="ocustomer_last_order_date" />
               <xs:element minOccurs="0" name="ocustomer_days_past_due" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_ytd_sales" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_thirty_day_sales" type="xs:string" />
@@ -141,12 +141,12 @@
               <xs:element minOccurs="0" name="ocustomer_365_day_sales" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_auto_email_invoice" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_auto_mail_invoice" type="xs:string" />
-              <xs:element minOccurs="0" name="ocustomer_auto_fax_invoice" />
+              <xs:element minOccurs="0" name="ocustomer_auto_fax_invoice" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_store_count" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_is_priority" type="xs:string" />
-              <xs:element minOccurs="0" name="ocustomer_url" type="xs:string" />
-              <xs:element minOccurs="0" name="ocustomer_nickname" type="xs:string" />
-              <xs:element minOccurs="0" name="ocustomer_temperature" type="xs:string" />
+              <xs:element minOccurs="0" name="ocustomer_url" />
+              <xs:element minOccurs="0" name="ocustomer_nickname" />
+              <xs:element minOccurs="0" name="ocustomer_temperature" />
               <xs:element minOccurs="0" name="ocustomer_is_taxed" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_rating" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_tax_exempt_state_id" />
@@ -155,66 +155,11 @@
               <xs:element minOccurs="0" name="ocustomer_send_invoice_reminders" type="xs:string" />
               <xs:element minOccurs="0" name="ocustomer_company_size" />
               <xs:element minOccurs="0" name="ocustomer_company_industry" />
-              <xs:element minOccurs="0" name="ocustomer_auto_email_statement" type="xs:string" />
-              <xs:element minOccurs="0" name="ocustomer_is_international" type="xs:string" />
+              <xs:element minOccurs="0" name="ocustomer_auto_email_statement" />
+              <xs:element minOccurs="0" name="ocustomer_is_international" />
               <xs:element minOccurs="0" name="ocustomer_hide_pricing" />
-              <xs:element minOccurs="0" name="sap_sales_organization_id" type="xs:string" />
-              <xs:element minOccurs="0" name="billing_address">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element minOccurs="0" name="ocustomer_address_id" type="xs:string" />
-                    <xs:element minOccurs="0" name="ocustomer_address_type_id" type="xs:string" />
-                    <xs:element minOccurs="0" name="ocustomer_id" type="xs:string" />
-                    <xs:element minOccurs="0" name="olead_id" />
-                    <xs:element minOccurs="0" name="oaddress_type" type="xs:string" />
-                    <xs:element minOccurs="0" name="oaddress_name" type="xs:string" />
-                    <xs:element minOccurs="0" name="oaddress_street_1" type="xs:string" />
-                    <xs:element minOccurs="0" name="oaddress_street_2" />
-                    <xs:element minOccurs="0" name="oaddress_street_3" />
-                    <xs:element minOccurs="0" name="oaddress_street_4" />
-                    <xs:element minOccurs="0" name="oaddress_locality" type="xs:string" />
-                    <xs:element minOccurs="0" name="oaddress_region" type="xs:string" />
-                    <xs:element minOccurs="0" name="oaddress_postcode" type="xs:string" />
-                    <xs:element minOccurs="0" name="oaddress_country" type="xs:string" />
-                    <xs:element minOccurs="0" name="ofulfillment_center_code" />
-                    <xs:element minOccurs="0" name="oaddress_contact" type="xs:string" />
-                    <xs:element minOccurs="0" name="oaddress_phone" type="xs:string" />
-                    <xs:element minOccurs="0" name="oaddress_fax" />
-                    <xs:element minOccurs="0" name="oaddress_email_to" type="xs:string" />
-                    <xs:element minOccurs="0" name="oaddress_email_cc" />
-                    <xs:element minOccurs="0" name="oaddress_email_bcc" />
-                    <xs:element minOccurs="0" name="oaddress_url_1" />
-                    <xs:element minOccurs="0" name="oaddress_url_2" />
-                    <xs:element minOccurs="0" name="oaddress_url_3" />
-                    <xs:element minOccurs="0" name="oaddress_url_4" />
-                    <xs:element minOccurs="0" name="oaddress_url_5" />
-                    <xs:element minOccurs="0" name="oaddress_external_id" type="xs:string" />
-                    <xs:element minOccurs="0" name="oaddress_default" type="xs:string" />
-                    <xs:element minOccurs="0" name="oaddress_active" type="xs:string" />
-                    <xs:element minOccurs="0" name="oaddress_notes" />
-                    <xs:element minOccurs="0" name="OCDT" type="xs:string" />
-                    <xs:element minOccurs="0" name="OCU" type="xs:string" />
-                    <xs:element minOccurs="0" name="OMDT" type="xs:string" />
-                    <xs:element minOccurs="0" name="OMU" type="xs:string" />
-                    <xs:element minOccurs="0" name="oaddress_is_billing" type="xs:string" />
-                    <xs:element minOccurs="0" name="oaddress_is_shipping" type="xs:string" />
-                    <xs:element minOccurs="0" name="ocountry_id" type="xs:string" />
-                    <xs:element minOccurs="0" name="country">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element minOccurs="0" name="ocountry_id" type="xs:string" />
-                          <xs:element minOccurs="0" name="ocountry_code" type="xs:string" />
-                          <xs:element minOccurs="0" name="ocountry_name" type="xs:string" />
-                          <xs:element minOccurs="0" name="OCU" />
-                          <xs:element minOccurs="0" name="OMU" />
-                          <xs:element minOccurs="0" name="OCDT" type="xs:string" />
-                          <xs:element minOccurs="0" name="OMDT" />
-                        </xs:sequence>
-                      </xs:complexType>
-                    </xs:element>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
+              <xs:element minOccurs="0" name="sap_sales_organization_id" />
+              <xs:element minOccurs="0" name="billing_address" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
