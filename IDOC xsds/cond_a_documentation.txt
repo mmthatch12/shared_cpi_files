@@ -1,0 +1,439 @@
+
+Structure of basic type COND_A01 
+Interchange of conditions: Master data for price determ. 
+
+	•	E1KOMG : Filter segment with separated condition key 
+Status: Required , min. number : 1 , max. number : 1 
+Structure 
+	◦	E1KONH : Data from condition header 
+Status: Required , min. number : 1 , max. number : 9999 
+Structure 
+	▪	E1KONP : Conditions Items 
+Status: Required , min. number : 1 , max. number : 99 
+Structure 
+	▪	E1KONM : Conditions Quantity Scale 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+	▪	E1KONW : Conditions Value Scale 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+
+Segment structures 
+
+	•	E1KOMG : Filter segment with separated condition key 
+Segment definition E2KOMG005 Released since Release 751 , Segment length: 0968 
+	1.	KVEWE : Usage of the condition table 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 001, Offset : 0063. external length : 000001
+	2.	KOTABNR : Number of the Condition Table 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 002, Offset : 0064. external length : 000003
+	3.	KAPPL : Application 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 003, Offset : 0067. external length : 000002
+	4.	KSCHL : Condition type 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 004, Offset : 0069. external length : 000004
+	5.	VAKEY : Variable key 50 bytes 
+internal data type : CHAR Internal length : 000050 characters Position in segment : 005, Offset : 0073. external length : 000050
+	6.	VKORG : Sales Organization 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 006, Offset : 0123. external length : 000004
+	7.	VTWEG : Distribution Channel 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 007, Offset : 0127. external length : 000002
+	8.	SPART : Division 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 008, Offset : 0129. external length : 000002
+	9.	KUNNR : Customer number 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 009, Offset : 0131. external length : 000010
+	10.	KDGRP : Customer Group 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 010, Offset : 0141. external length : 000002
+	11.	PLTYP : Price List Type 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 011, Offset : 0143. external length : 000002
+	12.	KONDA : Customer Price Group 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 012, Offset : 0145. external length : 000002
+	13.	KONDM : Material Price Group 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 013, Offset : 0147. external length : 000002
+	14.	WAERK : SD document currency 
+internal data type : CUKY Internal length : 000005 characters Position in segment : 014, Offset : 0149. external length : 000005
+	15.	MATNR : Material Number (18 Characters) 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 015, Offset : 0154. external length : 000018
+	16.	BWTAR : Valuation Type 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 016, Offset : 0172. external length : 000010
+	17.	CHARG : Batch Number 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 017, Offset : 0182. external length : 000010
+	18.	PRODH : Product hierarchy 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 018, Offset : 0192. external length : 000018
+	19.	MEINS : Base Unit of Measure 
+internal data type : UNIT Internal length : 000003 characters Position in segment : 019, Offset : 0210. external length : 000003
+	20.	BONUS : Volume rebate group 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 020, Offset : 0213. external length : 000002
+	21.	EBONU : Settlement Group 1 (Purchasing) 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 021, Offset : 0215. external length : 000002
+	22.	PROVG : Commission group 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 022, Offset : 0217. external length : 000002
+	23.	ALAND : Departure country (country from which the goods are sent) 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 023, Offset : 0219. external length : 000003
+	24.	WKREG : Region in which plant is located 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 024, Offset : 0222. external length : 000003
+	25.	WKCOU : County in which plant is located 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 025, Offset : 0225. external length : 000003
+	26.	WKCTY : City in which plant is located 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 026, Offset : 0228. external length : 000004
+	27.	LLAND : Destination Country/Region 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 027, Offset : 0232. external length : 000003
+	28.	REGIO : Region (State, Province, County) 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 028, Offset : 0235. external length : 000003
+	29.	COUNC : County Code 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 029, Offset : 0238. external length : 000003
+	30.	CITYC : City Code 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 030, Offset : 0241. external length : 000004
+	31.	TAXM1 : Tax classification material 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 031, Offset : 0245. external length : 000001
+	32.	TAXM2 : Tax classification 2 for material 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 032, Offset : 0246. external length : 000001
+	33.	TAXM3 : Tax classification 3 for material 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 033, Offset : 0247. external length : 000001
+	34.	TAXM4 : Tax Classification 4 Material 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 034, Offset : 0248. external length : 000001
+	35.	TAXM5 : Tax classification 5 for material 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 035, Offset : 0249. external length : 000001
+	36.	TAXM6 : Tax classification 6 for material 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 036, Offset : 0250. external length : 000001
+	37.	TAXM7 : Tax classification 7 for material 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 037, Offset : 0251. external length : 000001
+	38.	TAXM8 : Tax Classification 8 Material 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 038, Offset : 0252. external length : 000001
+	39.	TAXM9 : Tax Classification 9 Material 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 039, Offset : 0253. external length : 000001
+	40.	TAXK1 : Tax Classification 1 for Customer 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 040, Offset : 0254. external length : 000001
+	41.	TAXK2 : Tax Classification 2 for Customer 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 041, Offset : 0255. external length : 000001
+	42.	TAXK3 : Tax classification 3 for customer 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 042, Offset : 0256. external length : 000001
+	43.	TAXK4 : Tax Classification 4 Customer 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 043, Offset : 0257. external length : 000001
+	44.	TAXK5 : Tax Classification 5 for Customer 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 044, Offset : 0258. external length : 000001
+	45.	TAXK6 : Tax Classification 6 for Customer 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 045, Offset : 0259. external length : 000001
+	46.	TAXK7 : Tax Classification 7 for Customer 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 046, Offset : 0260. external length : 000001
+	47.	TAXK8 : Tax Classification 8 for Customer 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 047, Offset : 0261. external length : 000001
+	48.	TAXK9 : Tax Classification 9 for Customer 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 048, Offset : 0262. external length : 000001
+	49.	LIFNR : Account Number of Vendor or Creditor 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 049, Offset : 0263. external length : 000010
+	50.	MATKL : Material Group 
+internal data type : CHAR Internal length : 000009 characters Position in segment : 050, Offset : 0273. external length : 000009
+	51.	EKORG : Purchasing organization 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 051, Offset : 0282. external length : 000004
+	52.	ESOKZ : Purchasing info record category 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 052, Offset : 0286. external length : 000001
+	53.	WERKS : Plant 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 053, Offset : 0287. external length : 000004
+	54.	RESWK : Supplying (issuing) plant in case of stock transport order 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 054, Offset : 0291. external length : 000004
+	55.	KOLIF : Prior Supplier 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 055, Offset : 0295. external length : 000010
+	56.	LTSNR : Supplier Subrange 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 056, Offset : 0305. external length : 000006
+	57.	WGLIF : Supplier Material Group 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 057, Offset : 0311. external length : 000018
+	58.	MWSKZ : Tax on sales/purchases code 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 058, Offset : 0329. external length : 000002
+	59.	WERKV : Resale plant 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 059, Offset : 0331. external length : 000004
+	60.	WAGRP : Material group 
+internal data type : CHAR Internal length : 000009 characters Position in segment : 060, Offset : 0335. external length : 000009
+	61.	VRKME : Sales unit 
+internal data type : UNIT Internal length : 000003 characters Position in segment : 061, Offset : 0344. external length : 000003
+	62.	EAN11 : International Article Number (EAN/UPC) 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 062, Offset : 0347. external length : 000018
+	63.	EANNR : European Article Number (EAN) - obsolete!!!!! 
+internal data type : CHAR Internal length : 000013 characters Position in segment : 063, Offset : 0365. external length : 000013
+	64.	AUART : Order Type 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 064, Offset : 0378. external length : 000004
+	65.	MEEIN : Unit of measure of a purchased material 
+internal data type : UNIT Internal length : 000003 characters Position in segment : 065, Offset : 0382. external length : 000003
+	66.	INFNR : Number of purchasing info record 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 066, Offset : 0385. external length : 000010
+	67.	EVRTN : Purchasing Document Number 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 067, Offset : 0395. external length : 000010
+	68.	EVRTP : Item Number of Purchasing Document 
+internal data type : NUMC Internal length : 000005 characters Position in segment : 068, Offset : 0405. external length : 000005
+	69.	INCO1 : Incoterms (Part 1) 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 069, Offset : 0410. external length : 000003
+	70.	INCO2 : Incoterms (Part 2) 
+internal data type : CHAR Internal length : 000028 characters Position in segment : 070, Offset : 0413. external length : 000028
+	71.	BUKRS : Company Code 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 071, Offset : 0441. external length : 000004
+	72.	MTART : Material type 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 072, Offset : 0445. external length : 000004
+	73.	LIFRE : Different Invoicing Party 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 073, Offset : 0449. external length : 000010
+	74.	EKKOL : Condition Group with Supplier 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 074, Offset : 0459. external length : 000004
+	75.	EKKOA : Condition Group in Case of Different Supplier 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 075, Offset : 0463. external length : 000004
+	76.	BSTME : Purchase Order Unit of Measure 
+internal data type : UNIT Internal length : 000003 characters Position in segment : 076, Offset : 0467. external length : 000003
+	77.	WGHIE : Material group hierarchy 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 077, Offset : 0470. external length : 000018
+	78.	TAXIM : Tax indicator for material (Purchasing) 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 078, Offset : 0488. external length : 000001
+	79.	TAXIK : Tax Indicator: Account Assignment (Purchasing) 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 079, Offset : 0489. external length : 000001
+	80.	TAXIW : Tax Indicator: Plant (Purchasing) 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 080, Offset : 0490. external length : 000001
+	81.	TAXIL : Tax indicator: Import 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 081, Offset : 0491. external length : 000001
+	82.	TAXIR : Tax indicator: Region (Intrastat) 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 082, Offset : 0492. external length : 000001
+	83.	TXJCD : Tax Jurisdiction 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 083, Offset : 0493. external length : 000015
+	84.	FKART : Billing Type 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 084, Offset : 0508. external length : 000004
+	85.	VKORGAU : Sales organization of sales order 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 085, Offset : 0512. external length : 000004
+	86.	HIENR : Customer 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 086, Offset : 0516. external length : 000010
+	87.	VARCOND : Variant Condition Key 
+internal data type : CHAR Internal length : 000026 characters Position in segment : 087, Offset : 0526. external length : 000026
+	88.	LAND1 : Country Key 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 088, Offset : 0552. external length : 000003
+	89.	ZTERM : Terms of payment key 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 089, Offset : 0555. external length : 000004
+	90.	GZOLX : Preference zone 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 090, Offset : 0559. external length : 000004
+	91.	VBELN : Sales and Distribution Document Number 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 091, Offset : 0563. external length : 000010
+	92.	POSNR : Item number of the SD document 
+internal data type : NUMC Internal length : 000006 characters Position in segment : 092, Offset : 0573. external length : 000006
+	93.	UPMAT : Pricing reference material of main item 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 093, Offset : 0579. external length : 000018
+	94.	UKONM : Material pricing group of main item 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 094, Offset : 0597. external length : 000002
+	95.	ANZSN : Number of serial numbers 
+internal data type : NUMC Internal length : 000010 characters Position in segment : 095, Offset : 0599. external length : 000010
+	96.	AUART_SD : Sales Document Type 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 096, Offset : 0609. external length : 000004
+	97.	PRODH1 : Data Element ID_PRODH1 
+internal data type : CHAR Internal length : 000005 characters Position in segment : 097, Offset : 0613. external length : 000005
+	98.	PRODH2 : Data Element ID_PRODH2 
+internal data type : CHAR Internal length : 000005 characters Position in segment : 098, Offset : 0618. external length : 000005
+	99.	PRODH3 : Data Element ID_PRODH3 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 099, Offset : 0623. external length : 000008
+	100.	BZIRK : Sales District 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 100, Offset : 0631. external length : 000006
+	101.	VKGRP : Sales group 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 101, Offset : 0637. external length : 000003
+	102.	BRSCH : Industry key 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 102, Offset : 0640. external length : 000004
+	103.	VKBUR : Sales office 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 103, Offset : 0644. external length : 000004
+	104.	PRCTR : Profit Center 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 104, Offset : 0648. external length : 000010
+	105.	LHIENR : Vendor number of vendor hierarchy 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 105, Offset : 0658. external length : 000010
+	106.	KDKGR : Customer Attribute for Condition Groups 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 106, Offset : 0668. external length : 000002
+	107.	BSTYP : Purchasing Document Category 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 107, Offset : 0670. external length : 000001
+	108.	BSART : Order Type (Purchasing) 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 108, Offset : 0671. external length : 000004
+	109.	EKGRP : Purchasing Group 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 109, Offset : 0675. external length : 000003
+	110.	AKTNR : Promotion 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 110, Offset : 0678. external length : 000010
+	111.	VAKEY_LONG : Variable key 100 bytes 
+internal data type : CHAR Internal length : 000100 characters Position in segment : 111, Offset : 0688. external length : 000100
+	112.	SRVPOS : Activity Number 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 112, Offset : 0788. external length : 000018
+	113.	PSTYP : Item Category 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 113, Offset : 0806. external length : 000001
+	114.	HLAND : Delivering country 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 114, Offset : 0807. external length : 000003
+	115.	AUSFU : Exporter for import processing in foreign trade 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 115, Offset : 0810. external length : 000010
+	116.	HERKL : Country of Origin of Material (Non-Preferential Origin) 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 116, Offset : 0820. external length : 000003
+	117.	VERLD : Country of dispatch for Foreign Trade 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 117, Offset : 0823. external length : 000003
+	118.	COIMP : Code number for import processing in foreign trade 
+internal data type : CHAR Internal length : 000017 characters Position in segment : 118, Offset : 0826. external length : 000017
+	119.	STAWN : Commodity Code 
+internal data type : CHAR Internal length : 000017 characters Position in segment : 119, Offset : 0843. external length : 000017
+	120.	CASNR : CAS number for pharmaceutical products in foreign trade 
+internal data type : CHAR Internal length : 000015 characters Position in segment : 120, Offset : 0860. external length : 000015
+	121.	EXPRF : Procedure 
+internal data type : CHAR Internal length : 000008 characters Position in segment : 121, Offset : 0875. external length : 000008
+	122.	COKON : Customs quota code for import processing in foreign trade 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 122, Offset : 0883. external length : 000006
+	123.	COPHA : Pharmaceutical products code (Foreign Trade) 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 123, Offset : 0889. external length : 000006
+	124.	COADI : Anti-dumping code for import processing in foreign trade 
+internal data type : CHAR Internal length : 000006 characters Position in segment : 124, Offset : 0895. external length : 000006
+	125.	HERSE : Manufacturer number for import processing in foreign trade 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 125, Offset : 0901. external length : 000010
+	126.	KTNUM : Quota or Ceiling Number for Import Processing 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 126, Offset : 0911. external length : 000010
+	127.	PLNUM : Quota or Ceiling Number for Import Processing 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 127, Offset : 0921. external length : 000010
+	128.	PREFA : Preference: Preference type for foreign trade 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 128, Offset : 0931. external length : 000010
+	129.	EILGR : Country Groups for Import Processing in Foreign Trade 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 129, Offset : 0941. external length : 000010
+	130.	MATNR_LONG : Material No. 
+internal data type : CHAR Internal length : 000040 characters Position in segment : 130, Offset : 0951. external length : 000040
+	131.	UPMAT_LONG : Pricing reference material of main item 
+internal data type : CHAR Internal length : 000040 characters Position in segment : 131, Offset : 0991. external length : 000040
+	•	E1KONH : Data from condition header 
+Segment definition E2KONH Released since Release 30B , Segment length: 0099 
+	1.	KNUMH : Number of the Condition Record 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 001, Offset : 0063. external length : 000010
+	2.	DATAB : Valid-From Date 
+internal data type : DATS Internal length : 000008 characters Position in segment : 002, Offset : 0073. external length : 000008
+	3.	DATBI : Valid To Date 
+internal data type : DATS Internal length : 000008 characters Position in segment : 003, Offset : 0081. external length : 000008
+	4.	KOSRT : Search term for conditions 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 004, Offset : 0089. external length : 000010
+	5.	KZUST : Responsibility in SD for condition/material 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 005, Offset : 0099. external length : 000003
+	6.	KNUMA_PI : Sales Promotion 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 006, Offset : 0102. external length : 000010
+	7.	KNUMA_AG : Sales deal 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 007, Offset : 0112. external length : 000010
+	8.	KNUMA_SQ : Sales quote 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 008, Offset : 0122. external length : 000010
+	9.	KNUMA_SD : Standard agreement 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 009, Offset : 0132. external length : 000010
+	10.	AKTNR : Promotion 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 010, Offset : 0142. external length : 000010
+	11.	KNUMA_BO : Agreement (subsequent settlement) 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 011, Offset : 0152. external length : 000010
+	•	E1KONP : Conditions Items 
+Segment definition E2KONP003 Released since Release 751 , Segment length: 0552 
+	1.	KSCHL : Condition type 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 001, Offset : 0063. external length : 000004
+	2.	KNUMT : Number of texts 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 002, Offset : 0067. external length : 000010
+	3.	STFKZ : Scale Type 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 003, Offset : 0077. external length : 000001
+	4.	KZBZG : Scale Base Type 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 004, Offset : 0078. external length : 000001
+	5.	KSTBM : Condition Scale Quantity 
+internal data type : QUAN Internal length : 000015 characters 000003 decimal places, without sign Position in segment : 005, Offset : 0079. external length : 000019
+	6.	KONMS : Condition Scale Unit of Measure 
+internal data type : UNIT Internal length : 000003 characters Position in segment : 006, Offset : 0098. external length : 000003
+	7.	KSTBW : Scale Value 
+internal data type : CURR Internal length : 000015 characters 000002 decimal places, without sign Position in segment : 007, Offset : 0101. external length : 000020
+	8.	KONWS : Scale Currency 
+internal data type : CUKY Internal length : 000005 characters Position in segment : 008, Offset : 0121. external length : 000005
+	9.	KRECH : Calculation Type for Condition 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 009, Offset : 0126. external length : 000001
+	10.	KBETR : Condition Amount or Percentage 
+internal data type : CURR Internal length : 000011 characters 000002 decimal places, with sign Position in segment : 010, Offset : 0127. external length : 000016
+	11.	KONWA : Condition Unit (Currency or Percentage) 
+internal data type : CUKY Internal length : 000005 characters Position in segment : 011, Offset : 0143. external length : 000005
+	12.	KPEIN : Condition pricing unit 
+internal data type : NUMC Internal length : 000005 characters Position in segment : 012, Offset : 0148. external length : 000005
+	13.	KMEIN : Condition Unit 
+internal data type : UNIT Internal length : 000003 characters Position in segment : 013, Offset : 0153. external length : 000003
+	14.	PRSCH : Price levels 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 014, Offset : 0156. external length : 000004
+	15.	KUMZA : Numerator for converting condition units to base units 
+internal data type : DEC  Internal length : 000005 characters No decimal places, without sign Position in segment : 015, Offset : 0160. external length : 000006
+	16.	KUMNE : Denominator for converting condition units to base units 
+internal data type : DEC  Internal length : 000005 characters No decimal places, without sign Position in segment : 016, Offset : 0166. external length : 000006
+	17.	MEINS : Base Unit of Measure 
+internal data type : UNIT Internal length : 000003 characters Position in segment : 017, Offset : 0172. external length : 000003
+	18.	MXWRT : Lower limit of the condition rate/amount 
+internal data type : CURR Internal length : 000011 characters 000002 decimal places, with sign Position in segment : 018, Offset : 0175. external length : 000016
+	19.	GKWRT : Upper limit for the condition rate 
+internal data type : CURR Internal length : 000011 characters 000002 decimal places, with sign Position in segment : 019, Offset : 0191. external length : 000016
+	20.	PKWRT : Planned condition value 
+internal data type : CURR Internal length : 000015 characters 000002 decimal places, with sign Position in segment : 020, Offset : 0207. external length : 000021
+	21.	FKWRT : Cumulative guaranteed discount (not used) 
+internal data type : CURR Internal length : 000015 characters 000002 decimal places, with sign Position in segment : 021, Offset : 0228. external length : 000021
+	22.	RSWRT : Accumulated accruals values (not used) 
+internal data type : CURR Internal length : 000015 characters 000002 decimal places, with sign Position in segment : 022, Offset : 0249. external length : 000021
+	23.	KWAEH : Condition Currency (for Cumulation Fields) 
+internal data type : CUKY Internal length : 000005 characters Position in segment : 023, Offset : 0270. external length : 000005
+	24.	UKBAS : Planned condition basis 
+internal data type : CURR Internal length : 000015 characters 000002 decimal places, with sign Position in segment : 024, Offset : 0275. external length : 000021
+	25.	KZNEP : Condition exclusion indicator 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 025, Offset : 0296. external length : 000001
+	26.	KUNNR : Customer Number 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 026, Offset : 0297. external length : 000010
+	27.	LIFNR : Account Number of Vendor or Creditor 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 027, Offset : 0307. external length : 000010
+	28.	MWSK1 : Tax on sales/purchases code 
+internal data type : CHAR Internal length : 000002 characters Position in segment : 028, Offset : 0317. external length : 000002
+	29.	LOEVM_KO : Deletion Indicator for Condition Record 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 029, Offset : 0319. external length : 000001
+	30.	ZAEHK_IND : Condition item index (short length) 
+internal data type : NUMC Internal length : 000002 characters Position in segment : 030, Offset : 0320. external length : 000002
+	31.	BOMAT : Material for rebate settlement 
+internal data type : CHAR Internal length : 000018 characters Position in segment : 031, Offset : 0322. external length : 000018
+	32.	KBRUE : Accrual Amount 
+internal data type : CURR Internal length : 000011 characters 000002 decimal places, with sign Position in segment : 032, Offset : 0340. external length : 000016
+	33.	KSPAE : Rebate was set up retroactively 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 033, Offset : 0356. external length : 000001
+	34.	BOSTA : Status of the agreement 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 034, Offset : 0357. external length : 000001
+	35.	KNUMA_PI : Sales Promotion 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 035, Offset : 0358. external length : 000010
+	36.	KNUMA_AG : Sales deal 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 036, Offset : 0368. external length : 000010
+	37.	KNUMA_SQ : Sales quote 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 037, Offset : 0378. external length : 000010
+	38.	VALTG : Additional Value Days 
+internal data type : NUMC Internal length : 000002 characters Position in segment : 038, Offset : 0388. external length : 000002
+	39.	VALDT : Fixed Value Date 
+internal data type : DATS Internal length : 000008 characters Position in segment : 039, Offset : 0390. external length : 000008
+	40.	ZTERM : Terms of payment key 
+internal data type : CHAR Internal length : 000004 characters Position in segment : 040, Offset : 0398. external length : 000004
+	41.	ANZAUF : Maximum number of sales orders per condition record 
+internal data type : NUMC Internal length : 000002 characters Position in segment : 041, Offset : 0402. external length : 000002
+	42.	MIKBAS : Minimum condition base value 
+internal data type : QUAN Internal length : 000015 characters 000003 decimal places, without sign Position in segment : 042, Offset : 0404. external length : 000019
+	43.	MXKBAS : Maximum condition base value 
+internal data type : QUAN Internal length : 000015 characters 000003 decimal places, without sign Position in segment : 043, Offset : 0423. external length : 000019
+	44.	KOMXWRT : Maximum condition value 
+internal data type : CURR Internal length : 000013 characters 000002 decimal places, with sign Position in segment : 044, Offset : 0442. external length : 000018
+	45.	KLF_STG : Number of incremental scale 
+internal data type : NUMC Internal length : 000004 characters Position in segment : 045, Offset : 0460. external length : 000004
+	46.	KLF_KAL : Scale number for pricing 
+internal data type : NUMC Internal length : 000004 characters Position in segment : 046, Offset : 0464. external length : 000004
+	47.	VKKAL : Sales Price Calculation: Relevant to Pricing 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 047, Offset : 0468. external length : 000001
+	48.	AKTNR : Promotion 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 048, Offset : 0469. external length : 000010
+	49.	KNUMA_BO : Agreement (subsequent settlement) 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 049, Offset : 0479. external length : 000010
+	50.	MDFLG : Indicator: Matrix Maintenance 
+internal data type : CHAR Internal length : 000001 characters Position in segment : 050, Offset : 0489. external length : 000001
+	51.	BOMAT_EXTERNAL : Long Material Number for Field BOMAT 
+internal data type : CHAR Internal length : 000040 characters Position in segment : 051, Offset : 0490. external length : 000040
+	52.	BOMAT_VERSION : Version Number for field BOMAT 
+internal data type : CHAR Internal length : 000010 characters Position in segment : 052, Offset : 0530. external length : 000010
+	53.	BOMAT_GUID : External GUID for Field BOMAT 
+internal data type : CHAR Internal length : 000032 characters Position in segment : 053, Offset : 0540. external length : 000032
+	54.	BOMAT_LONG : Material for rebate settlement 
+internal data type : CHAR Internal length : 000040 characters Position in segment : 054, Offset : 0572. external length : 000040
+	55.	ZAEHK_IND_LONG : Condition item index
+internal data type : NUMC Internal length : 000003 characters Position in segment : 055, Offset : 0612. external length : 000003
+	•	E1KONM : Conditions Quantity Scale 
+Segment definition E2KONM Released since Release 30B , Segment length: 0035 
+	1.	KSTBM : Condition Scale Quantity 
+internal data type : QUAN Internal length : 000015 characters 000003 decimal places, without sign Position in segment : 001, Offset : 0063. external length : 000019
+	2.	KBETR : Condition Amount or Percentage 
+internal data type : CURR Internal length : 000011 characters 000002 decimal places, with sign Position in segment : 002, Offset : 0082. external length : 000016
+	•	E1KONW : Conditions Value Scale 
+Segment definition E2KONW Released since Release 30B , Segment length: 0036 
+	1.	KSTBW : Condition Scale Quantity 
+internal data type : QUAN Internal length : 000015 characters 000003 decimal places, without sign Position in segment : 001, Offset : 0063. external length : 000020
+	2.	KBETR : Condition Amount or Percentage 
+internal data type : CURR Internal length : 000011 characters 000002 decimal places, with sign Position in segment : 002, Offset : 0083. external length : 000016
+
+Info... 
+Automatically created HTML doc. created on 12/21/2022 at 12:12:09  Client 100  System S4M  Release 755  Lang. E  Transaction WE60 
+Display current status  Version 3 of IDoc record types : IDoc record types for SAP Release 4.0 
+ 
