@@ -1,6 +1,6 @@
 
-Structure of basic type INVOIC01 
-Invoice/Billing document 
+Structure of basic type INVOIC02 
+Invoice/Billing document
 
 	•	E1EDK01 : IDoc: Document header general data 
 Status: Required , min. number : 1 , max. number : 1 
@@ -18,7 +18,7 @@ Structure
 Status: Optional , min. number : 1 , max. number : 99 
 Structure 
 	•	E1EDK04 : IDoc: Document header taxes 
-Status: Optional , min. number : 1 , max. number : 25 
+Status: Optional , min. number : 1 , max. number : 999 
 Structure 
 	•	E1EDK17 : IDoc: Document Header Terms of Delivery 
 Status: Optional , min. number : 1 , max. number : 10 
@@ -73,6 +73,9 @@ Status: Optional , min. number : 1 , max. number : 9
 Structure 
 	◦	E1EDP08 : IDoc: Package data individual 
 Status: Optional , min. number : 1 , max. number : 999999 
+Structure 
+	◦	E1EDP30 : IDOC: Document Item Account Assignment Intercompany Billing 
+Status: Optional , min. number : 1 , max. number : 99 
 Structure 
 	◦	E1EDPT1 : IDoc: Document Item Text Identification 
 Status: Optional , min. number : 1 , max. number : 99 
@@ -1008,6 +1011,12 @@ internal data type : CHAR Internal length : 000017 characters Position in se
 internal data type : CHAR Internal length : 000017 characters Position in segment : 026, Offset : 0498. external length : 000017
 	27.	PKNRS : Shipment number key for VDA/Odette 
 internal data type : CHAR Internal length : 000001 characters Position in segment : 027, Offset : 0515. external length : 000001
+	•	E1EDP30 : IDOC: Document Item Account Assignment Intercompany Billing 
+Segment definition E2EDP30000 Released since Release 40A , Segment length: 0033 
+	1.	QUALF : IDOC qualifier reference document 
+internal data type : CHAR Internal length : 000003 characters Position in segment : 001, Offset : 0063. external length : 000003
+	2.	IVKON : 30 Characters 
+internal data type : CHAR Internal length : 000030 characters Position in segment : 002, Offset : 0066. external length : 000030
 	•	E1EDPT1 : IDoc: Document Item Text Identification 
 Segment definition E2EDPT1001 Released since Release 40A , Segment length: 0009 
 	1.	TDID : Text ID 
@@ -1034,6 +1043,6 @@ internal data type : CHAR Internal length : 000003 characters Position in se
 internal data type : CHAR Internal length : 000003 characters Position in segment : 004, Offset : 0087. external length : 000003
 
 Info... 
-Automatically created HTML doc. created on 12/20/2022 at 16:57:21  Client 100  System S4M  Release 755  Lang. E  Transaction WE60 
+Automatically created HTML doc. created on 12/21/2022 at 16:56:33  Client 100  System S4M  Release 755  Lang. E  Transaction WE60 
 Display current status  Version 3 of IDoc record types : IDoc record types for SAP Release 4.0 
  

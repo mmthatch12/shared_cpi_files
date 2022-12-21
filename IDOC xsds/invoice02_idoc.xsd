@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
- <xs:element name="INVOIC01">
+ <xs:element name="INVOIC02">
   <xs:annotation>
    <xs:documentation>Invoice/Billing document</xs:documentation>
   </xs:annotation>
@@ -15,7 +15,7 @@
         </xs:annotation>
         <xs:complexType>
          <xs:sequence>
-          <xs:element name="TABNAM" type="xs:string">
+          <xs:element name="TABNAM" type="xs:string" fixed="EDI_DC40">
            <xs:annotation>
             <xs:documentation>Name of Table Structure</xs:documentation>
            </xs:annotation>
@@ -109,12 +109,12 @@
             </xs:restriction>
            </xs:simpleType>
           </xs:element>
-          <xs:element name="IDOCTYP" type="xs:string">
+          <xs:element name="IDOCTYP" type="xs:string" fixed="INVOIC02">
            <xs:annotation>
             <xs:documentation>Name of basic type</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="CIMTYP" minOccurs="0" type="xs:string">
+          <xs:element name="CIMTYP" minOccurs="0" type="xs:string" fixed="">
            <xs:annotation>
             <xs:documentation>Extension (defined by customer)</xs:documentation>
            </xs:annotation>
@@ -370,7 +370,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -726,7 +726,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -1182,7 +1182,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -1248,7 +1248,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -1294,7 +1294,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -1430,7 +1430,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -1496,7 +1496,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -1542,7 +1542,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -1598,7 +1598,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -1684,7 +1684,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -1770,7 +1770,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -2496,7 +2496,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -2588,7 +2588,7 @@
               </xs:simpleType>
              </xs:element>
             </xs:sequence>
-            <xs:attribute name="SEGMENT" use="required">
+            <xs:attribute name="SEGMENT" use="optional">
              <xs:simpleType>
               <xs:restriction base="xs:string">
                <xs:enumeration value="1"/>
@@ -2598,7 +2598,7 @@
            </xs:complexType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -2634,7 +2634,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -3356,7 +3356,7 @@
               </xs:simpleType>
              </xs:element>
             </xs:sequence>
-            <xs:attribute name="SEGMENT" use="required">
+            <xs:attribute name="SEGMENT" use="optional">
              <xs:simpleType>
               <xs:restriction base="xs:string">
                <xs:enumeration value="1"/>
@@ -3402,7 +3402,7 @@
               </xs:simpleType>
              </xs:element>
             </xs:sequence>
-            <xs:attribute name="SEGMENT" use="required">
+            <xs:attribute name="SEGMENT" use="optional">
              <xs:simpleType>
               <xs:restriction base="xs:string">
                <xs:enumeration value="1"/>
@@ -3508,7 +3508,7 @@
               </xs:simpleType>
              </xs:element>
             </xs:sequence>
-            <xs:attribute name="SEGMENT" use="required">
+            <xs:attribute name="SEGMENT" use="optional">
              <xs:simpleType>
               <xs:restriction base="xs:string">
                <xs:enumeration value="1"/>
@@ -3544,7 +3544,7 @@
               </xs:simpleType>
              </xs:element>
             </xs:sequence>
-            <xs:attribute name="SEGMENT" use="required">
+            <xs:attribute name="SEGMENT" use="optional">
              <xs:simpleType>
               <xs:restriction base="xs:string">
                <xs:enumeration value="1"/>
@@ -4000,7 +4000,7 @@
               </xs:simpleType>
              </xs:element>
             </xs:sequence>
-            <xs:attribute name="SEGMENT" use="required">
+            <xs:attribute name="SEGMENT" use="optional">
              <xs:simpleType>
               <xs:restriction base="xs:string">
                <xs:enumeration value="1"/>
@@ -4176,7 +4176,7 @@
               </xs:simpleType>
              </xs:element>
             </xs:sequence>
-            <xs:attribute name="SEGMENT" use="required">
+            <xs:attribute name="SEGMENT" use="optional">
              <xs:simpleType>
               <xs:restriction base="xs:string">
                <xs:enumeration value="1"/>
@@ -4252,7 +4252,7 @@
               </xs:simpleType>
              </xs:element>
             </xs:sequence>
-            <xs:attribute name="SEGMENT" use="required">
+            <xs:attribute name="SEGMENT" use="optional">
              <xs:simpleType>
               <xs:restriction base="xs:string">
                <xs:enumeration value="1"/>
@@ -4828,7 +4828,7 @@
               </xs:simpleType>
              </xs:element>
             </xs:sequence>
-            <xs:attribute name="SEGMENT" use="required">
+            <xs:attribute name="SEGMENT" use="optional">
              <xs:simpleType>
               <xs:restriction base="xs:string">
                <xs:enumeration value="1"/>
@@ -5114,7 +5114,43 @@
               </xs:simpleType>
              </xs:element>
             </xs:sequence>
-            <xs:attribute name="SEGMENT" use="required">
+            <xs:attribute name="SEGMENT" use="optional">
+             <xs:simpleType>
+              <xs:restriction base="xs:string">
+               <xs:enumeration value="1"/>
+              </xs:restriction>
+             </xs:simpleType>
+            </xs:attribute>
+           </xs:complexType>
+          </xs:element>
+          <xs:element name="E1EDP30" minOccurs="0" maxOccurs="unbounded">
+           <xs:annotation>
+            <xs:documentation>IDOC: Document Item Account Assignment Intercompany Billing</xs:documentation>
+           </xs:annotation>
+           <xs:complexType>
+            <xs:sequence>
+             <xs:element name="QUALF" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>IDOC qualifier reference document</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="3"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+             <xs:element name="IVKON" minOccurs="0">
+              <xs:annotation>
+               <xs:documentation>30 Characters</xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+               <xs:restriction base="xs:string">
+                <xs:maxLength value="30"/>
+               </xs:restriction>
+              </xs:simpleType>
+             </xs:element>
+            </xs:sequence>
+            <xs:attribute name="SEGMENT" use="optional">
              <xs:simpleType>
               <xs:restriction base="xs:string">
                <xs:enumeration value="1"/>
@@ -5186,7 +5222,7 @@
                  </xs:simpleType>
                 </xs:element>
                </xs:sequence>
-               <xs:attribute name="SEGMENT" use="required">
+               <xs:attribute name="SEGMENT" use="optional">
                 <xs:simpleType>
                  <xs:restriction base="xs:string">
                   <xs:enumeration value="1"/>
@@ -5196,7 +5232,7 @@
               </xs:complexType>
              </xs:element>
             </xs:sequence>
-            <xs:attribute name="SEGMENT" use="required">
+            <xs:attribute name="SEGMENT" use="optional">
              <xs:simpleType>
               <xs:restriction base="xs:string">
                <xs:enumeration value="1"/>
@@ -5206,7 +5242,7 @@
            </xs:complexType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -5262,7 +5298,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -5298,7 +5334,7 @@
            </xs:simpleType>
           </xs:element>
          </xs:sequence>
-         <xs:attribute name="SEGMENT" use="required">
+         <xs:attribute name="SEGMENT" use="optional">
           <xs:simpleType>
            <xs:restriction base="xs:string">
             <xs:enumeration value="1"/>
@@ -5308,7 +5344,7 @@
         </xs:complexType>
        </xs:element>
       </xs:sequence>
-      <xs:attribute name="BEGIN" use="required">
+      <xs:attribute name="BEGIN" use="optional">
        <xs:simpleType>
         <xs:restriction base="xs:string">
          <xs:enumeration value="1"/>
