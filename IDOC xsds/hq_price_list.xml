@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+	<oprice_list_id>241</oprice_list_id>
+	<ochannel_id>132</ochannel_id>
+	<oprice_list_key>TAR-IS</oprice_list_key>
+	<oprice_list_description>Target In Store</oprice_list_description>
+	<oprice_list_modifier_type>0</oprice_list_modifier_type>
+	<oprice_list_modifier>0.00</oprice_list_modifier>
+	<oprice_list_is_active>1</oprice_list_is_active>
+	<oprice_list_gp_id/>
+	<oprice_list_is_base>0</oprice_list_is_base>
+	<oprice_list_activate_date/>
+	<oprice_list_deactivate_date/>
+	<OCU>0</OCU>
+	<OCDT>2019-04-01 10:36:02</OCDT>
+	<OMU>0</OMU>
+	<OMDT>2019-04-01 10:36:04</OMDT>
+	<prices>
+		<oprice_id>1246769</oprice_id>
+		<oprice_list_id>241</oprice_list_id>
+		<oproduct_id>47671</oproduct_id>
+		<oproduct_parent_id/>
+		<oprice_parent_id/>
+		<oprice>141.99000</oprice>
+		<oprice_type>price-list</oprice_type>
+		<oprice_currency>USD</oprice_currency>
+		<oprice_label/>
+		<oprice_channels/>
+		<oprice_status>active</oprice_status>
+		<oprice_effective_datetime>2021-01-06 09:36:29</oprice_effective_datetime>
+		<oprice_last_price>0</oprice_last_price>
+		<oprice_percent_change>0</oprice_percent_change>
+		<oprice_bundle_percent/>
+		<OCDT>-0001-11-30 00:00:00</OCDT>
+		<OCU>0</OCU>
+		<OMDT/>
+		<OMU/>
+	</prices>
+	<prices>
+		<oprice_id>1246770</oprice_id>
+		<oprice_list_id>241</oprice_list_id>
+		<oproduct_id>47672</oproduct_id>
+		<oproduct_parent_id/>
+		<oprice_parent_id/>
+		<oprice>213.70000</oprice>
+		<oprice_type>price-list</oprice_type>
+		<oprice_currency>USD</oprice_currency>
+		<oprice_label/>
+		<oprice_channels/>
+		<oprice_status>active</oprice_status>
+		<oprice_effective_datetime>2021-01-06 09:36:29</oprice_effective_datetime>
+		<oprice_last_price>0</oprice_last_price>
+		<oprice_percent_change>0</oprice_percent_change>
+		<oprice_bundle_percent/>
+		<OCDT>-0001-11-30 00:00:00</OCDT>
+		<OCU>0</OCU>
+		<OMDT/>
+		<OMU/>
+	</prices>
+	<prices>
+		<oprice_id>1246771</oprice_id>
+		<oprice_list_id>241</oprice_list_id>
+		<oproduct_id>47673</oproduct_id>
+		<oproduct_parent_id/>
+		<oprice_parent_id/>
+		<oprice>167.52000</oprice>
+		<oprice_type>price-list</oprice_type>
+		<oprice_currency>USD</oprice_currency>
+		<oprice_label/>
+		<oprice_channels/>
+		<oprice_status>active</oprice_status>
+		<oprice_effective_datetime>2021-01-06 09:36:29</oprice_effective_datetime>
+		<oprice_last_price>0</oprice_last_price>
+		<oprice_percent_change>0</oprice_percent_change>
+		<oprice_bundle_percent/>
+		<OCDT>-0001-11-30 00:00:00</OCDT>
+		<OCU>0</OCU>
+		<OMDT/>
+		<OMU/>
+	</prices>
+	<prices>
+		<oprice_id>1246772</oprice_id>
+		<oprice_list_id>241</oprice_list_id>
+		<oproduct_id>47674</oproduct_id>
+		<oproduct_parent_id/>
+		<oprice_parent_id/>
+		<oprice>106.22000</oprice>
+		<oprice_type>price-list</oprice_type>
+		<oprice_currency>USD</oprice_currency>
+		<oprice_label/>
+		<oprice_channels/>
+		<oprice_status>active</oprice_status>
+		<oprice_effective_datetime>2021-01-06 09:36:29</oprice_effective_datetime>
+		<oprice_last_price>0</oprice_last_price>
+		<oprice_percent_change>0</oprice_percent_change>
+		<oprice_bundle_percent/>
+		<OCDT>-0001-11-30 00:00:00</OCDT>
+		<OCU>0</OCU>
+		<OMDT/>
+		<OMU/>
+	</prices>
+	<prices>
+		<oprice_id>1246773</oprice_id>
+		<oprice_list_id>241</oprice_list_id>
+		<oproduct_id>47668</oproduct_id>
+		<oproduct_parent_id/>
+		<oprice_parent_id/>
+		<oprice>100.15000</oprice>
+		<oprice_type>price-list</oprice_type>
+		<oprice_currency>USD</oprice_currency>
+		<oprice_label/>
+		<oprice_channels/>
+		<oprice_status>active</oprice_status>
+		<oprice_effective_datetime>2021-01-06 09:36:29</oprice_effective_datetime>
+		<oprice_last_price>0</oprice_last_price>
+		<oprice_percent_change>0</oprice_percent_change>
+		<oprice_bundle_percent/>
+		<OCDT>-0001-11-30 00:00:00</OCDT>
+		<OCU>0</OCU>
+		<OMDT/>
+		<OMU/>
+	</prices>
+	<prices>
+		<oprice_id>1246774</oprice_id>
+		<oprice_list_id>241</oprice_list_id>
+		<oproduct_id>47669</oproduct_id>
+		<oproduct_parent_id/>
+		<oprice_parent_id/>
+		<oprice>116.59000</oprice>
+		<oprice_type>price-list</oprice_type>
+		<oprice_currency>USD</oprice_currency>
+		<oprice_label/>
+		<oprice_channels/>
+		<oprice_status>active</oprice_status>
+		<oprice_effective_datetime>2021-01-06 09:36:29</oprice_effective_datetime>
+		<oprice_last_price>0</oprice_last_price>
+		<oprice_percent_change>0</oprice_percent_change>
+		<oprice_bundle_percent/>
+		<OCDT>-0001-11-30 00:00:00</OCDT>
+		<OCU>0</OCU>
+		<OMDT/>
+		<OMU/>
+	</prices>
+	<prices>
+		<oprice_id>1246775</oprice_id>
+		<oprice_list_id>241</oprice_list_id>
+		<oproduct_id>47670</oproduct_id>
+		<oproduct_parent_id/>
+		<oprice_parent_id/>
+		<oprice>74.50000</oprice>
+		<oprice_type>price-list</oprice_type>
+		<oprice_currency>USD</oprice_currency>
+		<oprice_label/>
+		<oprice_channels/>
+		<oprice_status>active</oprice_status>
+		<oprice_effective_datetime>2021-01-06 09:36:29</oprice_effective_datetime>
+		<oprice_last_price>0</oprice_last_price>
+		<oprice_percent_change>0</oprice_percent_change>
+		<oprice_bundle_percent/>
+		<OCDT>-0001-11-30 00:00:00</OCDT>
+		<OCU>0</OCU>
+		<OMDT/>
+		<OMU/>
+	</prices>
+	<prices>
+		<oprice_id>1948854</oprice_id>
+		<oprice_list_id>241</oprice_list_id>
+		<oproduct_id>47668</oproduct_id>
+		<oproduct_parent_id/>
+		<oprice_parent_id/>
+		<oprice>121.90000</oprice>
+		<oprice_type>price-list</oprice_type>
+		<oprice_currency>USD</oprice_currency>
+		<oprice_label/>
+		<oprice_channels/>
+		<oprice_status>active</oprice_status>
+		<oprice_effective_datetime>2021-12-20 16:09:39</oprice_effective_datetime>
+		<oprice_last_price>0</oprice_last_price>
+		<oprice_percent_change>0</oprice_percent_change>
+		<oprice_bundle_percent/>
+		<OCDT>-0001-11-30 00:00:00</OCDT>
+		<OCU>0</OCU>
+		<OMDT/>
+		<OMU/>
+	</prices>
+	<prices>
+		<oprice_id>1948855</oprice_id>
+		<oprice_list_id>241</oprice_list_id>
+		<oproduct_id>47670</oproduct_id>
+		<oproduct_parent_id/>
+		<oprice_parent_id/>
+		<oprice>91.57000</oprice>
+		<oprice_type>price-list</oprice_type>
+		<oprice_currency>USD</oprice_currency>
+		<oprice_label/>
+		<oprice_channels/>
+		<oprice_status>active</oprice_status>
+		<oprice_effective_datetime>2021-12-20 16:09:39</oprice_effective_datetime>
+		<oprice_last_price>0</oprice_last_price>
+		<oprice_percent_change>0</oprice_percent_change>
+		<oprice_bundle_percent/>
+		<OCDT>-0001-11-30 00:00:00</OCDT>
+		<OCU>0</OCU>
+		<OMDT/>
+		<OMU/>
+	</prices>
+	<prices>
+		<oprice_id>1948856</oprice_id>
+		<oprice_list_id>241</oprice_list_id>
+		<oproduct_id>47673</oproduct_id>
+		<oproduct_parent_id/>
+		<oprice_parent_id/>
+		<oprice>184.50000</oprice>
+		<oprice_type>price-list</oprice_type>
+		<oprice_currency>USD</oprice_currency>
+		<oprice_label/>
+		<oprice_channels/>
+		<oprice_status>active</oprice_status>
+		<oprice_effective_datetime>2021-12-20 16:09:39</oprice_effective_datetime>
+		<oprice_last_price>0</oprice_last_price>
+		<oprice_percent_change>0</oprice_percent_change>
+		<oprice_bundle_percent/>
+		<OCDT>-0001-11-30 00:00:00</OCDT>
+		<OCU>0</OCU>
+		<OMDT/>
+		<OMU/>
+	</prices>
+	<prices>
+		<oprice_id>1948857</oprice_id>
+		<oprice_list_id>241</oprice_list_id>
+		<oproduct_id>47671</oproduct_id>
+		<oproduct_parent_id/>
+		<oprice_parent_id/>
+		<oprice>156.35000</oprice>
+		<oprice_type>price-list</oprice_type>
+		<oprice_currency>USD</oprice_currency>
+		<oprice_label/>
+		<oprice_channels/>
+		<oprice_status>active</oprice_status>
+		<oprice_effective_datetime>2021-12-20 16:09:39</oprice_effective_datetime>
+		<oprice_last_price>0</oprice_last_price>
+		<oprice_percent_change>0</oprice_percent_change>
+		<oprice_bundle_percent/>
+		<OCDT>-0001-11-30 00:00:00</OCDT>
+		<OCU>0</OCU>
+		<OMDT/>
+		<OMU/>
+	</prices>
+	<prices>
+		<oprice_id>1948858</oprice_id>
+		<oprice_list_id>241</oprice_list_id>
+		<oproduct_id>47674</oproduct_id>
+		<oproduct_parent_id/>
+		<oprice_parent_id/>
+		<oprice>117.00000</oprice>
+		<oprice_type>price-list</oprice_type>
+		<oprice_currency>USD</oprice_currency>
+		<oprice_label/>
+		<oprice_channels/>
+		<oprice_status>active</oprice_status>
+		<oprice_effective_datetime>2021-12-20 16:09:39</oprice_effective_datetime>
+		<oprice_last_price>0</oprice_last_price>
+		<oprice_percent_change>0</oprice_percent_change>
+		<oprice_bundle_percent/>
+		<OCDT>-0001-11-30 00:00:00</OCDT>
+		<OCU>0</OCU>
+		<OMDT/>
+		<OMU/>
+	</prices>
+</root>

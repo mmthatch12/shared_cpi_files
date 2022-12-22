@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="oprice_list_id" type="xs:string" />
+        <xs:element minOccurs="0" name="ochannel_id" type="xs:string" />
+        <xs:element minOccurs="0" name="oprice_list_key" type="xs:string" />
+        <xs:element minOccurs="0" name="oprice_list_description" type="xs:string" />
+        <xs:element minOccurs="0" name="oprice_list_modifier_type" type="xs:string" />
+        <xs:element minOccurs="0" name="oprice_list_modifier" type="xs:string" />
+        <xs:element minOccurs="0" name="oprice_list_is_active" type="xs:string" />
+        <xs:element minOccurs="0" name="oprice_list_gp_id" />
+        <xs:element minOccurs="0" name="oprice_list_is_base" type="xs:string" />
+        <xs:element minOccurs="0" name="oprice_list_activate_date" />
+        <xs:element minOccurs="0" name="oprice_list_deactivate_date" />
+        <xs:element minOccurs="0" name="OCU" type="xs:string" />
+        <xs:element minOccurs="0" name="OCDT" type="xs:string" />
+        <xs:element minOccurs="0" name="OMU" type="xs:string" />
+        <xs:element minOccurs="0" name="OMDT" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="prices">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="oprice_id" type="xs:string" />
+              <xs:element minOccurs="0" name="oprice_list_id" type="xs:string" />
+              <xs:element minOccurs="0" name="oproduct_id" type="xs:string" />
+              <xs:element minOccurs="0" name="oproduct_parent_id" />
+              <xs:element minOccurs="0" name="oprice_parent_id" />
+              <xs:element minOccurs="0" name="oprice" type="xs:string" />
+              <xs:element minOccurs="0" name="oprice_type" type="xs:string" />
+              <xs:element minOccurs="0" name="oprice_currency" type="xs:string" />
+              <xs:element minOccurs="0" name="oprice_label" />
+              <xs:element minOccurs="0" name="oprice_channels" />
+              <xs:element minOccurs="0" name="oprice_status" type="xs:string" />
+              <xs:element minOccurs="0" name="oprice_effective_datetime" type="xs:string" />
+              <xs:element minOccurs="0" name="oprice_last_price" type="xs:string" />
+              <xs:element minOccurs="0" name="oprice_percent_change" type="xs:string" />
+              <xs:element minOccurs="0" name="oprice_bundle_percent" />
+              <xs:element minOccurs="0" name="OCDT" type="xs:string" />
+              <xs:element minOccurs="0" name="OCU" type="xs:string" />
+              <xs:element minOccurs="0" name="OMDT" />
+              <xs:element minOccurs="0" name="OMU" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
