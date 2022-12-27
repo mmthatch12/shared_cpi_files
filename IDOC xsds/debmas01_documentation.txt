@@ -1,0 +1,931 @@
+
+Structure of basic type DEBMAS01 
+Customer master 
+
+	•	E1KNA1M : Master customer master basic data (KNA1) 
+Status: Required , min. number : 1 , max. number : 1 
+Structure 
+	◦	E1KNVVM : Master customer master sales data (KNVV) 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+	▪	E1KNVPM : Master customer master partner roles (KNVP) 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+	▪	E1KNVDM : Master customer master document request (KNVD) 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+	▪	E1KNVIM : Master customer master tax indicators (KNVI) 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+	▪	E1KNVLM : Master customer master licenses (KNVL) 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+	◦	E1KNB1M : Master Customer Master Company Code (KNB1) 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+	▪	E1KNB5M : Master customer master reminder data (KNB5) 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+	◦	E1KNBKM : Master customer master bank details and bank master 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+	◦	E1KNVAM : Master customer master unloading point (KNVA) 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+	◦	E1KNVKM : Master customer master contact person (KNVK) 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+	◦	E1KNKAM : Master customer master credit management central data (KNKA) 
+Status: Optional , min. number : 1 , max. number : 1 
+Structure 
+	◦	E1KNKKM : Master customer master credit mgmt control area data (KNKK) 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+
+Segment structures 
+
+	•	E1KNA1M : Master customer master basic data (KNA1) 
+Segment definition E2KNA1M005 Released since Release 46C , Segment length: 0940 
+	1.	MSGFN : Function 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 001, Offset : 0063. external length : 000003
+	2.	KUNNR : Customer Number 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 002, Offset : 0066. external length : 000010
+	3.	ANRED : Title 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 003, Offset : 0076. external length : 000015
+	4.	AUFSD : Central order block for customer 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 004, Offset : 0091. external length : 000002
+	5.	BAHNE : Express train station 
+internal data type : CHARInternal length : 000025 charactersPosition in segment : 005, Offset : 0093. external length : 000025
+	6.	BAHNS : Train station 
+internal data type : CHARInternal length : 000025 charactersPosition in segment : 006, Offset : 0118. external length : 000025
+	7.	BBBNR : International location number (part 1) 
+internal data type : NUMCInternal length : 000007 charactersPosition in segment : 007, Offset : 0143. external length : 000007
+	8.	BBSNR : International location number (Part 2) 
+internal data type : NUMCInternal length : 000005 charactersPosition in segment : 008, Offset : 0150. external length : 000005
+	9.	BEGRU : Authorization Group 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 009, Offset : 0155. external length : 000004
+	10.	BRSCH : Industry key 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 010, Offset : 0159. external length : 000004
+	11.	BUBKZ : Check digit for the international location number 
+internal data type : NUMCInternal length : 000001 charactersPosition in segment : 011, Offset : 0163. external length : 000001
+	12.	DATLT : Data communication line no. 
+internal data type : CHARInternal length : 000014 charactersPosition in segment : 012, Offset : 0164. external length : 000014
+	13.	FAKSD : Central billing block for customer 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 013, Offset : 0178. external length : 000002
+	14.	FISKN : Account number of the master record with the fiscal address 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 014, Offset : 0180. external length : 000010
+	15.	KNRZA : Account number of an alternative payer 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 015, Offset : 0190. external length : 000010
+	16.	KONZS : Group key 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 016, Offset : 0200. external length : 000010
+	17.	KTOKD : Customer Account Group 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 017, Offset : 0210. external length : 000004
+	18.	KUKLA : Customer Classification 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 018, Offset : 0214. external length : 000002
+	19.	LAND1 : Country Key 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 019, Offset : 0216. external length : 000003
+	20.	LIFNR : Account Number of Vendor or Creditor 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 020, Offset : 0219. external length : 000010
+	21.	LIFSD : Central delivery block for the customer 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 021, Offset : 0229. external length : 000002
+	22.	LOCCO : City Coordinates 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 022, Offset : 0231. external length : 000010
+	23.	LOEVM : Central Deletion Flag for Master Record 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 023, Offset : 0241. external length : 000001
+	24.	NAME1 : Name 1 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 024, Offset : 0242. external length : 000035
+	25.	NAME2 : Name 2 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 025, Offset : 0277. external length : 000035
+	26.	NAME3 : Name 3 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 026, Offset : 0312. external length : 000035
+	27.	NAME4 : Name 4 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 027, Offset : 0347. external length : 000035
+	28.	NIELS : Nielsen ID 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 028, Offset : 0382. external length : 000002
+	29.	ORT01 : City 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 029, Offset : 0384. external length : 000035
+	30.	ORT02 : District 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 030, Offset : 0419. external length : 000035
+	31.	PFACH : PO Box 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 031, Offset : 0454. external length : 000010
+	32.	PSTL2 : P.O. Box Postal Code 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 032, Offset : 0464. external length : 000010
+	33.	PSTLZ : Postal Code 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 033, Offset : 0474. external length : 000010
+	34.	REGIO : Region (State, Province, County) 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 034, Offset : 0484. external length : 000003
+	35.	COUNC : County Code 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 035, Offset : 0487. external length : 000003
+	36.	CITYC : City Code 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 036, Offset : 0490. external length : 000004
+	37.	RPMKR : Regional market 
+internal data type : CHARInternal length : 000005 charactersPosition in segment : 037, Offset : 0494. external length : 000005
+	38.	SORTL : Sort field 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 038, Offset : 0499. external length : 000010
+	39.	SPERR : Central posting block 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 039, Offset : 0509. external length : 000001
+	40.	SPRAS : Language Key 
+internal data type : LANGInternal length : 000001 charactersPosition in segment : 040, Offset : 0510. external length : 000001
+	41.	STCD1 : Tax Number 1 
+internal data type : CHARInternal length : 000016 charactersPosition in segment : 041, Offset : 0511. external length : 000016
+	42.	STCD2 : Tax Number 2 
+internal data type : CHARInternal length : 000011 charactersPosition in segment : 042, Offset : 0527. external length : 000011
+	43.	STKZA : Indicator: Business Partner Subject to Equalization Tax? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 043, Offset : 0538. external length : 000001
+	44.	STKZU : Liable for VAT 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 044, Offset : 0539. external length : 000001
+	45.	STRAS : Street and House Number 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 045, Offset : 0540. external length : 000035
+	46.	TELBX : Telebox number 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 046, Offset : 0575. external length : 000015
+	47.	TELF1 : First telephone number 
+internal data type : CHARInternal length : 000016 charactersPosition in segment : 047, Offset : 0590. external length : 000016
+	48.	TELF2 : Second telephone number 
+internal data type : CHARInternal length : 000016 charactersPosition in segment : 048, Offset : 0606. external length : 000016
+	49.	TELFX : Fax Number 
+internal data type : CHARInternal length : 000031 charactersPosition in segment : 049, Offset : 0622. external length : 000031
+	50.	TELTX : Teletex number 
+internal data type : CHARInternal length : 000030 charactersPosition in segment : 050, Offset : 0653. external length : 000030
+	51.	TELX1 : Telex number 
+internal data type : CHARInternal length : 000030 charactersPosition in segment : 051, Offset : 0683. external length : 000030
+	52.	LZONE : Transportation zone to or from which the goods are delivered 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 052, Offset : 0713. external length : 000010
+	53.	XZEMP : Indicator: Alternative Payee in Document Allowed? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 053, Offset : 0723. external length : 000001
+	54.	VBUND : Company ID of Trading Partner 
+internal data type : CHARInternal length : 000006 charactersPosition in segment : 054, Offset : 0724. external length : 000006
+	55.	STCEG : VAT Registration Number 
+internal data type : CHARInternal length : 000020 charactersPosition in segment : 055, Offset : 0730. external length : 000020
+	56.	GFORM : Legal status 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 056, Offset : 0750. external length : 000002
+	57.	BRAN1 : Industry code 1 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 057, Offset : 0752. external length : 000010
+	58.	BRAN2 : Industry code 2 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 058, Offset : 0762. external length : 000010
+	59.	BRAN3 : Industry code 3 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 059, Offset : 0772. external length : 000010
+	60.	BRAN4 : Industry code 4 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 060, Offset : 0782. external length : 000010
+	61.	BRAN5 : Industry code 5 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 061, Offset : 0792. external length : 000010
+	62.	UMJAH : Year For Which Sales are Given 
+internal data type : NUMCInternal length : 000004 charactersPosition in segment : 062, Offset : 0802. external length : 000004
+	63.	UWAER : Currency of sales figure 
+internal data type : CUKYInternal length : 000005 charactersPosition in segment : 063, Offset : 0806. external length : 000005
+	64.	JMZAH : Yearly number of employees 
+internal data type : NUMCInternal length : 000006 charactersPosition in segment : 064, Offset : 0811. external length : 000006
+	65.	JMJAH : Year for which the number of employees is given 
+internal data type : NUMCInternal length : 000004 charactersPosition in segment : 065, Offset : 0817. external length : 000004
+	66.	KATR1 : Attribute 1 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 066, Offset : 0821. external length : 000002
+	67.	KATR2 : Attribute 2 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 067, Offset : 0823. external length : 000002
+	68.	KATR3 : Attribute 3 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 068, Offset : 0825. external length : 000002
+	69.	KATR4 : Attribute 4 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 069, Offset : 0827. external length : 000002
+	70.	KATR5 : Attribute 5 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 070, Offset : 0829. external length : 000002
+	71.	KATR6 : Attribute 6 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 071, Offset : 0831. external length : 000003
+	72.	KATR7 : Attribute 7 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 072, Offset : 0834. external length : 000003
+	73.	KATR8 : Attribute 8 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 073, Offset : 0837. external length : 000003
+	74.	KATR9 : Attribute 9 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 074, Offset : 0840. external length : 000003
+	75.	KATR10 : Attribute 10 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 075, Offset : 0843. external length : 000003
+	76.	STKZN : Natural Person 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 076, Offset : 0846. external length : 000001
+	77.	UMSA1 : Field of length 16 
+internal data type : CHARInternal length : 000016 charactersPosition in segment : 077, Offset : 0847. external length : 000016
+	78.	TXJCD : Tax Jurisdiction 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 078, Offset : 0863. external length : 000015
+	79.	PERIV : Fiscal Year Variant 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 079, Offset : 0878. external length : 000002
+	80.	KTOCD : Reference Account Group for One-Time Account (Customer) 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 080, Offset : 0880. external length : 000004
+	81.	PFORT : PO Box city 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 081, Offset : 0884. external length : 000035
+	82.	DTAMS : Report key for data medium exchange 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 082, Offset : 0919. external length : 000001
+	83.	DTAWS : Instruction key for data medium exchange 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 083, Offset : 0920. external length : 000002
+	84.	HZUOR : Hierarchy assignment (batch input) 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 084, Offset : 0922. external length : 000002
+	85.	CIVVE : ID for mainly non-military use 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 085, Offset : 0924. external length : 000001
+	86.	MILVE : ID for mainly military use 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 086, Offset : 0925. external length : 000001
+	87.	SPRAS_ISO : 2-Character SAP Language Code 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 087, Offset : 0926. external length : 000002
+	88.	FITYP : Tax type 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 088, Offset : 0928. external length : 000002
+	89.	STCDT : Tax Number Type 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 089, Offset : 0930. external length : 000002
+	90.	STCD3 : Tax Number 3 
+internal data type : CHARInternal length : 000018 charactersPosition in segment : 090, Offset : 0932. external length : 000018
+	91.	STCD4 : Tax Number 4 
+internal data type : CHARInternal length : 000018 charactersPosition in segment : 091, Offset : 0950. external length : 000018
+	92.	XICMS : Customer is ICMS-exempt 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 092, Offset : 0968. external length : 000001
+	93.	XXIPI : Customer is IPI-exempt 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 093, Offset : 0969. external length : 000001
+	94.	XSUBT : Customer group of Substituiçao Tributária calculation- old!! 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 094, Offset : 0970. external length : 000001
+	95.	CFOPC : Customer's CFOP category 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 095, Offset : 0971. external length : 000002
+	96.	TXLW1 : Tax law: ICMS 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 096, Offset : 0973. external length : 000003
+	97.	TXLW2 : Tax law: IPI 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 097, Offset : 0976. external length : 000003
+	98.	CCC01 : Indicator for biochemical warfare for legal control 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 098, Offset : 0979. external length : 000001
+	99.	CCC02 : Indicator for nuclear nonproliferation for legal control 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 099, Offset : 0980. external length : 000001
+	100.	CCC03 : Indicator for national security for legal control 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 100, Offset : 0981. external length : 000001
+	101.	CCC04 : Indicator for missile technology for legal control 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 101, Offset : 0982. external length : 000001
+	102.	CASSD : Central sales block for customer 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 102, Offset : 0983. external length : 000002
+	103.	KDKG1 : Customer condition group 1 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 103, Offset : 0985. external length : 000002
+	104.	KDKG2 : Customer condition group 2 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 104, Offset : 0987. external length : 000002
+	105.	KDKG3 : Customer condition group 3 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 105, Offset : 0989. external length : 000002
+	106.	KDKG4 : Customer condition group 4 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 106, Offset : 0991. external length : 000002
+	107.	KDKG5 : Customer condition group 5 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 107, Offset : 0993. external length : 000002
+	108.	NODEL : Central deletion block for master record 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 108, Offset : 0995. external length : 000001
+	109.	XSUB2 : Customer group for Substituiçao Tributária calculation 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 109, Offset : 0996. external length : 000003
+	110.	WERKS : Plant 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 110, Offset : 0999. external length : 000004
+	•	E1KNVVM : Master customer master sales data (KNVV) 
+Segment definition E2KNVVM010 Released since Release 752 , Segment length: 0340 
+	1.	MSGFN : Function 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 001, Offset : 0063. external length : 000003
+	2.	VKORG : Sales Organization 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 002, Offset : 0066. external length : 000004
+	3.	VTWEG : Distribution Channel 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 003, Offset : 0070. external length : 000002
+	4.	SPART : Division 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 004, Offset : 0072. external length : 000002
+	5.	BEGRU : Authorization Group 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 005, Offset : 0074. external length : 000004
+	6.	LOEVM : Deletion flag for customer (sales level) 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 006, Offset : 0078. external length : 000001
+	7.	VERSG : Customer Statistics Group 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 007, Offset : 0079. external length : 000001
+	8.	AUFSD : Customer order block (sales area) 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 008, Offset : 0080. external length : 000002
+	9.	KALKS : Customer classific for pricing proc determination (old) 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 009, Offset : 0082. external length : 000001
+	10.	KDGRP : Customer Group 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 010, Offset : 0083. external length : 000002
+	11.	BZIRK : Sales District 
+internal data type : CHARInternal length : 000006 charactersPosition in segment : 011, Offset : 0085. external length : 000006
+	12.	KONDA : Customer Price Group 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 012, Offset : 0091. external length : 000002
+	13.	PLTYP : Price List Type 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 013, Offset : 0093. external length : 000002
+	14.	AWAHR : Order Probability of the Item 
+internal data type : NUMCInternal length : 000003 charactersPosition in segment : 014, Offset : 0095. external length : 000003
+	15.	INCO1 : Incoterms (Part 1) 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 015, Offset : 0098. external length : 000003
+	16.	INCO2 : Incoterms (Part 2) 
+internal data type : CHARInternal length : 000028 charactersPosition in segment : 016, Offset : 0101. external length : 000028
+	17.	LIFSD : Customer delivery block (sales area) 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 017, Offset : 0129. external length : 000002
+	18.	AUTLF : Complete Delivery Defined for Each Sales Order? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 018, Offset : 0131. external length : 000001
+	19.	ANTLF : Maximum Number of Partial Deliveries Allowed Per Item 
+internal data type : DEC Internal length : 000001 charactersNo decimal places, without signPosition in segment : 019, Offset : 0132. external length : 000002
+	20.	KZTLF : Partial delivery at item level 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 020, Offset : 0134. external length : 000001
+	21.	KZAZU : Order Combination Indicator 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 021, Offset : 0135. external length : 000001
+	22.	CHSPL : Batch split allowed 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 022, Offset : 0136. external length : 000001
+	23.	LPRIO : Delivery Priority 
+internal data type : NUMCInternal length : 000002 charactersPosition in segment : 023, Offset : 0137. external length : 000002
+	24.	EIKTO : Shipper's (Our) Account Number at the Customer or Vendor 
+internal data type : CHARInternal length : 000012 charactersPosition in segment : 024, Offset : 0139. external length : 000012
+	25.	VSBED : Shipping Conditions 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 025, Offset : 0151. external length : 000002
+	26.	FAKSD : Billing block for customer (sales and distribution) 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 026, Offset : 0153. external length : 000002
+	27.	MRNKZ : Manual Invoice Maintenance 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 027, Offset : 0155. external length : 000001
+	28.	PERFK : Invoice Dates (Calendar Identification) 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 028, Offset : 0156. external length : 000002
+	29.	PERRL : Invoice List Schedule (calendar identification) 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 029, Offset : 0158. external length : 000002
+	30.	WAERS : Currency 
+internal data type : CUKYInternal length : 000005 charactersPosition in segment : 030, Offset : 0160. external length : 000005
+	31.	KTGRD : Account Assignment Group for this customer 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 031, Offset : 0165. external length : 000002
+	32.	ZTERM : Terms of payment key 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 032, Offset : 0167. external length : 000004
+	33.	VWERK : Delivering Plant 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 033, Offset : 0171. external length : 000004
+	34.	VKGRP : Sales group 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 034, Offset : 0175. external length : 000003
+	35.	VKBUR : Sales office 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 035, Offset : 0178. external length : 000004
+	36.	VSORT : Item proposal 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 036, Offset : 0182. external length : 000010
+	37.	KVGR1 : Customer Group 1 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 037, Offset : 0192. external length : 000003
+	38.	KVGR2 : scheme 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 038, Offset : 0195. external length : 000003
+	39.	KVGR3 : Customer group 3 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 039, Offset : 0198. external length : 000003
+	40.	KVGR4 : Customer group 4 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 040, Offset : 0201. external length : 000003
+	41.	KVGR5 : Customer group 5 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 041, Offset : 0204. external length : 000003
+	42.	BOKRE : Indicator: Customer Is Rebate-Relevant 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 042, Offset : 0207. external length : 000001
+	43.	KURST : Exchange Rate Type 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 043, Offset : 0208. external length : 000004
+	44.	PRFRE : Relevant for price determination ID 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 044, Offset : 0212. external length : 000001
+	45.	KLABC : Customer classification (ABC analysis) 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 045, Offset : 0213. external length : 000002
+	46.	KABSS : Customer payment guarantee procedure 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 046, Offset : 0215. external length : 000004
+	47.	KKBER : Credit control area 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 047, Offset : 0219. external length : 000004
+	48.	CASSD : Sales Block for Customer (Sales Area) 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 048, Offset : 0223. external length : 000002
+	49.	RDOFF : Switch off rounding? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 049, Offset : 0225. external length : 000001
+	50.	AGREL : Indicator: Relevant for Settlement Management 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 050, Offset : 0226. external length : 000001
+	51.	MEGRU : Unit of Measure Group 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 051, Offset : 0227. external length : 000004
+	52.	UEBTO : Overdelivery tolerance limit (BTCI) 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 052, Offset : 0231. external length : 000004
+	53.	UNTTO : Underdelivery tolerance (BTCI) 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 053, Offset : 0235. external length : 000004
+	54.	UEBTK : Unlimited Overdelivery Allowed 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 054, Offset : 0239. external length : 000001
+	55.	PVKSM : Customer procedure for product proposal 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 055, Offset : 0240. external length : 000002
+	56.	PODKZ : Relevant for POD processing 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 056, Offset : 0242. external length : 000001
+	57.	PODTG : Timeframe for Confirmation of POD (BI) 
+internal data type : CHARInternal length : 000011 charactersPosition in segment : 057, Offset : 0243. external length : 000011
+	58.	BLIND : Indicator: Doc. index compilation active for purchase orders 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 058, Offset : 0254. external length : 000001
+	59.	CARRIER_NOTIF : Carrier is to be notified 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 059, Offset : 0255. external length : 000001
+	60.	CVP_XBLCK_V : Business Purpose Completed Flag 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 060, Offset : 0256. external length : 000001
+	61.	INCOV : Incoterms Version 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 061, Offset : 0257. external length : 000004
+	62.	INCO2_L : Incoterms Location 1 
+internal data type : CHARInternal length : 000070 charactersPosition in segment : 062, Offset : 0261. external length : 000070
+	63.	INCO3_L : Incoterms Location 2 
+internal data type : CHARInternal length : 000070 charactersPosition in segment : 063, Offset : 0331. external length : 000070
+	64.	KALKS_NEW : Customer Classification for Pricing Procedure Determination 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 064, Offset : 0401. external length : 000002
+	•	E1KNVPM : Master customer master partner roles (KNVP) 
+Segment definition E2KNVPM002 Released since Release 45A , Segment length: 0049 
+	1.	MSGFN : Function 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 001, Offset : 0063. external length : 000003
+	2.	PARVW : Partner Function 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 002, Offset : 0066. external length : 000002
+	3.	KUNN2 : Customer number of business partner 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 003, Offset : 0068. external length : 000010
+	4.	DEFPA : Default Partner 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 004, Offset : 0078. external length : 000001
+	5.	KNREF : Customer description of partner (plant, storage location) 
+internal data type : CHARInternal length : 000030 charactersPosition in segment : 005, Offset : 0079. external length : 000030
+	6.	PARZA : Partner counter 
+internal data type : NUMCInternal length : 000003 charactersPosition in segment : 006, Offset : 0109. external length : 000003
+	•	E1KNVDM : Master customer master document request (KNVD) 
+Segment definition E2KNVDM001 Released since Release 40A , Segment length: 0015 
+	1.	MSGFN : Function 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 001, Offset : 0063. external length : 000003
+	2.	DOCTP : Output Type 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 002, Offset : 0066. external length : 000004
+	3.	SPRAS : Message language 
+internal data type : LANGInternal length : 000001 charactersPosition in segment : 003, Offset : 0070. external length : 000001
+	4.	DOANZ : 3-Byte field 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 004, Offset : 0071. external length : 000003
+	5.	DOVER : Dispatch time 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 005, Offset : 0074. external length : 000001
+	6.	NACHA : Message transmission medium 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 006, Offset : 0075. external length : 000001
+	7.	SPRAS_ISO : 2-Character SAP Language Code 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 007, Offset : 0076. external length : 000002
+	•	E1KNVIM : Master customer master tax indicators (KNVI) 
+Segment definition E2KNVIM Released since Release 30A , Segment length: 0011 
+	1.	MSGFN : Function 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 001, Offset : 0063. external length : 000003
+	2.	ALAND : Departure country (country from which the goods are sent) 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 002, Offset : 0066. external length : 000003
+	3.	TATYP : Tax category (sales tax, federal sales tax,...) 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 003, Offset : 0069. external length : 000004
+	4.	TAXKD : Tax classification for customer 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 004, Offset : 0073. external length : 000001
+	•	E1KNVLM : Master customer master licenses (KNVL) 
+Segment definition E2KNVLM Released since Release 30A , Segment length: 0042 
+	1.	MSGFN : Function 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 001, Offset : 0063. external length : 000003
+	2.	ALAND : Departure country (country from which the goods are sent) 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 002, Offset : 0066. external length : 000003
+	3.	TATYP : Tax category (sales tax, federal sales tax,...) 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 003, Offset : 0069. external length : 000004
+	4.	LICNR : License number 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 004, Offset : 0073. external length : 000015
+	5.	DATAB : Valid-From Date 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 005, Offset : 0088. external length : 000008
+	6.	DATBI : Valid To Date 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 006, Offset : 0096. external length : 000008
+	7.	BELIC : Confirmation for licenses 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 007, Offset : 0104. external length : 000001
+	•	E1KNB1M : Master Customer Master Company Code (KNB1) 
+Segment definition E2KNB1M008 Released since Release 740 , Segment length: 0752 
+	1.	MSGFN : Function 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 001, Offset : 0063. external length : 000003
+	2.	BUKRS : Company Code 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 002, Offset : 0066. external length : 000006
+	3.	SPERR : Posting block for company code 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 003, Offset : 0072. external length : 000001
+	4.	LOEVM : Deletion Flag for Master Record (Company Code Level) 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 004, Offset : 0073. external length : 000001
+	5.	ZUAWA : Key for sorting according to assignment numbers 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 005, Offset : 0074. external length : 000003
+	6.	BUSAB : Accounting Clerk Abbreviation 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 006, Offset : 0077. external length : 000002
+	7.	AKONT : Reconciliation Account in General Ledger 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 007, Offset : 0079. external length : 000010
+	8.	BEGRU : Authorization Group 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 008, Offset : 0089. external length : 000004
+	9.	KNRZE : Head office account number (in branch accounts) 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 009, Offset : 0093. external length : 000010
+	10.	KNRZB : Account number of an alternative payer 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 010, Offset : 0103. external length : 000010
+	11.	ZAMIM : Indicator: Payment Notice to Customer (with Cleared Items)? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 011, Offset : 0113. external length : 000001
+	12.	ZAMIV : Indicator: Payment Notice to Sales Department? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 012, Offset : 0114. external length : 000001
+	13.	ZAMIR : Indicator: Payment Notice to Legal Department? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 013, Offset : 0115. external length : 000001
+	14.	ZAMIB : Indicator: Payment Notice to the Accounting Department? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 014, Offset : 0116. external length : 000001
+	15.	ZAMIO : Indicator: Payment Notice to Customer (W/o Cleared Items)? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 015, Offset : 0117. external length : 000001
+	16.	ZWELS : List of Respected Payment Methods 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 016, Offset : 0118. external length : 000010
+	17.	XVERR : Indicator: Clearing between customer and vendor ? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 017, Offset : 0128. external length : 000001
+	18.	ZAHLS : Block Key for Payment 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 018, Offset : 0129. external length : 000001
+	19.	ZTERM : Terms of payment key 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 019, Offset : 0130. external length : 000004
+	20.	WAKON : Terms of Payment Key for Bill of Exchange Charges 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 020, Offset : 0134. external length : 000004
+	21.	VZSKZ : Interest Indicator 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 021, Offset : 0138. external length : 000002
+	22.	ZINDT : Key Date of Last Interest Calculation 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 022, Offset : 0140. external length : 000008
+	23.	ZINRT : Interest Calculation Frequency in Months 
+internal data type : NUMCInternal length : 000002 charactersPosition in segment : 023, Offset : 0148. external length : 000002
+	24.	EIKTO : Our account number at customer 
+internal data type : CHARInternal length : 000012 charactersPosition in segment : 024, Offset : 0150. external length : 000012
+	25.	ZSABE : User at customer 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 025, Offset : 0162. external length : 000015
+	26.	KVERM : Memo 
+internal data type : CHARInternal length : 000030 charactersPosition in segment : 026, Offset : 0177. external length : 000030
+	27.	FDGRV : Planning Group 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 027, Offset : 0207. external length : 000010
+	28.	VRBKZ : Export Credit Insurance Institution Number 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 028, Offset : 0217. external length : 000002
+	29.	VLIBB : Amount Insured 
+internal data type : CURRInternal length : 000013 characters000002 decimal places, without signPosition in segment : 029, Offset : 0219. external length : 000014
+	30.	VRSZL : Insurance Lead Months 
+internal data type : DEC Internal length : 000003 charactersNo decimal places, without signPosition in segment : 030, Offset : 0233. external length : 000004
+	31.	VRSPR : Deductible Percentage Rate 
+internal data type : DEC Internal length : 000003 charactersNo decimal places, without signPosition in segment : 031, Offset : 0237. external length : 000004
+	32.	VRSNR : Insurance Number 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 032, Offset : 0241. external length : 000010
+	33.	VERDT : Insurance Validity Date 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 033, Offset : 0251. external length : 000008
+	34.	PERKZ : Collective Invoice Variant 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 034, Offset : 0259. external length : 000001
+	35.	XDEZV : Indicator: Local Processing? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 035, Offset : 0260. external length : 000001
+	36.	XAUSZ : Indicator for Periodic Account Statements 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 036, Offset : 0261. external length : 000001
+	37.	WEBTR : Bill of Exchange Limit (in Local Currency) 
+internal data type : CURRInternal length : 000013 characters000002 decimal places, without signPosition in segment : 037, Offset : 0262. external length : 000014
+	38.	REMIT : Next payee 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 038, Offset : 0276. external length : 000010
+	39.	DATLZ : Date of Last Interest Calculation Run 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 039, Offset : 0286. external length : 000008
+	40.	XZVER : Indicator: Record Payment History ? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 040, Offset : 0294. external length : 000001
+	41.	TOGRU : Tolerance Group for Business Partner/G/L Account 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 041, Offset : 0295. external length : 000004
+	42.	KULTG : Probable Time Until Check Is Paid 
+internal data type : DEC Internal length : 000003 charactersNo decimal places, without signPosition in segment : 042, Offset : 0299. external length : 000004
+	43.	HBKID : Short Key for a House Bank 
+internal data type : CHARInternal length : 000005 charactersPosition in segment : 043, Offset : 0303. external length : 000005
+	44.	XPORE : Indicator: Pay All Items Separately? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 044, Offset : 0308. external length : 000001
+	45.	BLNKZ : (Obsolete) Subsidy Ind. for Determining the Reduction Rate 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 045, Offset : 0309. external length : 000002
+	46.	ALTKN : Previous Master Record Number 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 046, Offset : 0311. external length : 000010
+	47.	ZGRUP : Key for Payment Grouping 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 047, Offset : 0321. external length : 000002
+	48.	URLID : Short Key for Known/Negotiated Leave 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 048, Offset : 0323. external length : 000004
+	49.	MGRUP : Key for Dunning Notice Grouping 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 049, Offset : 0327. external length : 000002
+	50.	LOCKB : Key of the Lockbox to Which the Customer Is to Pay 
+internal data type : CHARInternal length : 000007 charactersPosition in segment : 050, Offset : 0329. external length : 000007
+	51.	UZAWE : Payment method supplement 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 051, Offset : 0336. external length : 000002
+	52.	EKVBD : Account Number of Buying Group 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 052, Offset : 0338. external length : 000010
+	53.	SREGL : Selection Rule for Payment Advices 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 053, Offset : 0348. external length : 000003
+	54.	XEDIP : Indicator: Send Payment Advices by EDI 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 054, Offset : 0351. external length : 000001
+	55.	FRGRP : Release Approval Group 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 055, Offset : 0352. external length : 000004
+	56.	VRSDG : Reason Code Conversion Version 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 056, Offset : 0356. external length : 000003
+	57.	TLFXS : Accounting clerk's fax number at the customer/vendor 
+internal data type : CHARInternal length : 000031 charactersPosition in segment : 057, Offset : 0359. external length : 000031
+	58.	PERNR : Personnel Number 
+internal data type : NUMCInternal length : 000008 charactersPosition in segment : 058, Offset : 0390. external length : 000008
+	59.	INTAD : Internet address of partner company clerk 
+internal data type : CHARInternal length : 000130 charactersPosition in segment : 059, Offset : 0398. external length : 000130
+	60.	GUZTE : Payment Terms Key for Credit Memos 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 060, Offset : 0528. external length : 000004
+	61.	GRICD : Activity Code for Gross Income Tax 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 061, Offset : 0532. external length : 000002
+	62.	GRIDT : Distribution Type for Employment Tax 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 062, Offset : 0534. external length : 000002
+	63.	WBRSL : Value Adjustment Key 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 063, Offset : 0536. external length : 000002
+	64.	NODEL : Deletion bock for master record (company code level) 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 064, Offset : 0538. external length : 000001
+	65.	TLFNS : Accounting clerk's telephone number at business partner 
+internal data type : CHARInternal length : 000030 charactersPosition in segment : 065, Offset : 0539. external length : 000030
+	66.	CESSION_KZ : Accounts Receivable Pledging Indicator 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 066, Offset : 0569. external length : 000002
+	67.	GMVKZD : Customer is in execution 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 067, Offset : 0571. external length : 000001
+	68.	AVSND : Indicator: Send Payment Advice by XML 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 068, Offset : 0572. external length : 000001
+	69.	SMTP_ADDR : E-Mail Address 
+internal data type : CHARInternal length : 000241 charactersPosition in segment : 069, Offset : 0573. external length : 000241
+	70.	CVP_XBLCK_B : Business Purpose Completed Flag 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 070, Offset : 0814. external length : 000001
+	•	E1KNB5M : Master customer master reminder data (KNB5) 
+Segment definition E2KNB5M Released since Release 30A , Segment length: 0039 
+	1.	MSGFN : Function 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 001, Offset : 0063. external length : 000003
+	2.	MABER : Dunning Area 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 002, Offset : 0066. external length : 000002
+	3.	MAHNA : Dunning Procedure 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 003, Offset : 0068. external length : 000004
+	4.	MANSP : Dunning Block 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 004, Offset : 0072. external length : 000001
+	5.	MADAT : Date of Last Dunning Notice 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 005, Offset : 0073. external length : 000008
+	6.	MAHNS : Dunning Level 
+internal data type : NUMCInternal length : 000001 charactersPosition in segment : 006, Offset : 0081. external length : 000001
+	7.	KNRMA : Account Number of the Dunning Recipient 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 007, Offset : 0082. external length : 000010
+	8.	GMVDT : Date of the Legal Dunning Proceedings 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 008, Offset : 0092. external length : 000008
+	9.	BUSAB : Dunning Clerk 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 009, Offset : 0100. external length : 000002
+	•	E1KNBKM : Master customer master bank details and bank master 
+Segment definition E2KNBKM005 Released since Release 700 , Segment length: 0458 
+	1.	MSGFN : Function 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 001, Offset : 0063. external length : 000003
+	2.	BANKS : Bank country key 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 002, Offset : 0066. external length : 000003
+	3.	BANKL : Bank number 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 003, Offset : 0069. external length : 000015
+	4.	BANKN : Bank account number 
+internal data type : CHARInternal length : 000018 charactersPosition in segment : 004, Offset : 0084. external length : 000018
+	5.	BKONT : Bank Control Key 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 005, Offset : 0102. external length : 000002
+	6.	BVTYP : Partner bank type 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 006, Offset : 0104. external length : 000004
+	7.	XEZER : Indicator: Is there collection authorization ? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 007, Offset : 0108. external length : 000001
+	8.	BKREF : Reference specifications for bank details 
+internal data type : CHARInternal length : 000020 charactersPosition in segment : 008, Offset : 0109. external length : 000020
+	9.	BANKA : Name of bank 
+internal data type : CHARInternal length : 000060 charactersPosition in segment : 009, Offset : 0129. external length : 000060
+	10.	STRAS : Street and House Number 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 010, Offset : 0189. external length : 000035
+	11.	ORT01 : City 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 011, Offset : 0224. external length : 000035
+	12.	SWIFT : SWIFT/BIC for International Payments 
+internal data type : CHARInternal length : 000011 charactersPosition in segment : 012, Offset : 0259. external length : 000011
+	13.	BGRUP : Bank group (bank network) 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 013, Offset : 0270. external length : 000002
+	14.	XPGRO : Post Office Bank Current Account 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 014, Offset : 0272. external length : 000001
+	15.	BNKLZ : Bank number 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 015, Offset : 0273. external length : 000015
+	16.	PSKTO : Account Number of Bank Account At Post Office 
+internal data type : CHARInternal length : 000016 charactersPosition in segment : 016, Offset : 0288. external length : 000016
+	17.	BRNCH : Bank Branch 
+internal data type : CHARInternal length : 000040 charactersPosition in segment : 017, Offset : 0304. external length : 000040
+	18.	PROVZ : Region (State, Province, County) 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 018, Offset : 0344. external length : 000003
+	19.	KOINH : Account Holder Name 
+internal data type : CHARInternal length : 000060 charactersPosition in segment : 019, Offset : 0347. external length : 000035
+	20.	KOINH_N : Account Holder Name 
+internal data type : CHARInternal length : 000060 charactersPosition in segment : 020, Offset : 0382. external length : 000060
+	21.	KOVON : Date (batch input) 
+internal data type : CHARInternal length : 000008 charactersPosition in segment : 021, Offset : 0442. external length : 000008
+	22.	KOBIS : Date (batch input) 
+internal data type : CHARInternal length : 000008 charactersPosition in segment : 022, Offset : 0450. external length : 000008
+	23.	IBAN_BANKS : Bank country key 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 023, Offset : 0458. external length : 000003
+	24.	IBAN_BANKL : Bank Keys 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 024, Offset : 0461. external length : 000015
+	25.	IBAN_BIC : SWIFT/BIC for International Payments 
+internal data type : CHARInternal length : 000011 charactersPosition in segment : 025, Offset : 0476. external length : 000011
+	26.	IBAN : IBAN (International Bank Account Number) 
+internal data type : CHARInternal length : 000034 charactersPosition in segment : 026, Offset : 0487. external length : 000034
+	•	E1KNVAM : Master customer master unloading point (KNVA) 
+Segment definition E2KNVAM Released since Release 30A , Segment length: 0202 
+	1.	MSGFN : Function 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 001, Offset : 0063. external length : 000003
+	2.	ABLAD : Unloading Point 
+internal data type : CHARInternal length : 000025 charactersPosition in segment : 002, Offset : 0066. external length : 000025
+	3.	KNFAK : Customer's factory calendar 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 003, Offset : 0091. external length : 000002
+	4.	WANID : Goods receiving hours ID (default value) 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 004, Offset : 0093. external length : 000003
+	5.	MOAB1 : Goods receipt times: Monday morning from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 005, Offset : 0096. external length : 000006
+	6.	MOBI1 : Goods receiving hours: Monday morning until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 006, Offset : 0102. external length : 000006
+	7.	MOAB2 : Goods receiving hours: Monday afternoon from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 007, Offset : 0108. external length : 000006
+	8.	MOBI2 : Goods receiving hours: Monday afternoon until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 008, Offset : 0114. external length : 000006
+	9.	DIAB1 : Goods receiving hours: Tuesday morning from... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 009, Offset : 0120. external length : 000006
+	10.	DIBI1 : Goods receipt times: Tuesday morning until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 010, Offset : 0126. external length : 000006
+	11.	DIAB2 : Goods receiving hours: Tuesday afternoon from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 011, Offset : 0132. external length : 000006
+	12.	DIBI2 : Goods receiving hours: Tuesday afternoon until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 012, Offset : 0138. external length : 000006
+	13.	MIAB1 : Goods receiving hours: Wednesday morning from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 013, Offset : 0144. external length : 000006
+	14.	MIBI1 : Goods receiving hours: Wednesday morning until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 014, Offset : 0150. external length : 000006
+	15.	MIAB2 : Goods receiving hours: Wednesday afternoon from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 015, Offset : 0156. external length : 000006
+	16.	MIBI2 : Goods receiving hours: Wednesday afternoon until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 016, Offset : 0162. external length : 000006
+	17.	DOAB1 : Goods receiving hours: Thursday morning from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 017, Offset : 0168. external length : 000006
+	18.	DOBI1 : Goods receiving hours: Thursday morning until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 018, Offset : 0174. external length : 000006
+	19.	DOAB2 : Goods receiving hours: Thursday afternoon from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 019, Offset : 0180. external length : 000006
+	20.	DOBI2 : Goods receiving hours: Thursday afternoon until... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 020, Offset : 0186. external length : 000006
+	21.	FRAB1 : Goods receiving hours: Friday morning from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 021, Offset : 0192. external length : 000006
+	22.	FRBI1 : Goods receiving hours: Friday morning until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 022, Offset : 0198. external length : 000006
+	23.	FRAB2 : Goods receiving hours: Friday afternoon from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 023, Offset : 0204. external length : 000006
+	24.	FRBI2 : Goods receiving hours: Friday afternoon until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 024, Offset : 0210. external length : 000006
+	25.	SAAB1 : Goods receiving hours: Saturday morning from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 025, Offset : 0216. external length : 000006
+	26.	SABI1 : Goods receiving hours: Saturday morning from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 026, Offset : 0222. external length : 000006
+	27.	SAAB2 : Goods receiving hours: Saturday afternoon from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 027, Offset : 0228. external length : 000006
+	28.	SABI2 : Goods receiving hours: Saturday afternoon until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 028, Offset : 0234. external length : 000006
+	29.	SOAB1 : Goods receiving hours: Sunday morning from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 029, Offset : 0240. external length : 000006
+	30.	SOBI1 : Goods receiving hours: Sunday morning until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 030, Offset : 0246. external length : 000006
+	31.	SOAB2 : Goods receiving hours: Sunday afternoon from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 031, Offset : 0252. external length : 000006
+	32.	SOBI2 : Goods receiving hours: Sunday afternoon until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 032, Offset : 0258. external length : 000006
+	33.	DEFAB : Default unloading point 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 033, Offset : 0264. external length : 000001
+	•	E1KNVKM : Master customer master contact person (KNVK) 
+Segment definition E2KNVKM003 Released since Release 755 , Segment length: 0479 
+	1.	MSGFN : Function 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 001, Offset : 0063. external length : 000003
+	2.	PARNR : Number of contact person 
+internal data type : NUMCInternal length : 000010 charactersPosition in segment : 002, Offset : 0066. external length : 000010
+	3.	NAMEV : First name 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 003, Offset : 0076. external length : 000035
+	4.	NAME1 : Name 1 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 004, Offset : 0111. external length : 000035
+	5.	ABTPA : Contact person's department at customer 
+internal data type : CHARInternal length : 000012 charactersPosition in segment : 005, Offset : 0146. external length : 000012
+	6.	ABTNR : Contact person department 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 006, Offset : 0158. external length : 000004
+	7.	UEPAR : Higher-Level Partner 
+internal data type : NUMCInternal length : 000010 charactersPosition in segment : 007, Offset : 0162. external length : 000010
+	8.	TELF1 : First telephone number 
+internal data type : CHARInternal length : 000016 charactersPosition in segment : 008, Offset : 0172. external length : 000016
+	9.	ANRED : Form of address for contact person (Mr, Mrs...etc) 
+internal data type : CHARInternal length : 000030 charactersPosition in segment : 009, Offset : 0188. external length : 000030
+	10.	PAFKT : Contact person function 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 010, Offset : 0218. external length : 000002
+	11.	PARVO : Partner's Authority 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 011, Offset : 0220. external length : 000001
+	12.	PAVIP : VIP Partner 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 012, Offset : 0221. external length : 000001
+	13.	PARGE : Gender Key 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 013, Offset : 0222. external length : 000001
+	14.	PARLA : Partner language 
+internal data type : LANGInternal length : 000001 charactersPosition in segment : 014, Offset : 0223. external length : 000001
+	15.	GBDAT : Date of Birth 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 015, Offset : 0224. external length : 000008
+	16.	VRTNR : Representative number 
+internal data type : NUMCInternal length : 000010 charactersPosition in segment : 016, Offset : 0232. external length : 000010
+	17.	BRYTH : Call frequency 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 017, Offset : 0242. external length : 000004
+	18.	AKVER : Buying habits 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 018, Offset : 0246. external length : 000002
+	19.	NMAIL : Advertising material indicator 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 019, Offset : 0248. external length : 000001
+	20.	PARAU : Notes about contact person 
+internal data type : CHARInternal length : 000040 charactersPosition in segment : 020, Offset : 0249. external length : 000040
+	21.	PARH1 : Contact person: Attribute 1 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 021, Offset : 0289. external length : 000002
+	22.	PARH2 : Contact person: Attribute 2 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 022, Offset : 0291. external length : 000002
+	23.	PARH3 : Contact person: Attribute 3 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 023, Offset : 0293. external length : 000002
+	24.	PARH4 : Contact person: Attribute 4 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 024, Offset : 0295. external length : 000002
+	25.	PARH5 : Contact person: Attribute 5 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 025, Offset : 0297. external length : 000002
+	26.	MOAB1 : Contact person's visiting hours: Monday morning from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 026, Offset : 0299. external length : 000006
+	27.	MOBI1 : Contact person's visiting hours: Monday morning until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 027, Offset : 0305. external length : 000006
+	28.	MOAB2 : Contact person's visiting hours: Monday afternoon from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 028, Offset : 0311. external length : 000006
+	29.	MOBI2 : Contact person's visiting hours: Monday afternoon until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 029, Offset : 0317. external length : 000006
+	30.	DIAB1 : Contact person's visiting hours: Tuesday morning from... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 030, Offset : 0323. external length : 000006
+	31.	DIBI1 : Contact person's visiting hours: Tuesday morning until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 031, Offset : 0329. external length : 000006
+	32.	DIAB2 : Contact person's visiting hours: Tuesday afternoon from.. 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 032, Offset : 0335. external length : 000006
+	33.	DIBI2 : Contact person's visiting hours: Tuesday afternoon until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 033, Offset : 0341. external length : 000006
+	34.	MIAB1 : Contact person's visiting hours: Wednesday morning from... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 034, Offset : 0347. external length : 000006
+	35.	MIBI1 : Contact person's visiting hours: Wednesday morning until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 035, Offset : 0353. external length : 000006
+	36.	MIAB2 : Contact person's visiting hours: Wednesday afternoon from .. 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 036, Offset : 0359. external length : 000006
+	37.	MIBI2 : Contact person's visiting hours: Wednesday afternoon until.. 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 037, Offset : 0365. external length : 000006
+	38.	DOAB1 : Contact person's visiting hours: Thursday morning from .... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 038, Offset : 0371. external length : 000006
+	39.	DOBI1 : Contact person's visiting hours: Thursday morning until .... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 039, Offset : 0377. external length : 000006
+	40.	DOAB2 : Contact person's visiting hours: Thursday afternoon from... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 040, Offset : 0383. external length : 000006
+	41.	DOBI2 : Contact person's visiting hours: Thursday afternoon until .. 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 041, Offset : 0389. external length : 000006
+	42.	FRAB1 : Contact person's visiting hours: Friday morning from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 042, Offset : 0395. external length : 000006
+	43.	FRBI1 : Contact person's visiting hours: Friday morning until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 043, Offset : 0401. external length : 000006
+	44.	FRAB2 : Contact person's visiting hours: Friday afternoon from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 044, Offset : 0407. external length : 000006
+	45.	FRBI2 : Contact person's visiting hours: Friday afternoon until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 045, Offset : 0413. external length : 000006
+	46.	SAAB1 : Contact person's visiting hours: Saturday morning from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 046, Offset : 0419. external length : 000006
+	47.	SABI1 : Contact person's visiting hours: Saturday morning until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 047, Offset : 0425. external length : 000006
+	48.	SAAB2 : Contact person's visiting hours: Saturday afternoon from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 048, Offset : 0431. external length : 000006
+	49.	SABI2 : Contact person's visiting hours: Saturday afternoon until .. 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 049, Offset : 0437. external length : 000006
+	50.	SOAB1 : Contact person's visiting hours: Sunday morning from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 050, Offset : 0443. external length : 000006
+	51.	SOBI1 : Contact person's visiting hours: Sunday morning until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 051, Offset : 0449. external length : 000006
+	52.	SOAB2 : Contact person's visiting hours: Sunday afternoon from ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 052, Offset : 0455. external length : 000006
+	53.	SOBI2 : Contact person's visiting hours: Sunday afternoon until ... 
+internal data type : TIMSInternal length : 000006 charactersPosition in segment : 053, Offset : 0461. external length : 000006
+	54.	PAKN1 : Contact person: Attribute 6 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 054, Offset : 0467. external length : 000003
+	55.	PAKN2 : Contact person: Attribute 7 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 055, Offset : 0470. external length : 000003
+	56.	PAKN3 : Contact person: Attribute 8 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 056, Offset : 0473. external length : 000003
+	57.	PAKN4 : Contact person: Attribute 9 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 057, Offset : 0476. external length : 000003
+	58.	PAKN5 : Contact person: Attribute 10 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 058, Offset : 0479. external length : 000003
+	59.	SORTL : Sort field 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 059, Offset : 0482. external length : 000010
+	60.	FAMST : Marital Status Key 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 060, Offset : 0492. external length : 000001
+	61.	SPNAM : Nickname 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 061, Offset : 0493. external length : 000010
+	62.	TITEL_AP : Title of contact person (description of function) 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 062, Offset : 0503. external length : 000035
+	63.	PARLA_ISO : 2-Character SAP Language Code 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 063, Offset : 0538. external length : 000002
+	64.	CVP_XBLCK_K : Business Purpose Completed Flag 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 064, Offset : 0540. external length : 000001
+	65.	GENDER : Partner's gender 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 065, Offset : 0541. external length : 000001
+	•	E1KNKAM : Master customer master credit management central data (KNKA) 
+Segment definition E2KNKAM Released since Release 30A , Segment length: 0048 
+	1.	MSGFN : Function 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 001, Offset : 0063. external length : 000003
+	2.	KLIMG : Field of length 16 
+internal data type : CHARInternal length : 000016 charactersPosition in segment : 002, Offset : 0066. external length : 000016
+	3.	KLIME : Field of length 16 
+internal data type : CHARInternal length : 000016 charactersPosition in segment : 003, Offset : 0082. external length : 000016
+	4.	WAERS : Currency Key 
+internal data type : CUKYInternal length : 000005 charactersPosition in segment : 004, Offset : 0098. external length : 000005
+	5.	DLAUS : Date of the Last General Information 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 005, Offset : 0103. external length : 000008
+	•	E1KNKKM : Master customer master credit mgmt control area data (KNKK) 
+Segment definition E2KNKKM001 Released since Release 31G , Segment length: 0136 
+	1.	MSGFN : Function 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 001, Offset : 0063. external length : 000003
+	2.	KKBER : Credit control area 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 002, Offset : 0066. external length : 000004
+	3.	KLIMK : Field of length 16 
+internal data type : CHARInternal length : 000016 charactersPosition in segment : 003, Offset : 0070. external length : 000016
+	4.	KNKLI : Customer's Account Number with Credit Limit Reference 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 004, Offset : 0086. external length : 000010
+	5.	CTLPC : Credit Management: Risk Category 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 005, Offset : 0096. external length : 000003
+	6.	DTREV : Last Internal Review 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 006, Offset : 0099. external length : 000008
+	7.	CRBLB : Indicator: Blocked by Credit Management? 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 007, Offset : 0107. external length : 000001
+	8.	SBGRP : Credit Representative Group for Credit Management 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 008, Offset : 0108. external length : 000003
+	9.	NXTRV : Next Review 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 009, Offset : 0111. external length : 000008
+	10.	KRAUS : Credit Information Number 
+internal data type : CHARInternal length : 000011 charactersPosition in segment : 010, Offset : 0119. external length : 000011
+	11.	PAYDB : Do Not Use - Replaced by Data Element DBPAY_CM 
+internal data type : NUMCInternal length : 000002 charactersPosition in segment : 011, Offset : 0130. external length : 000002
+	12.	DBRAT : Do Not Use - Replaced by DBRTG_CM 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 012, Offset : 0132. external length : 000003
+	13.	REVDB : Last External Review 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 013, Offset : 0135. external length : 000008
+	14.	GRUPP : Customer Credit Group 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 014, Offset : 0143. external length : 000004
+	15.	SBDAT : Reference Date 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 015, Offset : 0147. external length : 000008
+	16.	KDGRP : Customer Group 
+internal data type : CHARInternal length : 000008 charactersPosition in segment : 016, Offset : 0155. external length : 000008
+	17.	DBPAY : Payment Index 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 017, Offset : 0163. external length : 000003
+	18.	DBRTG : Rating 
+internal data type : CHARInternal length : 000005 charactersPosition in segment : 018, Offset : 0166. external length : 000005
+	19.	DBEKR : Recommended Credit Limit 
+internal data type : CURRInternal length : 000015 characters000002 decimal places, without signPosition in segment : 019, Offset : 0171. external length : 000017
+	20.	DBWAE : ISO currency code 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 020, Offset : 0188. external length : 000003
+	21.	DBMON : Date Monitoring 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 021, Offset : 0191. external length : 000008
+
+Info... 
+Automatically created HTML doc.created on 12/27/2022 at 12:21:22 Client 100 System S4M Release 755 Lang. E Transaction WE60 
+Display current status Version 3 of IDoc record types : IDoc record types for SAP Release 4.0 
+ 
