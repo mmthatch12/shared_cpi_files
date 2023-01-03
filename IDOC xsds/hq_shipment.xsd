@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="oshipment_id" type="xs:string" />
+        <xs:element minOccurs="0" name="oorder_id" type="xs:string" />
+        <xs:element minOccurs="0" name="oInvoice_id" />
+        <xs:element minOccurs="0" name="olocation_id" type="xs:string" />
+        <xs:element minOccurs="0" name="owarehouse_id" type="xs:string" />
+        <xs:element minOccurs="0" name="fulfillment_center_id" />
+        <xs:element minOccurs="0" name="ocarrier_id" type="xs:string" />
+        <xs:element minOccurs="0" name="ocarrier_service_id" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_type_id" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_type" />
+        <xs:element minOccurs="0" name="oshipment_from" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_tracking_number" />
+        <xs:element minOccurs="0" name="oshipment_account_number" />
+        <xs:element minOccurs="0" name="oshipment_status" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_date" />
+        <xs:element minOccurs="0" name="oshipment_carrier" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_service" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_amount" />
+        <xs:element minOccurs="0" name="oshipment_actual_cost" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_estimated_cost" />
+        <xs:element minOccurs="0" name="oshipment_is_tracked" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_is_printed" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_is_printed_label" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_is_printed_slip" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_label_format" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_is_notified" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_picker" />
+        <xs:element minOccurs="0" name="oshipment_by" />
+        <xs:element minOccurs="0" name="oshipment_scanner_by" />
+        <xs:element minOccurs="0" name="oshipment_fingerprint" />
+        <xs:element minOccurs="0" name="oshipment_address_validation_overridden" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_is_return" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_tags" />
+        <xs:element minOccurs="0" name="oshipment_saturday_pickup" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_saturday_delivery" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_ship_by" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_method_id" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_zone" />
+        <xs:element minOccurs="0" name="OCDT" type="xs:string" />
+        <xs:element minOccurs="0" name="OCU" type="xs:string" />
+        <xs:element minOccurs="0" name="OMDT" type="xs:string" />
+        <xs:element minOccurs="0" name="OMU" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_is_auto" />
+        <xs:element minOccurs="0" name="oshipment_notify_owner_on_ship" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_to_address_id" type="xs:string" />
+        <xs:element minOccurs="0" name="oshipment_from_address_id" />
+        <xs:element minOccurs="0" name="oshipment_return_address_id" />
+        <xs:element minOccurs="0" name="oshipment_sent_to_scanner_at" />
+        <xs:element minOccurs="0" name="oshipment_delivered_at" />
+        <xs:element minOccurs="0" name="oshipment_special_instructions" />
+        <xs:element minOccurs="0" name="rate_quote_reference" />
+        <xs:element minOccurs="0" name="booking_user" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+	<oshipment_id>23355972</oshipment_id>
+	<oorder_id>24378665</oorder_id>
+	<oInvoice_id/>
+	<olocation_id>12</olocation_id>
+	<owarehouse_id>30</owarehouse_id>
+	<fulfillment_center_id/>
+	<ocarrier_id>2</ocarrier_id>
+	<ocarrier_service_id>45</ocarrier_service_id>
+	<oshipment_type_id>1</oshipment_type_id>
+	<oshipment_type/>
+	<oshipment_from>15</oshipment_from>
+	<oshipment_tracking_number/>
+	<oshipment_account_number></oshipment_account_number>
+	<oshipment_status>0</oshipment_status>
+	<oshipment_date/>
+	<oshipment_carrier>FedEx</oshipment_carrier>
+	<oshipment_service>03</oshipment_service>
+	<oshipment_amount/>
+	<oshipment_actual_cost>0</oshipment_actual_cost>
+	<oshipment_estimated_cost/>
+	<oshipment_is_tracked>0</oshipment_is_tracked>
+	<oshipment_is_printed>0</oshipment_is_printed>
+	<oshipment_is_printed_label>0</oshipment_is_printed_label>
+	<oshipment_is_printed_slip>0</oshipment_is_printed_slip>
+	<oshipment_label_format>ZPL</oshipment_label_format>
+	<oshipment_is_notified>false</oshipment_is_notified>
+	<oshipment_picker/>
+	<oshipment_by/>
+	<oshipment_scanner_by/>
+	<oshipment_fingerprint/>
+	<oshipment_address_validation_overridden>0</oshipment_address_validation_overridden>
+	<oshipment_is_return>0</oshipment_is_return>
+	<oshipment_tags/>
+	<oshipment_saturday_pickup>0</oshipment_saturday_pickup>
+	<oshipment_saturday_delivery>0</oshipment_saturday_delivery>
+	<oshipment_ship_by>2023-01-02 00:00:00</oshipment_ship_by>
+	<oshipment_method_id>1</oshipment_method_id>
+	<oshipment_zone/>
+	<OCDT>2023-01-03 00:28:25</OCDT>
+	<OCU>3015</OCU>
+	<OMDT>2023-01-03 00:28:25</OMDT>
+	<OMU>3015</OMU>
+	<oshipment_is_auto/>
+	<oshipment_notify_owner_on_ship>0</oshipment_notify_owner_on_ship>
+	<oshipment_to_address_id>145883849</oshipment_to_address_id>
+	<oshipment_from_address_id/>
+	<oshipment_return_address_id/>
+	<oshipment_sent_to_scanner_at/>
+	<oshipment_delivered_at/>
+	<oshipment_special_instructions/>
+	<rate_quote_reference/>
+	<booking_user/>
+</root>
