@@ -1,0 +1,382 @@
+
+Structure of basic type WMMBID02 
+Stock movements from ext. systems 
+
+E1MBXYH : Goods movements for mobile data entry (header data) 
+Status: Required , min. number : 1 , max. number : 1 
+Structure 
+E1MBXYI : Add goods movement from external system: Item 
+Status: Required , min. number : 1 , max. number : 9999 
+Structure 
+E1MBXYJ : Create Goods Movement from Non-SAP System: Item++ 
+Status: Optional , min. number : 1 , max. number : 1 
+Structure 
+
+Segment structures 
+
+E1MBXYH : Goods movements for mobile data entry (header data) 
+Segment definition E2MBXYH002 Released since Release 620 , Segment length: 0191 
+BLDAT : Document Date in Document 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 001, Offset : 0063. external length : 000008
+BUDAT : Posting Date in the Document 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 002, Offset : 0071. external length : 000008
+XBLNR : Reference Document Number 
+internal data type : CHARInternal length : 000016 charactersPosition in segment : 003, Offset : 0079. external length : 000016
+BKTXT : Document Header Text 
+internal data type : CHARInternal length : 000025 charactersPosition in segment : 004, Offset : 0095. external length : 000025
+FRBNR : Number of bill of lading at time of goods receipt 
+internal data type : CHARInternal length : 000016 charactersPosition in segment : 005, Offset : 0120. external length : 000016
+XABLN : Goods Receipt/Issue Slip Number 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 006, Offset : 0136. external length : 000010
+TCODE : Transaction Code 
+internal data type : CHARInternal length : 000020 charactersPosition in segment : 007, Offset : 0146. external length : 000020
+USNAM : User Name 
+internal data type : CHARInternal length : 000012 charactersPosition in segment : 008, Offset : 0166. external length : 000012
+VBUND : Company ID 
+internal data type : CHARInternal length : 000006 charactersPosition in segment : 009, Offset : 0178. external length : 000006
+XBLNR_LONG : Reference Document Number (for Dependencies see Long Text) 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 010, Offset : 0184. external length : 000035
+FRBNR_LONG : Bill of Lading Number in GR (Dependencies: see Long Text) 
+internal data type : CHARInternal length : 000035 charactersPosition in segment : 011, Offset : 0219. external length : 000035
+E1MBXYI : Add goods movement from external system: Item 
+Segment definition E2MBXYI003 Released since Release 751 , Segment length: 0944 
+BEAKZ : Line already processed 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 001, Offset : 0063. external length : 000001
+XSTOB : Flag: Reverse posting 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 002, Offset : 0064. external length : 000001
+MATNR : Material Number (18 Characters) 
+internal data type : CHARInternal length : 000018 charactersPosition in segment : 003, Offset : 0065. external length : 000018
+WERKS : Plant 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 004, Offset : 0083. external length : 000004
+LGORT : Storage location 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 005, Offset : 0087. external length : 000004
+CHARG : Batch Number 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 006, Offset : 0091. external length : 000010
+BWART : Movement type (inventory management) 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 007, Offset : 0101. external length : 000003
+INSMK : Stock Type 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 008, Offset : 0104. external length : 000001
+SOBKZ : Special Stock Indicator 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 009, Offset : 0105. external length : 000001
+KZVBR : Consumption posting 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 010, Offset : 0106. external length : 000001
+LIFNR : Account Number of Vendor or Creditor 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 011, Offset : 0107. external length : 000010
+KUNNR : Customer Number 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 012, Offset : 0117. external length : 000010
+KDAUF : Sales Order Number 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 013, Offset : 0127. external length : 000010
+KDPOS : Item number in Sales Order 
+internal data type : NUMCInternal length : 000006 charactersPosition in segment : 014, Offset : 0137. external length : 000006
+KDEIN : Delivery schedule for sales order 
+internal data type : NUMCInternal length : 000004 charactersPosition in segment : 015, Offset : 0143. external length : 000004
+SHKZG : Debit/Credit Indicator 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 016, Offset : 0147. external length : 000001
+WAERS : Currency Key 
+internal data type : CUKYInternal length : 000005 charactersPosition in segment : 017, Offset : 0148. external length : 000005
+DMBTR : Amount in local currency in CHAR format 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 018, Offset : 0153. external length : 000015
+BWTAR : Valuation Type 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 019, Offset : 0168. external length : 000010
+ERFMG : Quantity in unit of entry 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 020, Offset : 0178. external length : 000015
+ERFME : Unit of entry 
+internal data type : UNITInternal length : 000003 charactersPosition in segment : 021, Offset : 0193. external length : 000003
+BPMNG : Quantity in Order Price Quantity Unit 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 022, Offset : 0196. external length : 000015
+BPRME : Order Price Unit (Purchasing) 
+internal data type : UNITInternal length : 000003 charactersPosition in segment : 023, Offset : 0211. external length : 000003
+EBELN : Purchasing Document Number 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 024, Offset : 0214. external length : 000010
+EBELP : Item Number of Purchasing Document 
+internal data type : NUMCInternal length : 000005 charactersPosition in segment : 025, Offset : 0224. external length : 000005
+ELIKZ : "Delivery Completed" Indicator 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 026, Offset : 0229. external length : 000001
+SGTXT : Item Text 
+internal data type : CHARInternal length : 000050 charactersPosition in segment : 027, Offset : 0230. external length : 000050
+WEMPF : Goods Recipient 
+internal data type : CHARInternal length : 000012 charactersPosition in segment : 028, Offset : 0280. external length : 000012
+ABLAD : Unloading Point 
+internal data type : CHARInternal length : 000025 charactersPosition in segment : 029, Offset : 0292. external length : 000025
+KOSTL : Cost Center 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 030, Offset : 0317. external length : 000010
+AUFNR : Order Number 
+internal data type : CHARInternal length : 000012 charactersPosition in segment : 031, Offset : 0327. external length : 000012
+ANLN1 : Main Asset Number 
+internal data type : CHARInternal length : 000012 charactersPosition in segment : 032, Offset : 0339. external length : 000012
+ANLN2 : Asset Subnumber 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 033, Offset : 0351. external length : 000004
+RSNUM : Number of reservation/dependent requirements 
+internal data type : NUMCInternal length : 000010 charactersPosition in segment : 034, Offset : 0355. external length : 000010
+RSPOS : Item Number of Reservation / Dependent Requirements 
+internal data type : NUMCInternal length : 000004 charactersPosition in segment : 035, Offset : 0365. external length : 000004
+KZEAR : Final issue for this reservation 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 036, Offset : 0369. external length : 000001
+UMMAT : Receiving/Issuing Material 
+internal data type : CHARInternal length : 000018 charactersPosition in segment : 037, Offset : 0370. external length : 000018
+UMWRK : Receiving plant/issuing plant 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 038, Offset : 0388. external length : 000004
+UMLGO : Receiving/issuing storage location 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 039, Offset : 0392. external length : 000004
+UMCHA : Receiving/issuing batch 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 040, Offset : 0396. external length : 000010
+KZBEW : Movement Indicator 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 041, Offset : 0406. external length : 000001
+WEUNB : Goods Receipt, Non-Valuated 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 042, Offset : 0407. external length : 000001
+LGNUM : Warehouse Number / Warehouse Complex 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 043, Offset : 0408. external length : 000003
+LGTYP : Storage Type 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 044, Offset : 0411. external length : 000003
+LGPLA : Storage Bin 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 045, Offset : 0414. external length : 000010
+GRUND : Reason for Manual Valuation of Net Assets 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 046, Offset : 0424. external length : 000004
+EVERS : Shipping Instructions 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 047, Offset : 0428. external length : 000002
+EVERE : Compliance with Shipping Instructions 
+internal data type : CHARInternal length : 000002 charactersPosition in segment : 048, Offset : 0430. external length : 000002
+IMKEY : Internal Key for Real Estate Object 
+internal data type : CHARInternal length : 000008 charactersPosition in segment : 049, Offset : 0432. external length : 000008
+KSTRG : Cost Object 
+internal data type : CHARInternal length : 000012 charactersPosition in segment : 050, Offset : 0440. external length : 000012
+PAOBJNR : Number for profitab.segment (CO-PA) in char.format 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 051, Offset : 0452. external length : 000010
+PRCTR : Profit Center 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 052, Offset : 0462. external length : 000010
+PS_PSP_PNR : Work Breakdown Structure Element (WBS Element) 
+internal data type : NUMCInternal length : 000008 charactersPosition in segment : 053, Offset : 0472. external length : 000008
+NPLNR : Network Number for Account Assignment 
+internal data type : CHARInternal length : 000012 charactersPosition in segment : 054, Offset : 0480. external length : 000012
+AUFPL : Planning number for transactions in the order in CHAR format 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 055, Offset : 0492. external length : 000010
+APLZL : Counter for distinguishing DB entries 
+internal data type : CHARInternal length : 000008 charactersPosition in segment : 056, Offset : 0502. external length : 000008
+AUFPS : Number of order item in CHAR format 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 057, Offset : 0510. external length : 000004
+VPTNR : Partner account number 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 058, Offset : 0514. external length : 000010
+FIPOS : Commitment Item 
+internal data type : CHARInternal length : 000014 charactersPosition in segment : 059, Offset : 0524. external length : 000014
+GSBER : Business Area 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 060, Offset : 0538. external length : 000004
+BSTMG : Goods receipt quantity in order unit in CHAR format 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 061, Offset : 0542. external length : 000015
+BSTME : Purchase Order Unit of Measure 
+internal data type : UNITInternal length : 000003 charactersPosition in segment : 062, Offset : 0557. external length : 000003
+EXBWR : Externally entered posting amount in local currency 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 063, Offset : 0560. external length : 000015
+KONTO : G/L Account Number 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 064, Offset : 0575. external length : 000010
+RSHKZ : Debit/Credit Indicator 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 065, Offset : 0585. external length : 000001
+BDMNG : Requirement quantity in CHAR format 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 066, Offset : 0586. external length : 000015
+ENMNG : Issued quantity in char.format 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 067, Offset : 0601. external length : 000015
+QPLOS : Inspection Lot Number 
+internal data type : NUMCInternal length : 000012 charactersPosition in segment : 068, Offset : 0616. external length : 000012
+UMZST : Status of Transfer Batch 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 069, Offset : 0628. external length : 000001
+UMZUS : Status key of transfer batch 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 070, Offset : 0629. external length : 000001
+UMBAR : Valuation Type of Transfer Batch 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 071, Offset : 0630. external length : 000010
+UMSOK : Special stock indicator for physical stock transfer 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 072, Offset : 0640. external length : 000001
+LFBJA : Fiscal Year of a Reference Document 
+internal data type : NUMCInternal length : 000004 charactersPosition in segment : 073, Offset : 0641. external length : 000004
+LFBNR : Document No. of a Reference Document 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 074, Offset : 0645. external length : 000010
+LFPOS : Item of a Reference Document 
+internal data type : NUMCInternal length : 000004 charactersPosition in segment : 075, Offset : 0655. external length : 000004
+SJAHR : Calendar year for monthly work schedule generation 
+internal data type : NUMCInternal length : 000004 charactersPosition in segment : 076, Offset : 0659. external length : 000004
+SMBLN : Number of Material Document 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 077, Offset : 0663. external length : 000010
+SMBLP : Item in Material Document 
+internal data type : NUMCInternal length : 000004 charactersPosition in segment : 078, Offset : 0673. external length : 000004
+EXVKW : Sales value specified externally in loc.currency (CHAR-FORM) 
+internal data type : CHARInternal length : 000015 charactersPosition in segment : 079, Offset : 0677. external length : 000015
+QM_ZUSTD : Batch status with status changed in QM (internal) 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 080, Offset : 0692. external length : 000001
+POSNR : Delivery Item 
+internal data type : NUMCInternal length : 000006 charactersPosition in segment : 081, Offset : 0693. external length : 000006
+VBELN : Delivery 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 082, Offset : 0699. external length : 000010
+QM_UMZST : Status of receiv. batch when status changed in QM (intern.) 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 083, Offset : 0709. external length : 000001
+BWLVS : Movement Type for Warehouse Management 
+internal data type : NUMCInternal length : 000003 charactersPosition in segment : 084, Offset : 0710. external length : 000003
+UMREZ : Numerator for Conversion to Base Units of Measure 
+internal data type : DEC Internal length : 000005 charactersNo decimal places, without signPosition in segment : 085, Offset : 0713. external length : 000005
+UMREN : Denominator for conversion to base units of measure 
+internal data type : DEC Internal length : 000005 charactersNo decimal places, without signPosition in segment : 086, Offset : 0718. external length : 000005
+VFDAT : Shelf Life Expiration or Best-Before Date 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 087, Offset : 0723. external length : 000008
+DABRZ : Reference date for settlement 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 088, Offset : 0731. external length : 000008
+MATNR_EXTERNAL : Material Number 
+internal data type : CHARInternal length : 000040 charactersPosition in segment : 089, Offset : 0739. external length : 000040
+MATNR_VERSION : Version Number for MATNR Field 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 090, Offset : 0779. external length : 000010
+MATNR_GUID : External GUID for MATNR Field 
+internal data type : CHARInternal length : 000032 charactersPosition in segment : 091, Offset : 0789. external length : 000032
+UMMAT_EXTERNAL : Long Material Number for Field UMMAT 
+internal data type : CHARInternal length : 000040 charactersPosition in segment : 092, Offset : 0821. external length : 000040
+UMMAT_VERSION : Version Number for Field UMMAT 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 093, Offset : 0861. external length : 000010
+UMMAT_GUID : External GUID for Field UMMAT 
+internal data type : CHARInternal length : 000032 charactersPosition in segment : 094, Offset : 0871. external length : 000032
+FIPEX : Commitment Item (No Longer in Use -> FM_FIPEX) 
+internal data type : CHARInternal length : 000024 charactersPosition in segment : 095, Offset : 0903. external length : 000024
+MATNR_LONG : Material No. 
+internal data type : CHARInternal length : 000040 charactersPosition in segment : 096, Offset : 0927. external length : 000040
+UMMAT_LONG : Receiving/Issuing Material 
+internal data type : CHARInternal length : 000040 charactersPosition in segment : 097, Offset : 0967. external length : 000040
+E1MBXYJ : Create Goods Movement from Non-SAP System: Item++ 
+Segment definition E2MBXYJ001 Released since Release 620 , Segment length: 0476 
+PARGB : Trading partner's business area 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 001, Offset : 0063. external length : 000004
+PARBU : Clearing company code 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 002, Offset : 0067. external length : 000004
+CLASS : Class number 
+internal data type : CHARInternal length : 000018 charactersPosition in segment : 003, Offset : 0071. external length : 000018
+UMCLA : Class number 
+internal data type : CHARInternal length : 000018 charactersPosition in segment : 004, Offset : 0089. external length : 000018
+XCLAS : Checkbox 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 005, Offset : 0107. external length : 000001
+UMXCL : Checkbox 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 006, Offset : 0108. external length : 000001
+XNIBU : Checkbox 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 007, Offset : 0109. external length : 000001
+BDTER : Requirements date for the component 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 008, Offset : 0110. external length : 000008
+TBBEL : Material doc. no. of transfer requirement to be cancelled 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 009, Offset : 0118. external length : 000010
+TBBPO : Material doc. item of transf.reqmnt item to be cancelled 
+internal data type : NUMCInternal length : 000004 charactersPosition in segment : 010, Offset : 0128. external length : 000004
+TBBJR : Material doc. year of transfer requirement to be cancelled 
+internal data type : NUMCInternal length : 000004 charactersPosition in segment : 011, Offset : 0132. external length : 000004
+OBJNR : Object number 
+internal data type : CHARInternal length : 000022 charactersPosition in segment : 012, Offset : 0136. external length : 000022
+AUTYP : Order category 
+internal data type : NUMCInternal length : 000002 charactersPosition in segment : 013, Offset : 0158. external length : 000002
+QPLOA : Inspection Lot on Which the Usage Decision is Based 
+internal data type : NUMCInternal length : 000012 charactersPosition in segment : 014, Offset : 0160. external length : 000012
+TBPKZ : Indicator: No Transfer Requirement Created 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 015, Offset : 0172. external length : 000001
+TAFKZ : Indicator: do not cal up automatic TO creation 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 016, Offset : 0173. external length : 000001
+KZEAR_OLD : Final issue for this reservation 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 017, Offset : 0174. external length : 000001
+RSART : Record type 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 018, Offset : 0175. external length : 000001
+PPRCTR : Partner Profit Center 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 019, Offset : 0176. external length : 000010
+XMEVO : Propose quantities 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 020, Offset : 0186. external length : 000001
+UMLGT : Storage Type 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 021, Offset : 0187. external length : 000003
+UMLGP : Storage Bin 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 022, Offset : 0190. external length : 000010
+MENGE : Quantity 
+internal data type : QUANInternal length : 000013 characters000003 decimal places, without signPosition in segment : 023, Offset : 0200. external length : 000015
+MEINS : Base Unit of Measure 
+internal data type : UNITInternal length : 000003 charactersPosition in segment : 024, Offset : 0215. external length : 000003
+FKBER : Functional Area 
+internal data type : CHARInternal length : 000004 charactersPosition in segment : 025, Offset : 0218. external length : 000004
+MHDAT : SLED/Best-Before Date or Date of Production 
+internal data type : DATSInternal length : 000008 charactersPosition in segment : 026, Offset : 0222. external length : 000008
+BSSKZ : Special movement indicator for warehouse management 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 027, Offset : 0230. external length : 000001
+EXIDV : External Handling Unit Identification 
+internal data type : CHARInternal length : 000020 charactersPosition in segment : 028, Offset : 0231. external length : 000020
+BERKZ : Material Staging Indicator for Production Supply 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 029, Offset : 0251. external length : 000001
+PRVBE : Production Supply Area 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 030, Offset : 0252. external length : 000010
+KZECH : Determination of batch entry in the production/process order 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 031, Offset : 0262. external length : 000001
+UPTYP : Subitem Category, Purchasing Document 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 032, Offset : 0263. external length : 000001
+REFIX : Field defined as in SY-TABIX 
+internal data type : INT4Internal length : 000010 charactersPosition in segment : 033, Offset : 0264. external length : 000011
+VLIEF_AVIS : Delivery 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 034, Offset : 0275. external length : 000010
+VBELP_AVIS : Delivery Item 
+internal data type : NUMCInternal length : 000006 charactersPosition in segment : 035, Offset : 0285. external length : 000006
+XWAIT : Checkbox 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 036, Offset : 0291. external length : 000001
+XNOEQ : Checkbox 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 037, Offset : 0292. external length : 000001
+ILINR : IDoc line item number 
+internal data type : NUMCInternal length : 000006 charactersPosition in segment : 038, Offset : 0293. external length : 000006
+VOLUM : Volume 
+internal data type : QUANInternal length : 000015 characters000003 decimal places, without signPosition in segment : 039, Offset : 0299. external length : 000017
+VOLEH : Volume unit 
+internal data type : UNITInternal length : 000003 charactersPosition in segment : 040, Offset : 0316. external length : 000003
+ANZL1 : Number of Storage Units to be Placed Into Storage 
+internal data type : DEC Internal length : 000003 charactersNo decimal places, without signPosition in segment : 041, Offset : 0319. external length : 000004
+ANZL2 : Number of Storage Units to be Placed Into Storage 
+internal data type : DEC Internal length : 000003 charactersNo decimal places, without signPosition in segment : 042, Offset : 0323. external length : 000004
+LMEN1 : Quantity per Storage Unit to be Placed into Stock in Alt.UoM 
+internal data type : QUANInternal length : 000013 characters000003 decimal places, without signPosition in segment : 043, Offset : 0327. external length : 000015
+LMEN2 : Quantity per Storage Unit to be Placed into Stock in Alt.UoM 
+internal data type : QUANInternal length : 000013 characters000003 decimal places, without signPosition in segment : 044, Offset : 0342. external length : 000015
+LETY1 : Storage Unit Type 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 045, Offset : 0357. external length : 000003
+LETY2 : Storage Unit Type 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 046, Offset : 0360. external length : 000003
+KZKUB : Indicator: Do not create posting change notice 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 047, Offset : 0363. external length : 000001
+UBTYP : Storage Type 
+internal data type : CHARInternal length : 000003 charactersPosition in segment : 048, Offset : 0364. external length : 000003
+UBLGP : Storage Bin 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 049, Offset : 0367. external length : 000010
+MBLNR : Number of Material Document 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 050, Offset : 0377. external length : 000010
+MBLPO : Item in Material Document 
+internal data type : NUMCInternal length : 000004 charactersPosition in segment : 051, Offset : 0387. external length : 000004
+MJAHR : Material Document Year 
+internal data type : NUMCInternal length : 000004 charactersPosition in segment : 052, Offset : 0391. external length : 000004
+URZEI : Original line in material document 
+internal data type : NUMCInternal length : 000004 charactersPosition in segment : 053, Offset : 0395. external length : 000004
+GEBER : Fund 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 054, Offset : 0399. external length : 000010
+FISTL : Funds Center 
+internal data type : CHARInternal length : 000016 charactersPosition in segment : 055, Offset : 0409. external length : 000016
+KZBWS : Valuation of Special Stock 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 056, Offset : 0425. external length : 000001
+KDAUF_SD : Sales Order Number 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 057, Offset : 0426. external length : 000010
+KDPOS_SD : Item number in Sales Order 
+internal data type : NUMCInternal length : 000006 charactersPosition in segment : 058, Offset : 0436. external length : 000006
+XRERE : Reservation reading is mandatory 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 059, Offset : 0442. external length : 000001
+XSTOR : Reverse Posting Indicator 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 060, Offset : 0443. external length : 000001
+BRGEW : Gross weight 
+internal data type : QUANInternal length : 000015 characters000003 decimal places, without signPosition in segment : 061, Offset : 0444. external length : 000017
+GEWEI : Weight Unit 
+internal data type : UNITInternal length : 000003 charactersPosition in segment : 062, Offset : 0461. external length : 000003
+WM_KZBEW : Movement Indicator 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 063, Offset : 0464. external length : 000001
+WENUM : Goods Receipt Number 
+internal data type : CHARInternal length : 000010 charactersPosition in segment : 064, Offset : 0465. external length : 000010
+GEBEH : Lot Container 
+internal data type : UNITInternal length : 000003 charactersPosition in segment : 065, Offset : 0475. external length : 000003
+ANZGEB : QM - No. of Containers 
+internal data type : QUANInternal length : 000006 characters000003 decimal places, without signPosition in segment : 066, Offset : 0478. external length : 000009
+KANBA : Kanban Indicator 
+internal data type : CHARInternal length : 000001 charactersPosition in segment : 067, Offset : 0487. external length : 000001
+BSTMG : Goods receipt quantity in order unit 
+internal data type : QUANInternal length : 000013 characters000003 decimal places, without signPosition in segment : 068, Offset : 0488. external length : 000015
+FUNC_AREA_LONG : Functional Area 
+internal data type : CHARInternal length : 000016 charactersPosition in segment : 069, Offset : 0503. external length : 000016
+GRANT_NBR : Grant 
+internal data type : CHARInternal length : 000020 charactersPosition in segment : 070, Offset : 0519. external length : 000020
+
+Info... 
+Automatically created HTML doc.created on 01/03/2023 at 16:01:41 Client 100 System S4M Release 755 Lang. E Transaction WE60 
+Display current status Version 3 of IDoc record types : IDoc record types for SAP Release 4.0 
