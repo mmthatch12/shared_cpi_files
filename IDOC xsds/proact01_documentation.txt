@@ -1,0 +1,896 @@
+
+--------------------------------------------------------------------------------
+
+Structure of basic type PROACT01 
+
+Transfer of stock and sales data 
+
+
+
+
+•E1EDK34 : General header segment  
+Status: Required , min. number : 1 , max. number : 1 
+
+
+
+Structure 
+
+
+
+•E1EDK02 : IDoc: Document header reference data  
+Status: Optional , min. number : 1 , max. number : 10 
+
+
+
+Structure 
+
+
+
+•E1ADRM1 : Central Address Segment Group, Main Segment  
+Status: Required , min. number : 1 , max. number : 10 
+
+
+
+Structure 
+
+
+◦E1ADRP1 : Central Address Segment Group, Person Segment  
+Status: Optional , min. number : 1 , max. number : 10 
+
+
+
+Structure 
+
+
+
+◦E1ADRE1 : Central Address Segment Group, Additional Data Segment  
+Status: Optional , min. number : 1 , max. number : 10 
+
+
+
+Structure 
+
+
+
+
+•E1EDP31 : General item segment  
+Status: Required , min. number : 1 , max. number : 9999 
+
+
+
+Structure 
+
+
+◦E1EDP19 : IDoc: Document Item Object Identification  
+Status: Required , min. number : 1 , max. number : 5 
+
+
+
+Structure 
+
+
+
+◦E1EDP32 : Stock and sales data  
+Status: Required , min. number : 1 , max. number : 999 
+
+
+
+Structure 
+
+
+
+
+•E1EDS02 : IDoc: Summary segment  
+Status: Required , min. number : 1 , max. number : 1 
+
+
+
+Structure 
+
+
+
+Segment structures 
+
+
+
+
+•E1EDK34 : General header segment 
+
+Segment definition E2EDK34000 Released since Release 45A , Segment length: 0017 
+
+
+1.ACTION : Action code for the whole EDI message 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 001, Offset : 0063. external length : 000003
+
+
+2.DATUM : IDOC: Date 
+ 
+
+internal data type : CHAR
+ Internal length : 000008 characters
+ Position in segment : 002, Offset : 0066. external length : 000008
+
+
+3.UZEIT : IDOC: Time 
+ 
+
+internal data type : CHAR
+ Internal length : 000006 characters
+ Position in segment : 003, Offset : 0074. external length : 000006
+
+
+
+
+
+
+
+•E1EDK02 : IDoc: Document header reference data 
+
+Segment definition E2EDK02 Released since Release 30A , Segment length: 0058 
+
+
+1.QUALF : IDOC qualifier reference document 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 001, Offset : 0063. external length : 000003
+
+
+2.BELNR : IDOC document number 
+ 
+
+internal data type : CHAR
+ Internal length : 000035 characters
+ Position in segment : 002, Offset : 0066. external length : 000035
+
+
+3.POSNR : Item number 
+ 
+
+internal data type : CHAR
+ Internal length : 000006 characters
+ Position in segment : 003, Offset : 0101. external length : 000006
+
+
+4.DATUM : IDOC: Date 
+ 
+
+internal data type : CHAR
+ Internal length : 000008 characters
+ Position in segment : 004, Offset : 0107. external length : 000008
+
+
+5.UZEIT : IDOC: Time 
+ 
+
+internal data type : CHAR
+ Internal length : 000006 characters
+ Position in segment : 005, Offset : 0115. external length : 000006
+
+
+
+
+
+
+
+•E1ADRM1 : Central Address Segment Group, Main Segment 
+
+Segment definition E2ADRM1001 Released since Release 46A , Segment length: 0952 
+
+
+1.PARTNER_Q : Qualifier for partner function 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 001, Offset : 0063. external length : 000003
+
+
+2.ADDRESS_T : Addr. type 
+ 
+
+internal data type : CHAR
+ Internal length : 000001 characters
+ Position in segment : 002, Offset : 0066. external length : 000001
+
+
+3.PARTNER_ID : Partner no. (SAP) 
+ 
+
+internal data type : CHAR
+ Internal length : 000017 characters
+ Position in segment : 003, Offset : 0067. external length : 000017
+
+
+4.JURISDIC : Location for tax calculation - Tax Jurisdiction Code 
+ 
+
+internal data type : CHAR
+ Internal length : 000017 characters
+ Position in segment : 004, Offset : 0084. external length : 000017
+
+
+5.LANGUAGE : Language key 
+ 
+
+internal data type : CHAR
+ Internal length : 000002 characters
+ Position in segment : 005, Offset : 0101. external length : 000002
+
+
+6.FORMOFADDR : Form of address 
+ 
+
+internal data type : CHAR
+ Internal length : 000015 characters
+ Position in segment : 006, Offset : 0103. external length : 000015
+
+
+7.NAME1 : Name or address line 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 007, Offset : 0118. external length : 000040
+
+
+8.NAME2 : Name or address line 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 008, Offset : 0158. external length : 000040
+
+
+9.NAME3 : Name or address line 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 009, Offset : 0198. external length : 000040
+
+
+10.NAME4 : Name or address line 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 010, Offset : 0238. external length : 000040
+
+
+11.NAME_TEXT : Name or address line (formatted) 
+ 
+
+internal data type : CHAR
+ Internal length : 000050 characters
+ Position in segment : 011, Offset : 0278. external length : 000050
+
+
+12.NAME_CO : Subsequent line for name or address (c/o) 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 012, Offset : 0328. external length : 000040
+
+
+13.LOCATION : Location description of location 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 013, Offset : 0368. external length : 000040
+
+
+14.BUILDING : Location description: Building 
+ 
+
+internal data type : CHAR
+ Internal length : 000010 characters
+ Position in segment : 014, Offset : 0408. external length : 000010
+
+
+15.FLOOR : Location description: Floor 
+ 
+
+internal data type : CHAR
+ Internal length : 000010 characters
+ Position in segment : 015, Offset : 0418. external length : 000010
+
+
+16.ROOM : Location description: Room 
+ 
+
+internal data type : CHAR
+ Internal length : 000010 characters
+ Position in segment : 016, Offset : 0428. external length : 000010
+
+
+17.STREET1 : Street and house number 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 017, Offset : 0438. external length : 000040
+
+
+18.STREET2 : Street and house number 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 018, Offset : 0478. external length : 000040
+
+
+19.STREET3 : Street and house number 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 019, Offset : 0518. external length : 000040
+
+
+20.HOUSE_SUPL : House number 
+ 
+
+internal data type : CHAR
+ Internal length : 000004 characters
+ Position in segment : 020, Offset : 0558. external length : 000004
+
+
+21.HOUSE_RANG : House no. (interval) 
+ 
+
+internal data type : CHAR
+ Internal length : 000010 characters
+ Position in segment : 021, Offset : 0562. external length : 000010
+
+
+22.POSTL_COD1 : Postal code 
+ 
+
+internal data type : CHAR
+ Internal length : 000010 characters
+ Position in segment : 022, Offset : 0572. external length : 000010
+
+
+23.POSTL_COD3 : Postal code 
+ 
+
+internal data type : CHAR
+ Internal length : 000010 characters
+ Position in segment : 023, Offset : 0582. external length : 000010
+
+
+24.POSTL_AREA : Post delivery district 
+ 
+
+internal data type : CHAR
+ Internal length : 000015 characters
+ Position in segment : 024, Offset : 0592. external length : 000015
+
+
+25.CITY1 : Town or city 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 025, Offset : 0607. external length : 000040
+
+
+26.CITY2 : Town or city 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 026, Offset : 0647. external length : 000040
+
+
+27.POSTL_PBOX : PO Box 
+ 
+
+internal data type : CHAR
+ Internal length : 000010 characters
+ Position in segment : 027, Offset : 0687. external length : 000010
+
+
+28.POSTL_COD2 : Postal code 
+ 
+
+internal data type : CHAR
+ Internal length : 000010 characters
+ Position in segment : 028, Offset : 0697. external length : 000010
+
+
+29.POSTL_CITY : Town or city 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 029, Offset : 0707. external length : 000040
+
+
+30.TELEPHONE1 : Telephone number 
+ 
+
+internal data type : CHAR
+ Internal length : 000030 characters
+ Position in segment : 030, Offset : 0747. external length : 000030
+
+
+31.TELEPHONE2 : Telephone number 
+ 
+
+internal data type : CHAR
+ Internal length : 000030 characters
+ Position in segment : 031, Offset : 0777. external length : 000030
+
+
+32.TELEFAX : Fax number 
+ 
+
+internal data type : CHAR
+ Internal length : 000030 characters
+ Position in segment : 032, Offset : 0807. external length : 000030
+
+
+33.TELEX : Telex number 
+ 
+
+internal data type : CHAR
+ Internal length : 000030 characters
+ Position in segment : 033, Offset : 0837. external length : 000030
+
+
+34.E_MAIL : E-Mail Address 
+ 
+
+internal data type : CHAR
+ Internal length : 000070 characters
+ Position in segment : 034, Offset : 0867. external length : 000070
+
+
+35.COUNTRY1 : Country indicator (ISO alphanumeric) 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 035, Offset : 0937. external length : 000003
+
+
+36.COUNTRY2 : Country indicator (ISO numeric) 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 036, Offset : 0940. external length : 000003
+
+
+37.REGION : Region, state 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 037, Offset : 0943. external length : 000003
+
+
+38.COUNTY_COD : County Code (e.g. in USA) 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 038, Offset : 0946. external length : 000003
+
+
+39.COUNTY_TXT : County name (for example, in USA) 
+ 
+
+internal data type : CHAR
+ Internal length : 000025 characters
+ Position in segment : 039, Offset : 0949. external length : 000025
+
+
+40.TZCODE : Location for time zone (SAP code) 
+ 
+
+internal data type : CHAR
+ Internal length : 000006 characters
+ Position in segment : 040, Offset : 0974. external length : 000006
+
+
+41.TZDESC : Location for time zone (external code) 
+ 
+
+internal data type : CHAR
+ Internal length : 000035 characters
+ Position in segment : 041, Offset : 0980. external length : 000035
+
+
+
+
+
+
+
+•E1ADRP1 : Central Address Segment Group, Person Segment 
+
+Segment definition E2ADRP1000 Released since Release 40A , Segment length: 0242 
+
+
+1.PERSON_Q : Qualifier for contact person (person function) 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 001, Offset : 0063. external length : 000003
+
+
+2.TITLE : Form-of-Address Key 
+ 
+
+internal data type : CHAR
+ Internal length : 000004 characters
+ Position in segment : 002, Offset : 0066. external length : 000004
+
+
+3.NAME_FIRST : Name components 
+ 
+
+internal data type : CHAR
+ Internal length : 000035 characters
+ Position in segment : 003, Offset : 0070. external length : 000035
+
+
+4.NAME_LAST : Last name 
+ 
+
+internal data type : CHAR
+ Internal length : 000035 characters
+ Position in segment : 004, Offset : 0105. external length : 000035
+
+
+5.NAME2_PERS : Name components 
+ 
+
+internal data type : CHAR
+ Internal length : 000035 characters
+ Position in segment : 005, Offset : 0140. external length : 000035
+
+
+6.NICKNAME : Nickname or first name 
+ 
+
+internal data type : CHAR
+ Internal length : 000020 characters
+ Position in segment : 006, Offset : 0175. external length : 000020
+
+
+7.INITIALS : Initials or "middle initial" 
+ 
+
+internal data type : CHAR
+ Internal length : 000010 characters
+ Position in segment : 007, Offset : 0195. external length : 000010
+
+
+8.TITLE_ACA1 : Academic grades and names affixes 
+ 
+
+internal data type : CHAR
+ Internal length : 000004 characters
+ Position in segment : 008, Offset : 0205. external length : 000004
+
+
+9.TITLE_ACA2 : Academic grades and names affixes 
+ 
+
+internal data type : CHAR
+ Internal length : 000004 characters
+ Position in segment : 009, Offset : 0209. external length : 000004
+
+
+10.TITLE_SPPL : Academic grades and names affixes 
+ 
+
+internal data type : CHAR
+ Internal length : 000004 characters
+ Position in segment : 010, Offset : 0213. external length : 000004
+
+
+11.PREFIX1 : Name prefix 
+ 
+
+internal data type : CHAR
+ Internal length : 000004 characters
+ Position in segment : 011, Offset : 0217. external length : 000004
+
+
+12.PREFIX2 : Name prefix 
+ 
+
+internal data type : CHAR
+ Internal length : 000004 characters
+ Position in segment : 012, Offset : 0221. external length : 000004
+
+
+13.DEPARTMENT : Department 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 013, Offset : 0225. external length : 000040
+
+
+14.FUNCTION : Function 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 014, Offset : 0265. external length : 000040
+
+
+
+
+
+
+
+•E1ADRE1 : Central Address Segment Group, Additional Data Segment 
+
+Segment definition E2ADRE1000 Released since Release 40A , Segment length: 0073 
+
+
+1.EXTEND_Q : Qualifier for additional data, e.g. ILN or D&B number 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 001, Offset : 0063. external length : 000003
+
+
+2.EXTEND_D : Additional data, e.g. ILN or D&B no. 
+ 
+
+internal data type : CHAR
+ Internal length : 000070 characters
+ Position in segment : 002, Offset : 0066. external length : 000070
+
+
+
+
+
+
+
+•E1EDP31 : General item segment 
+
+Segment definition E2EDP31000 Released since Release 45A , Segment length: 0009 
+
+
+1.ACTION : Action code for the whole EDI message 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 001, Offset : 0063. external length : 000003
+
+
+2.POSEX : Item number 
+ 
+
+internal data type : CHAR
+ Internal length : 000006 characters
+ Position in segment : 002, Offset : 0066. external length : 000006
+
+
+
+
+
+
+
+•E1EDP19 : IDoc: Document Item Object Identification 
+
+Segment definition E2EDP19003 Released since Release 751 , Segment length: 0282 
+
+
+1.QUALF : IDOC object identification such as material no.,customer 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 001, Offset : 0063. external length : 000003
+
+
+2.IDTNR : IDOC material ID 
+ 
+
+internal data type : CHAR
+ Internal length : 000035 characters
+ Position in segment : 002, Offset : 0066. external length : 000035
+
+
+3.KTEXT : IDOC short text 
+ 
+
+internal data type : CHAR
+ Internal length : 000070 characters
+ Position in segment : 003, Offset : 0101. external length : 000070
+
+
+4.MFRPN : Manufacturer part number 
+ 
+
+internal data type : CHAR
+ Internal length : 000042 characters
+ Position in segment : 004, Offset : 0171. external length : 000042
+
+
+5.MFRNR : Manufacturer number 
+ 
+
+internal data type : CHAR
+ Internal length : 000010 characters
+ Position in segment : 005, Offset : 0213. external length : 000010
+
+
+6.IDTNR_EXTERNAL : Length of Material (Future Development) for Field IDTNR 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 006, Offset : 0223. external length : 000040
+
+
+7.IDTNR_VERSION : Version Number (Future Development) for Field IDTNR 
+ 
+
+internal data type : CHAR
+ Internal length : 000010 characters
+ Position in segment : 007, Offset : 0263. external length : 000010
+
+
+8.IDTNR_GUID : External GUID (Future Development) for Field IDTNR 
+ 
+
+internal data type : CHAR
+ Internal length : 000032 characters
+ Position in segment : 008, Offset : 0273. external length : 000032
+
+
+9.IDTNR_LONG : IDOC material ID 
+ 
+
+internal data type : CHAR
+ Internal length : 000040 characters
+ Position in segment : 009, Offset : 0305. external length : 000040
+
+
+
+
+
+
+
+•E1EDP32 : Stock and sales data 
+
+Segment definition E2EDP32001 Released since Release 46C , Segment length: 0050 
+
+
+1.QUALF : Qualifier for quantity information in IDoc PROACT 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 001, Offset : 0063. external length : 000003
+
+
+2.QUANTITY : Quantity 
+ 
+
+internal data type : CHAR
+ Internal length : 000015 characters
+ Position in segment : 002, Offset : 0066. external length : 000015
+
+
+3.UNIT : Unit of measure 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 003, Offset : 0081. external length : 000003
+
+
+4.DATE : IDOC: Date 
+ 
+
+internal data type : CHAR
+ Internal length : 000008 characters
+ Position in segment : 004, Offset : 0084. external length : 000008
+
+
+5.TIME : IDOC: Time 
+ 
+
+internal data type : CHAR
+ Internal length : 000006 characters
+ Position in segment : 005, Offset : 0092. external length : 000006
+
+
+6.DATE_TO : IDOC: Date 
+ 
+
+internal data type : CHAR
+ Internal length : 000008 characters
+ Position in segment : 006, Offset : 0098. external length : 000008
+
+
+7.TIME_TO : IDOC: Time 
+ 
+
+internal data type : CHAR
+ Internal length : 000006 characters
+ Position in segment : 007, Offset : 0106. external length : 000006
+
+
+8.ACTION : Activity Code for IDoc Inbound Processing 
+ 
+
+internal data type : CHAR
+ Internal length : 000001 characters
+ Position in segment : 008, Offset : 0112. external length : 000001
+
+
+
+
+
+
+
+•E1EDS02 : IDoc: Summary segment 
+
+Segment definition E2EDS02 Released since Release 30A , Segment length: 0024 
+
+
+1.SUMID : Qualifier for totals segment for shipping notification 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 001, Offset : 0063. external length : 000003
+
+
+2.SUMME : Total value of sum segment 
+ 
+
+internal data type : CHAR
+ Internal length : 000018 characters
+ Position in segment : 002, Offset : 0066. external length : 000018
+
+
+3.SUNIT : Total value unit for totals segment in the shipping notif. 
+ 
+
+internal data type : CHAR
+ Internal length : 000003 characters
+ Position in segment : 003, Offset : 0084. external length : 000003
+
+
+
+
+
+
+
+
+
+
+
+ Info... 
+Automatically created HTML doc.
+ created on 01/03/2023 at 16:11:49 
+ Client 100 
+ System S4M 
+ Release 755 
+ Lang. E 
+ Transaction WE60 
+Display current status 
+ Version 3 of IDoc record types : IDoc record types for SAP Release 4.0
