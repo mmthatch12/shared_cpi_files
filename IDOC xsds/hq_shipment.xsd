@@ -10,8 +10,8 @@
         <xs:element minOccurs="0" name="olocation_id" type="xs:string" />
         <xs:element minOccurs="0" name="owarehouse_id" type="xs:string" />
         <xs:element minOccurs="0" name="fulfillment_center_id" />
-        <xs:element minOccurs="0" name="ocarrier_id" type="xs:string" />
-        <xs:element minOccurs="0" name="ocarrier_service_id" type="xs:string" />
+        <xs:element minOccurs="0" name="ocarrier_id" />
+        <xs:element minOccurs="0" name="ocarrier_service_id" />
         <xs:element minOccurs="0" name="oshipment_type_id" type="xs:string" />
         <xs:element minOccurs="0" name="oshipment_type" />
         <xs:element minOccurs="0" name="oshipment_from" type="xs:string" />
@@ -32,11 +32,11 @@
         <xs:element minOccurs="0" name="oshipment_is_notified" type="xs:string" />
         <xs:element minOccurs="0" name="oshipment_picker" />
         <xs:element minOccurs="0" name="oshipment_by" />
-        <xs:element minOccurs="0" name="oshipment_scanner_by" />
+        <xs:element minOccurs="0" name="oshipment_scanner_by" type="xs:string" />
         <xs:element minOccurs="0" name="oshipment_fingerprint" />
         <xs:element minOccurs="0" name="oshipment_address_validation_overridden" type="xs:string" />
         <xs:element minOccurs="0" name="oshipment_is_return" type="xs:string" />
-        <xs:element minOccurs="0" name="oshipment_tags" />
+        <xs:element minOccurs="0" name="oshipment_tags" type="xs:string" />
         <xs:element minOccurs="0" name="oshipment_saturday_pickup" type="xs:string" />
         <xs:element minOccurs="0" name="oshipment_saturday_delivery" type="xs:string" />
         <xs:element minOccurs="0" name="oshipment_ship_by" type="xs:string" />
@@ -51,11 +51,265 @@
         <xs:element minOccurs="0" name="oshipment_to_address_id" type="xs:string" />
         <xs:element minOccurs="0" name="oshipment_from_address_id" />
         <xs:element minOccurs="0" name="oshipment_return_address_id" />
-        <xs:element minOccurs="0" name="oshipment_sent_to_scanner_at" />
+        <xs:element minOccurs="0" name="oshipment_sent_to_scanner_at" type="xs:string" />
         <xs:element minOccurs="0" name="oshipment_delivered_at" />
         <xs:element minOccurs="0" name="oshipment_special_instructions" />
         <xs:element minOccurs="0" name="rate_quote_reference" />
-        <xs:element minOccurs="0" name="booking_user" />
+        <xs:element minOccurs="0" name="booking_user" type="xs:string" />
+        <xs:element minOccurs="0" name="location">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="olocation_id" type="xs:string" />
+              <xs:element minOccurs="0" name="olocation_name" type="xs:string" />
+              <xs:element minOccurs="0" name="olocation_key" type="xs:string" />
+              <xs:element minOccurs="0" name="olocation_abr" type="xs:string" />
+              <xs:element minOccurs="0" name="ofulfillment_method_id" />
+              <xs:element minOccurs="0" name="olocation_external_id" type="xs:string" />
+              <xs:element minOccurs="0" name="olocation_status" type="xs:string" />
+              <xs:element minOccurs="0" name="olocation_default_warehouse_id" type="xs:string" />
+              <xs:element minOccurs="0" name="olocation_category_id" />
+              <xs:element minOccurs="0" name="olocation_is_owned" type="xs:string" />
+              <xs:element minOccurs="0" name="olocation_state_abbreviation" type="xs:string" />
+              <xs:element minOccurs="0" name="olocation_priority" />
+              <xs:element minOccurs="0" name="OCDT" />
+              <xs:element minOccurs="0" name="OCU" type="xs:string" />
+              <xs:element minOccurs="0" name="OMDT" />
+              <xs:element minOccurs="0" name="OMU" type="xs:string" />
+              <xs:element minOccurs="0" name="oinventory_is_owned" />
+              <xs:element minOccurs="0" name="olocation_is_inventoried" type="xs:string" />
+              <xs:element minOccurs="0" name="olocation_is_fulfilling_orders" type="xs:string" />
+              <xs:element minOccurs="0" name="oshipping_ports_id" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="warehouse">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="owarehouse_id" type="xs:string" />
+              <xs:element minOccurs="0" name="olocation_id" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_name" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_ref_id" />
+              <xs:element minOccurs="0" name="ochannel_id" type="xs:string" />
+              <xs:element minOccurs="0" name="oaddress_id" />
+              <xs:element minOccurs="0" name="owarehouse_is_owned" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_scanners_enabled" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_status" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_contact" />
+              <xs:element minOccurs="0" name="owarehouse_timezone" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_timezone_offset" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_street_1" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_street_2" />
+              <xs:element minOccurs="0" name="owarehouse_street_3" />
+              <xs:element minOccurs="0" name="owarehouse_street_4" />
+              <xs:element minOccurs="0" name="owarehouse_locality" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_region" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_postcode" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_country" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_phone" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_fax" />
+              <xs:element minOccurs="0" name="olatitude" type="xs:string" />
+              <xs:element minOccurs="0" name="olongitude" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_shipexec_key" />
+              <xs:element minOccurs="0" name="ostation_default_id" />
+              <xs:element minOccurs="0" name="owarehouse_return_address_id" />
+              <xs:element minOccurs="0" name="owarehouse_fedex_smartpost_hub_id" type="xs:string" />
+              <xs:element minOccurs="0" name="owarehouse_priority" />
+              <xs:element minOccurs="0" name="amxl_party_id" type="xs:string" />
+              <xs:element minOccurs="0" name="facility_manager_id" type="xs:string" />
+              <xs:element minOccurs="0" name="OCDT" />
+              <xs:element minOccurs="0" name="OCU" type="xs:string" />
+              <xs:element minOccurs="0" name="OMDT" type="xs:string" />
+              <xs:element minOccurs="0" name="OMU" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="origin_address" />
+        <xs:element minOccurs="0" name="destination_address">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="oaddress_id" type="xs:string" />
+              <xs:element minOccurs="0" name="oaddress_name" type="xs:string" />
+              <xs:element minOccurs="0" name="oaddress_street_1" type="xs:string" />
+              <xs:element minOccurs="0" name="oaddress_street_2" />
+              <xs:element minOccurs="0" name="oaddress_street_3" />
+              <xs:element minOccurs="0" name="oaddress_street_4" />
+              <xs:element minOccurs="0" name="oaddress_locality" type="xs:string" />
+              <xs:element minOccurs="0" name="oaddress_region" type="xs:string" />
+              <xs:element minOccurs="0" name="oaddress_postcode" type="xs:string" />
+              <xs:element minOccurs="0" name="oaddress_postcode_first_three" type="xs:string" />
+              <xs:element minOccurs="0" name="oaddress_country" type="xs:string" />
+              <xs:element minOccurs="0" name="slug" />
+              <xs:element minOccurs="0" name="order_variable" />
+              <xs:element minOccurs="0" name="parent_id" />
+              <xs:element minOccurs="0" name="OCDT" type="xs:string" />
+              <xs:element minOccurs="0" name="OCU" type="xs:string" />
+              <xs:element minOccurs="0" name="OMDT" type="xs:string" />
+              <xs:element minOccurs="0" name="OMU" type="xs:string" />
+              <xs:element minOccurs="0" name="oaddress_phone" />
+              <xs:element minOccurs="0" name="object_id" />
+              <xs:element minOccurs="0" name="object_type" type="xs:string" />
+              <xs:element minOccurs="0" name="oaddress_type" type="xs:string" />
+              <xs:element minOccurs="0" name="oaddress_contact" />
+              <xs:element minOccurs="0" name="oaddress_fax" />
+              <xs:element minOccurs="0" name="oaddress_email_to" />
+              <xs:element minOccurs="0" name="oaddress_email_cc" />
+              <xs:element minOccurs="0" name="oaddress_email_bcc" />
+              <xs:element minOccurs="0" name="oaddress_url_1" />
+              <xs:element minOccurs="0" name="oaddress_url_2" />
+              <xs:element minOccurs="0" name="oaddress_url_3" />
+              <xs:element minOccurs="0" name="oaddress_url_4" />
+              <xs:element minOccurs="0" name="oaddress_url_5" />
+              <xs:element minOccurs="0" name="oaddress_external_id" type="xs:string" />
+              <xs:element minOccurs="0" name="oaddress_sales_person" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="packages">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="opackage_id" type="xs:string" />
+              <xs:element minOccurs="0" name="oshipment_id" type="xs:string" />
+              <xs:element minOccurs="0" name="opackage_parent_id" type="xs:string" />
+              <xs:element minOccurs="0" name="opackage_is_voided" />
+              <xs:element minOccurs="0" name="opackage_type" type="xs:string" />
+              <xs:element minOccurs="0" name="opackage_tracking" />
+              <xs:element minOccurs="0" name="opackage_amount" type="xs:string" />
+              <xs:element minOccurs="0" name="opackage_weight" type="xs:string" />
+              <xs:element minOccurs="0" name="opackage_oz" type="xs:string" />
+              <xs:element minOccurs="0" name="opackage_width" />
+              <xs:element minOccurs="0" name="opackage_height" />
+              <xs:element minOccurs="0" name="opackage_length" />
+              <xs:element minOccurs="0" name="opackage_item_volume" />
+              <xs:element minOccurs="0" name="opackage_utilization" />
+              <xs:element minOccurs="0" name="opackage_label" />
+              <xs:element minOccurs="0" name="opackage_barcode" />
+              <xs:element minOccurs="0" name="opackage_sequence_number" />
+              <xs:element minOccurs="0" name="opackage_hash" />
+              <xs:element minOccurs="0" name="oboxdims_id" type="xs:string" />
+              <xs:element minOccurs="0" name="oboxdim_id" type="xs:string" />
+              <xs:element minOccurs="0" name="opackage_is_printed" type="xs:string" />
+              <xs:element minOccurs="0" name="opackage_is_pending_pickup" type="xs:string" />
+              <xs:element minOccurs="0" name="opackage_is_picked_up" type="xs:string" />
+              <xs:element minOccurs="0" name="opackage_is_delivered" type="xs:string" />
+              <xs:element minOccurs="0" name="opackage_scheduled_pickup_date" />
+              <xs:element minOccurs="0" name="opackage_actual_pickup_date" />
+              <xs:element minOccurs="0" name="opackage_scheduled_delivery_date" />
+              <xs:element minOccurs="0" name="opackage_actual_delivery_date" />
+              <xs:element minOccurs="0" name="opackage_box_count" type="xs:string" />
+              <xs:element minOccurs="0" name="opackage_fingerprint" />
+              <xs:element minOccurs="0" name="opackage_external_id" />
+              <xs:element minOccurs="0" name="OCDT" type="xs:string" />
+              <xs:element minOccurs="0" name="OCU" type="xs:string" />
+              <xs:element minOccurs="0" name="OMDT" type="xs:string" />
+              <xs:element minOccurs="0" name="OMU" type="xs:string" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="package_items">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="opackage_item_id" type="xs:string" />
+                    <xs:element minOccurs="0" name="oorder_item_id" type="xs:string" />
+                    <xs:element minOccurs="0" name="opackage_id" type="xs:string" />
+                    <xs:element minOccurs="0" name="oproduct_id" type="xs:string" />
+                    <xs:element minOccurs="0" name="obackorder_id" />
+                    <xs:element minOccurs="0" name="oorder_item_quantity" type="xs:string" />
+                    <xs:element minOccurs="0" name="opackage_item_quantity_scanned" />
+                    <xs:element minOccurs="0" name="opackage_item_sequence" />
+                    <xs:element minOccurs="0" name="opackage_number" />
+                    <xs:element minOccurs="0" name="opackage_item_x" type="xs:string" />
+                    <xs:element minOccurs="0" name="opackage_item_y" type="xs:string" />
+                    <xs:element minOccurs="0" name="opackage_item_z" type="xs:string" />
+                    <xs:element minOccurs="0" name="OCDT" type="xs:string" />
+                    <xs:element minOccurs="0" name="OCU" type="xs:string" />
+                    <xs:element minOccurs="0" name="OMDT" />
+                    <xs:element minOccurs="0" name="OMU" />
+                    <xs:element minOccurs="0" name="opackage_item_quantity_unfulfillable" />
+                    <xs:element minOccurs="0" name="opo_container_item_id" />
+                    <xs:element minOccurs="0" name="product">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="oproduct_id" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_signature" />
+                          <xs:element minOccurs="0" name="oproduct_default_location" />
+                          <xs:element minOccurs="0" name="oproduct_name" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_sku" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_upc" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_asin_us" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_asin_ca" />
+                          <xs:element minOccurs="0" name="oproduct_list_price" />
+                          <xs:element minOccurs="0" name="oproduct_sell_price" />
+                          <xs:element minOccurs="0" name="oproduct_quantity" />
+                          <xs:element minOccurs="0" name="oproduct_channels" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_wholesale_price" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_case_pack" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_fulfillment_method" />
+                          <xs:element minOccurs="0" name="oproduct_price_change" />
+                          <xs:element minOccurs="0" name="oproduct_weight" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_average_cost" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_purchase_cost" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_estimated_freight_cost" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_duties" type="xs:string" />
+                          <xs:element minOccurs="0" name="obrand_id" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_parent_id" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_is_parent" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_variation_types" />
+                          <xs:element minOccurs="0" name="oproduct_qty_per_container" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_target_days_left" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_class" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_type" />
+                          <xs:element minOccurs="0" name="order_variable" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_master_id" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_master_parent_id" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_gtin" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_casepack_upc" type="xs:string" />
+                          <xs:element minOccurs="0" name="slug" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_order" type="xs:string" />
+                          <xs:element minOccurs="0" name="parent_id" />
+                          <xs:element minOccurs="0" name="oproduct_is_noninventory" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_upc_new" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_gtin_new" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_casepack_upc_new" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_freight_class" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_status_id" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_status_changed" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_hts_code" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_tier" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_amr_is_obsolete" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproducts_parcel_cost" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproducts_additional_handling" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproducts_over_max" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproducts_large_pack" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproducts_ltl_cost" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproducts_transfer_cost" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_box_is_determined" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_pallet_size" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_qty_per_pallet" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_gsp" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_usmca" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_tsca" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_cotton_fee" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_lacey" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_is_filled" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_is_visible" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproducts_landed_is_std_cost" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_designation_id" type="xs:string" />
+                          <xs:element minOccurs="0" name="oproduct_shipping_method" type="xs:string" />
+                          <xs:element minOccurs="0" name="nmfc" />
+                          <xs:element minOccurs="0" name="class" />
+                          <xs:element minOccurs="0" name="subclass" />
+                          <xs:element minOccurs="0" name="OCDT" type="xs:string" />
+                          <xs:element minOccurs="0" name="OCU" type="xs:string" />
+                          <xs:element minOccurs="0" name="OMDT" type="xs:string" />
+                          <xs:element minOccurs="0" name="OMU" />
+                          <xs:element minOccurs="0" name="oproduct_external_id" />
+                          <xs:element minOccurs="0" name="oproduct_is_tax_exempt" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>

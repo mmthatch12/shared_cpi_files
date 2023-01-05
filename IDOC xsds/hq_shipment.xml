@@ -1,21 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <root>
-	<oshipment_id>23355972</oshipment_id>
-	<oorder_id>24378665</oorder_id>
+	<oshipment_id>23359692</oshipment_id>
+	<oorder_id>24389684</oorder_id>
 	<oInvoice_id/>
 	<olocation_id>12</olocation_id>
 	<owarehouse_id>30</owarehouse_id>
 	<fulfillment_center_id/>
-	<ocarrier_id>2</ocarrier_id>
-	<ocarrier_service_id>45</ocarrier_service_id>
-	<oshipment_type_id>1</oshipment_type_id>
+	<ocarrier_id/>
+	<ocarrier_service_id/>
+	<oshipment_type_id>2</oshipment_type_id>
 	<oshipment_type/>
 	<oshipment_from>15</oshipment_from>
 	<oshipment_tracking_number/>
 	<oshipment_account_number></oshipment_account_number>
-	<oshipment_status>0</oshipment_status>
+	<oshipment_status>4</oshipment_status>
 	<oshipment_date/>
-	<oshipment_carrier>FedEx</oshipment_carrier>
+	<oshipment_carrier>LTL</oshipment_carrier>
 	<oshipment_service>03</oshipment_service>
 	<oshipment_amount/>
 	<oshipment_actual_cost>0</oshipment_actual_cost>
@@ -26,30 +26,648 @@
 	<oshipment_is_printed_slip>0</oshipment_is_printed_slip>
 	<oshipment_label_format>ZPL</oshipment_label_format>
 	<oshipment_is_notified>false</oshipment_is_notified>
-	<oshipment_picker/>
+	<oshipment_picker></oshipment_picker>
 	<oshipment_by/>
-	<oshipment_scanner_by/>
+	<oshipment_scanner_by>481</oshipment_scanner_by>
 	<oshipment_fingerprint/>
 	<oshipment_address_validation_overridden>0</oshipment_address_validation_overridden>
 	<oshipment_is_return>0</oshipment_is_return>
-	<oshipment_tags/>
+	<oshipment_tags>ltl</oshipment_tags>
 	<oshipment_saturday_pickup>0</oshipment_saturday_pickup>
 	<oshipment_saturday_delivery>0</oshipment_saturday_delivery>
-	<oshipment_ship_by>2023-01-02 00:00:00</oshipment_ship_by>
+	<oshipment_ship_by>2023-01-03 00:00:00</oshipment_ship_by>
 	<oshipment_method_id>1</oshipment_method_id>
 	<oshipment_zone/>
-	<OCDT>2023-01-03 00:28:25</OCDT>
-	<OCU>3015</OCU>
-	<OMDT>2023-01-03 00:28:25</OMDT>
-	<OMU>3015</OMU>
+	<OCDT>2023-01-03 10:01:32</OCDT>
+	<OCU>481</OCU>
+	<OMDT>2023-01-03 10:02:11</OMDT>
+	<OMU>481</OMU>
 	<oshipment_is_auto/>
 	<oshipment_notify_owner_on_ship>0</oshipment_notify_owner_on_ship>
-	<oshipment_to_address_id>145883849</oshipment_to_address_id>
+	<oshipment_to_address_id>145966764</oshipment_to_address_id>
 	<oshipment_from_address_id/>
 	<oshipment_return_address_id/>
-	<oshipment_sent_to_scanner_at/>
+	<oshipment_sent_to_scanner_at>2023-01-03 10:02:11</oshipment_sent_to_scanner_at>
 	<oshipment_delivered_at/>
 	<oshipment_special_instructions/>
 	<rate_quote_reference/>
-	<booking_user/>
+	<booking_user>481</booking_user>
+	<location>
+		<olocation_id>12</olocation_id>
+		<olocation_name>California</olocation_name>
+		<olocation_key>california</olocation_key>
+		<olocation_abr>CAL</olocation_abr>
+		<ofulfillment_method_id/>
+		<olocation_external_id>CALIFORNIA</olocation_external_id>
+		<olocation_status>true</olocation_status>
+		<olocation_default_warehouse_id>30</olocation_default_warehouse_id>
+		<olocation_category_id/>
+		<olocation_is_owned>true</olocation_is_owned>
+		<olocation_state_abbreviation>CA</olocation_state_abbreviation>
+		<olocation_priority/>
+		<OCDT/>
+		<OCU>0</OCU>
+		<OMDT/>
+		<OMU>0</OMU>
+		<oinventory_is_owned/>
+		<olocation_is_inventoried>1</olocation_is_inventoried>
+		<olocation_is_fulfilling_orders>1</olocation_is_fulfilling_orders>
+		<oshipping_ports_id>7087</oshipping_ports_id>
+	</location>
+	<warehouse>
+		<owarehouse_id>30</owarehouse_id>
+		<olocation_id>12</olocation_id>
+		<owarehouse_name>Delano</owarehouse_name>
+		<owarehouse_ref_id></owarehouse_ref_id>
+		<ochannel_id>0</ochannel_id>
+		<oaddress_id/>
+		<owarehouse_is_owned>1</owarehouse_is_owned>
+		<owarehouse_scanners_enabled>1</owarehouse_scanners_enabled>
+		<owarehouse_status>1</owarehouse_status>
+		<owarehouse_contact></owarehouse_contact>
+		<owarehouse_timezone>America/Los_Angeles</owarehouse_timezone>
+		<owarehouse_timezone_offset>-7</owarehouse_timezone_offset>
+		<owarehouse_street_1>1700 Schuster Rd.</owarehouse_street_1>
+		<owarehouse_street_2></owarehouse_street_2>
+		<owarehouse_street_3></owarehouse_street_3>
+		<owarehouse_street_4></owarehouse_street_4>
+		<owarehouse_locality>Delano</owarehouse_locality>
+		<owarehouse_region>CA</owarehouse_region>
+		<owarehouse_postcode>93215</owarehouse_postcode>
+		<owarehouse_country>US</owarehouse_country>
+		<owarehouse_phone>8005177179</owarehouse_phone>
+		<owarehouse_fax></owarehouse_fax>
+		<olatitude>35.728450</olatitude>
+		<olongitude>-119.235300</olongitude>
+		<owarehouse_shipexec_key/>
+		<ostation_default_id/>
+		<owarehouse_return_address_id/>
+		<owarehouse_fedex_smartpost_hub_id>0</owarehouse_fedex_smartpost_hub_id>
+		<owarehouse_priority/>
+		<amxl_party_id>BSXB</amxl_party_id>
+		<facility_manager_id>2685</facility_manager_id>
+		<OCDT/>
+		<OCU>0</OCU>
+		<OMDT>2021-01-19 09:13:16</OMDT>
+		<OMU>0</OMU>
+	</warehouse>
+	<origin_address/>
+	<destination_address>
+		<oaddress_id>145966764</oaddress_id>
+		<oaddress_name>Mattress Depot</oaddress_name>
+		<oaddress_street_1>1310 SE 1st St.</oaddress_street_1>
+		<oaddress_street_2></oaddress_street_2>
+		<oaddress_street_3></oaddress_street_3>
+		<oaddress_street_4></oaddress_street_4>
+		<oaddress_locality>Mineral Wells</oaddress_locality>
+		<oaddress_region>TX</oaddress_region>
+		<oaddress_postcode>76067</oaddress_postcode>
+		<oaddress_postcode_first_three>760</oaddress_postcode_first_three>
+		<oaddress_country>US</oaddress_country>
+		<slug/>
+		<order_variable/>
+		<parent_id/>
+		<OCDT>2023-01-03 10:00:24</OCDT>
+		<OCU>481</OCU>
+		<OMDT>2023-01-03 10:00:30</OMDT>
+		<OMU>481</OMU>
+		<oaddress_phone></oaddress_phone>
+		<object_id/>
+		<object_type>ocustomer</object_type>
+		<oaddress_type>shipping</oaddress_type>
+		<oaddress_contact></oaddress_contact>
+		<oaddress_fax></oaddress_fax>
+		<oaddress_email_to></oaddress_email_to>
+		<oaddress_email_cc></oaddress_email_cc>
+		<oaddress_email_bcc></oaddress_email_bcc>
+		<oaddress_url_1></oaddress_url_1>
+		<oaddress_url_2/>
+		<oaddress_url_3/>
+		<oaddress_url_4/>
+		<oaddress_url_5/>
+		<oaddress_external_id>39894</oaddress_external_id>
+		<oaddress_sales_person/>
+	</destination_address>
+	<packages>
+		<opackage_id>25930455</opackage_id>
+		<oshipment_id>23359692</oshipment_id>
+		<opackage_parent_id>0</opackage_parent_id>
+		<opackage_is_voided/>
+		<opackage_type>boxes</opackage_type>
+		<opackage_tracking></opackage_tracking>
+		<opackage_amount>0.00000</opackage_amount>
+		<opackage_weight>785</opackage_weight>
+		<opackage_oz>0</opackage_oz>
+		<opackage_width/>
+		<opackage_height/>
+		<opackage_length/>
+		<opackage_item_volume/>
+		<opackage_utilization/>
+		<opackage_label></opackage_label>
+		<opackage_barcode/>
+		<opackage_sequence_number/>
+		<opackage_hash/>
+		<oboxdims_id>0</oboxdims_id>
+		<oboxdim_id>3</oboxdim_id>
+		<opackage_is_printed>0</opackage_is_printed>
+		<opackage_is_pending_pickup>0</opackage_is_pending_pickup>
+		<opackage_is_picked_up>0</opackage_is_picked_up>
+		<opackage_is_delivered>0</opackage_is_delivered>
+		<opackage_scheduled_pickup_date/>
+		<opackage_actual_pickup_date/>
+		<opackage_scheduled_delivery_date/>
+		<opackage_actual_delivery_date/>
+		<opackage_box_count>0</opackage_box_count>
+		<opackage_fingerprint/>
+		<opackage_external_id/>
+		<OCDT>2023-01-03 10:01:32</OCDT>
+		<OCU>481</OCU>
+		<OMDT>2023-01-03 10:02:05</OMDT>
+		<OMU>481</OMU>
+		<package_items>
+			<opackage_item_id>33189871</opackage_item_id>
+			<oorder_item_id>26894097</oorder_item_id>
+			<opackage_id>25930455</opackage_id>
+			<oproduct_id>23201</oproduct_id>
+			<obackorder_id/>
+			<oorder_item_quantity>11</oorder_item_quantity>
+			<opackage_item_quantity_scanned/>
+			<opackage_item_sequence/>
+			<opackage_number/>
+			<opackage_item_x>0</opackage_item_x>
+			<opackage_item_y>0</opackage_item_y>
+			<opackage_item_z>0</opackage_item_z>
+			<OCDT>2023-01-03 10:01:32</OCDT>
+			<OCU>481</OCU>
+			<OMDT/>
+			<OMU/>
+			<opackage_item_quantity_unfulfillable/>
+			<opo_container_item_id/>
+			<product>
+				<oproduct_id>23201</oproduct_id>
+				<oproduct_signature></oproduct_signature>
+				<oproduct_default_location/>
+				<oproduct_name>Malouf Twin/Full Bed Frame with Glides</oproduct_name>
+				<oproduct_sku>MA4633GL</oproduct_sku>
+				<oproduct_upc>840008334796</oproduct_upc>
+				<oproduct_asin_us/>
+				<oproduct_asin_ca/>
+				<oproduct_list_price/>
+				<oproduct_sell_price/>
+				<oproduct_quantity/>
+				<oproduct_channels>malouf,wholesale,purchasing-power,product</oproduct_channels>
+				<oproduct_wholesale_price>0</oproduct_wholesale_price>
+				<oproduct_case_pack>1</oproduct_case_pack>
+				<oproduct_fulfillment_method/>
+				<oproduct_price_change/>
+				<oproduct_weight>0</oproduct_weight>
+				<oproduct_average_cost>0</oproduct_average_cost>
+				<oproduct_purchase_cost>0</oproduct_purchase_cost>
+				<oproduct_estimated_freight_cost>0</oproduct_estimated_freight_cost>
+				<oproduct_duties>1.25000</oproduct_duties>
+				<obrand_id>5</obrand_id>
+				<oproduct_parent_id>23206</oproduct_parent_id>
+				<oproduct_is_parent>0</oproduct_is_parent>
+				<oproduct_variation_types/>
+				<oproduct_qty_per_container>1680</oproduct_qty_per_container>
+				<oproduct_target_days_left>0</oproduct_target_days_left>
+				<oproduct_class>MALOUF</oproduct_class>
+				<oproduct_type></oproduct_type>
+				<order_variable>0</order_variable>
+				<oproduct_master_id>0</oproduct_master_id>
+				<oproduct_master_parent_id>0</oproduct_master_parent_id>
+				<oproduct_gtin>10840008334793</oproduct_gtin>
+				<oproduct_casepack_upc>10840008334793</oproduct_casepack_upc>
+				<slug>malouf-twinfull-bed-frame-with-glides</slug>
+				<oproduct_order/>
+				<parent_id/>
+				<oproduct_is_noninventory>0</oproduct_is_noninventory>
+				<oproduct_upc_new>840008334796</oproduct_upc_new>
+				<oproduct_gtin_new>10840008334793</oproduct_gtin_new>
+				<oproduct_casepack_upc_new>10840008334793</oproduct_casepack_upc_new>
+				<oproduct_freight_class>65</oproduct_freight_class>
+				<oproduct_status_id>1</oproduct_status_id>
+				<oproduct_status_changed/>
+				<oproduct_hts_code>9403.20.0050</oproduct_hts_code>
+				<oproduct_tier>A</oproduct_tier>
+				<oproduct_amr_is_obsolete>0</oproduct_amr_is_obsolete>
+				<oproducts_parcel_cost>27.01695</oproducts_parcel_cost>
+				<oproducts_additional_handling>1</oproducts_additional_handling>
+				<oproducts_over_max>0</oproducts_over_max>
+				<oproducts_large_pack>0</oproducts_large_pack>
+				<oproducts_ltl_cost/>
+				<oproducts_transfer_cost/>
+				<oproduct_box_is_determined>0</oproduct_box_is_determined>
+				<oproduct_pallet_size>1</oproduct_pallet_size>
+				<oproduct_qty_per_pallet>90</oproduct_qty_per_pallet>
+				<oproduct_gsp>0</oproduct_gsp>
+				<oproduct_usmca>0</oproduct_usmca>
+				<oproduct_tsca>0</oproduct_tsca>
+				<oproduct_cotton_fee>0</oproduct_cotton_fee>
+				<oproduct_lacey>0</oproduct_lacey>
+				<oproduct_is_filled>0</oproduct_is_filled>
+				<oproduct_is_visible>1</oproduct_is_visible>
+				<oproducts_landed_is_std_cost>0</oproducts_landed_is_std_cost>
+				<oproduct_designation_id>1</oproduct_designation_id>
+				<oproduct_shipping_method>1</oproduct_shipping_method>
+				<nmfc/>
+				<class/>
+				<subclass/>
+				<OCDT>2022-05-19 02:04:18</OCDT>
+				<OCU/>
+				<OMDT>2023-01-03 02:03:20</OMDT>
+				<OMU/>
+				<oproduct_external_id/>
+				<oproduct_is_tax_exempt/>
+			</product>
+		</package_items>
+		<package_items>
+			<opackage_item_id>33189872</opackage_item_id>
+			<oorder_item_id>26894107</oorder_item_id>
+			<opackage_id>25930455</opackage_id>
+			<oproduct_id>18207</oproduct_id>
+			<obackorder_id/>
+			<oorder_item_quantity>2</oorder_item_quantity>
+			<opackage_item_quantity_scanned/>
+			<opackage_item_sequence/>
+			<opackage_number/>
+			<opackage_item_x>0</opackage_item_x>
+			<opackage_item_y>0</opackage_item_y>
+			<opackage_item_z>0</opackage_item_z>
+			<OCDT>2023-01-03 10:01:32</OCDT>
+			<OCU>481</OCU>
+			<OMDT/>
+			<OMU/>
+			<opackage_item_quantity_unfulfillable/>
+			<opo_container_item_id/>
+			<product>
+				<oproduct_id>18207</oproduct_id>
+				<oproduct_signature></oproduct_signature>
+				<oproduct_default_location/>
+				<oproduct_name>10" Hybrid Mattress, Plush, Queen</oproduct_name>
+				<oproduct_sku>BB10QQ0PMH</oproduct_sku>
+				<oproduct_upc>840008301576</oproduct_upc>
+				<oproduct_asin_us>B081GGK46Y</oproduct_asin_us>
+				<oproduct_asin_ca/>
+				<oproduct_list_price/>
+				<oproduct_sell_price/>
+				<oproduct_quantity/>
+				<oproduct_channels>wholesale,wayfair,purchasing-power,walmart,walmart-1p,product,amazon-ds,vip</oproduct_channels>
+				<oproduct_wholesale_price>0</oproduct_wholesale_price>
+				<oproduct_case_pack>1</oproduct_case_pack>
+				<oproduct_fulfillment_method/>
+				<oproduct_price_change/>
+				<oproduct_weight>0</oproduct_weight>
+				<oproduct_average_cost>0</oproduct_average_cost>
+				<oproduct_purchase_cost>0</oproduct_purchase_cost>
+				<oproduct_estimated_freight_cost>0</oproduct_estimated_freight_cost>
+				<oproduct_duties>1.00000</oproduct_duties>
+				<obrand_id>21</obrand_id>
+				<oproduct_parent_id>18219</oproduct_parent_id>
+				<oproduct_is_parent>0</oproduct_is_parent>
+				<oproduct_variation_types/>
+				<oproduct_qty_per_container>402</oproduct_qty_per_container>
+				<oproduct_target_days_left>0</oproduct_target_days_left>
+				<oproduct_class>MALOUF</oproduct_class>
+				<oproduct_type></oproduct_type>
+				<order_variable>0</order_variable>
+				<oproduct_master_id>0</oproduct_master_id>
+				<oproduct_master_parent_id>0</oproduct_master_parent_id>
+				<oproduct_gtin>10840008301573</oproduct_gtin>
+				<oproduct_casepack_upc>10840008301573</oproduct_casepack_upc>
+				<slug>brighton-bed-10-hybrid-mattress-plush-queen</slug>
+				<oproduct_order/>
+				<parent_id/>
+				<oproduct_is_noninventory>0</oproduct_is_noninventory>
+				<oproduct_upc_new>840008301576</oproduct_upc_new>
+				<oproduct_gtin_new>10840008301573</oproduct_gtin_new>
+				<oproduct_casepack_upc_new>10840008301573</oproduct_casepack_upc_new>
+				<oproduct_freight_class>100</oproduct_freight_class>
+				<oproduct_status_id>1</oproduct_status_id>
+				<oproduct_status_changed/>
+				<oproduct_hts_code>9404.21.0013</oproduct_hts_code>
+				<oproduct_tier>A</oproduct_tier>
+				<oproduct_amr_is_obsolete>0</oproduct_amr_is_obsolete>
+				<oproducts_parcel_cost>50.08572</oproducts_parcel_cost>
+				<oproducts_additional_handling>1</oproducts_additional_handling>
+				<oproducts_over_max>0</oproducts_over_max>
+				<oproducts_large_pack>0</oproducts_large_pack>
+				<oproducts_ltl_cost>19.1916333097673</oproducts_ltl_cost>
+				<oproducts_transfer_cost>11.0852106952059</oproducts_transfer_cost>
+				<oproduct_box_is_determined>0</oproduct_box_is_determined>
+				<oproduct_pallet_size>1</oproduct_pallet_size>
+				<oproduct_qty_per_pallet>9</oproduct_qty_per_pallet>
+				<oproduct_gsp>0</oproduct_gsp>
+				<oproduct_usmca>0</oproduct_usmca>
+				<oproduct_tsca>0</oproduct_tsca>
+				<oproduct_cotton_fee>0</oproduct_cotton_fee>
+				<oproduct_lacey>0</oproduct_lacey>
+				<oproduct_is_filled>0</oproduct_is_filled>
+				<oproduct_is_visible>1</oproduct_is_visible>
+				<oproducts_landed_is_std_cost>0</oproducts_landed_is_std_cost>
+				<oproduct_designation_id>1</oproduct_designation_id>
+				<oproduct_shipping_method>1</oproduct_shipping_method>
+				<nmfc/>
+				<class/>
+				<subclass/>
+				<OCDT>2022-10-27 00:00:00</OCDT>
+				<OCU>614</OCU>
+				<OMDT>2023-01-03 02:01:53</OMDT>
+				<OMU/>
+				<oproduct_external_id/>
+				<oproduct_is_tax_exempt/>
+			</product>
+		</package_items>
+		<package_items>
+			<opackage_item_id>33189873</opackage_item_id>
+			<oorder_item_id>26894116</oorder_item_id>
+			<opackage_id>25930455</opackage_id>
+			<oproduct_id>23205</oproduct_id>
+			<obackorder_id/>
+			<oorder_item_quantity>5</oorder_item_quantity>
+			<opackage_item_quantity_scanned/>
+			<opackage_item_sequence/>
+			<opackage_number/>
+			<opackage_item_x>0</opackage_item_x>
+			<opackage_item_y>0</opackage_item_y>
+			<opackage_item_z>0</opackage_item_z>
+			<OCDT>2023-01-03 10:01:32</OCDT>
+			<OCU>481</OCU>
+			<OMDT/>
+			<OMU/>
+			<opackage_item_quantity_unfulfillable/>
+			<opo_container_item_id/>
+			<product>
+				<oproduct_id>23205</oproduct_id>
+				<oproduct_signature></oproduct_signature>
+				<oproduct_default_location/>
+				<oproduct_name>Malouf Universal Adjustable Bed Frame with Glides</oproduct_name>
+				<oproduct_sku>MA6633GL</oproduct_sku>
+				<oproduct_upc>840008334833</oproduct_upc>
+				<oproduct_asin_us/>
+				<oproduct_asin_ca/>
+				<oproduct_list_price/>
+				<oproduct_sell_price/>
+				<oproduct_quantity/>
+				<oproduct_channels>malouf,wholesale,reports,purchasing-power,product,vip</oproduct_channels>
+				<oproduct_wholesale_price>0</oproduct_wholesale_price>
+				<oproduct_case_pack>1</oproduct_case_pack>
+				<oproduct_fulfillment_method/>
+				<oproduct_price_change/>
+				<oproduct_weight>0</oproduct_weight>
+				<oproduct_average_cost>0</oproduct_average_cost>
+				<oproduct_purchase_cost>0</oproduct_purchase_cost>
+				<oproduct_estimated_freight_cost>0</oproduct_estimated_freight_cost>
+				<oproduct_duties>1.25000</oproduct_duties>
+				<obrand_id>5</obrand_id>
+				<oproduct_parent_id>23208</oproduct_parent_id>
+				<oproduct_is_parent>0</oproduct_is_parent>
+				<oproduct_variation_types/>
+				<oproduct_qty_per_container>1300</oproduct_qty_per_container>
+				<oproduct_target_days_left>0</oproduct_target_days_left>
+				<oproduct_class>MALOUF</oproduct_class>
+				<oproduct_type></oproduct_type>
+				<order_variable>0</order_variable>
+				<oproduct_master_id>0</oproduct_master_id>
+				<oproduct_master_parent_id>0</oproduct_master_parent_id>
+				<oproduct_gtin>10840008334830</oproduct_gtin>
+				<oproduct_casepack_upc/>
+				<slug>malouf-universal-adjustable-bed-frame-with-glides</slug>
+				<oproduct_order/>
+				<parent_id/>
+				<oproduct_is_noninventory>0</oproduct_is_noninventory>
+				<oproduct_upc_new/>
+				<oproduct_gtin_new/>
+				<oproduct_casepack_upc_new/>
+				<oproduct_freight_class>65</oproduct_freight_class>
+				<oproduct_status_id>1</oproduct_status_id>
+				<oproduct_status_changed/>
+				<oproduct_hts_code>9403.20.0050</oproduct_hts_code>
+				<oproduct_tier>A</oproduct_tier>
+				<oproduct_amr_is_obsolete>0</oproduct_amr_is_obsolete>
+				<oproducts_parcel_cost>29.931855</oproducts_parcel_cost>
+				<oproducts_additional_handling>1</oproducts_additional_handling>
+				<oproducts_over_max>0</oproducts_over_max>
+				<oproducts_large_pack>0</oproducts_large_pack>
+				<oproducts_ltl_cost/>
+				<oproducts_transfer_cost/>
+				<oproduct_box_is_determined>0</oproduct_box_is_determined>
+				<oproduct_pallet_size>1</oproduct_pallet_size>
+				<oproduct_qty_per_pallet>85</oproduct_qty_per_pallet>
+				<oproduct_gsp>0</oproduct_gsp>
+				<oproduct_usmca>0</oproduct_usmca>
+				<oproduct_tsca>0</oproduct_tsca>
+				<oproduct_cotton_fee>0</oproduct_cotton_fee>
+				<oproduct_lacey>0</oproduct_lacey>
+				<oproduct_is_filled>0</oproduct_is_filled>
+				<oproduct_is_visible>1</oproduct_is_visible>
+				<oproducts_landed_is_std_cost>0</oproducts_landed_is_std_cost>
+				<oproduct_designation_id>1</oproduct_designation_id>
+				<oproduct_shipping_method>1</oproduct_shipping_method>
+				<nmfc/>
+				<class/>
+				<subclass/>
+				<OCDT>2022-05-19 02:04:18</OCDT>
+				<OCU/>
+				<OMDT>2023-01-03 02:03:20</OMDT>
+				<OMU/>
+				<oproduct_external_id/>
+				<oproduct_is_tax_exempt/>
+			</product>
+		</package_items>
+		<package_items>
+			<opackage_item_id>33189905</opackage_item_id>
+			<oorder_item_id>26894104</oorder_item_id>
+			<opackage_id>25930455</opackage_id>
+			<oproduct_id>18205</oproduct_id>
+			<obackorder_id/>
+			<oorder_item_quantity>1</oorder_item_quantity>
+			<opackage_item_quantity_scanned/>
+			<opackage_item_sequence/>
+			<opackage_number/>
+			<opackage_item_x>0</opackage_item_x>
+			<opackage_item_y>0</opackage_item_y>
+			<opackage_item_z>0</opackage_item_z>
+			<OCDT>2023-01-03 10:02:02</OCDT>
+			<OCU>481</OCU>
+			<OMDT/>
+			<OMU/>
+			<opackage_item_quantity_unfulfillable/>
+			<opo_container_item_id/>
+			<product>
+				<oproduct_id>18205</oproduct_id>
+				<oproduct_signature></oproduct_signature>
+				<oproduct_default_location/>
+				<oproduct_name>10" Hybrid Mattress, Plush, Full</oproduct_name>
+				<oproduct_sku>BB10FF0PMH</oproduct_sku>
+				<oproduct_upc>840008301552</oproduct_upc>
+				<oproduct_asin_us>B081GFK9M1</oproduct_asin_us>
+				<oproduct_asin_ca/>
+				<oproduct_list_price/>
+				<oproduct_sell_price/>
+				<oproduct_quantity/>
+				<oproduct_channels>general,wholesale,wayfair,purchasing-power,walmart,walmart-1p,product,amazon-ds,vip</oproduct_channels>
+				<oproduct_wholesale_price>0</oproduct_wholesale_price>
+				<oproduct_case_pack>1</oproduct_case_pack>
+				<oproduct_fulfillment_method/>
+				<oproduct_price_change/>
+				<oproduct_weight>0</oproduct_weight>
+				<oproduct_average_cost>0</oproduct_average_cost>
+				<oproduct_purchase_cost>0</oproduct_purchase_cost>
+				<oproduct_estimated_freight_cost>0</oproduct_estimated_freight_cost>
+				<oproduct_duties>1.00000</oproduct_duties>
+				<obrand_id>21</obrand_id>
+				<oproduct_parent_id>18219</oproduct_parent_id>
+				<oproduct_is_parent>0</oproduct_is_parent>
+				<oproduct_variation_types/>
+				<oproduct_qty_per_container>432</oproduct_qty_per_container>
+				<oproduct_target_days_left>0</oproduct_target_days_left>
+				<oproduct_class>MALOUF</oproduct_class>
+				<oproduct_type></oproduct_type>
+				<order_variable>0</order_variable>
+				<oproduct_master_id>0</oproduct_master_id>
+				<oproduct_master_parent_id>0</oproduct_master_parent_id>
+				<oproduct_gtin>10840008301559</oproduct_gtin>
+				<oproduct_casepack_upc>10840008301559</oproduct_casepack_upc>
+				<slug>brighton-bed-10-hybrid-mattress-plush-full</slug>
+				<oproduct_order/>
+				<parent_id/>
+				<oproduct_is_noninventory>0</oproduct_is_noninventory>
+				<oproduct_upc_new>840008301552</oproduct_upc_new>
+				<oproduct_gtin_new>10840008301559</oproduct_gtin_new>
+				<oproduct_casepack_upc_new>10840008301559</oproduct_casepack_upc_new>
+				<oproduct_freight_class>100</oproduct_freight_class>
+				<oproduct_status_id>1</oproduct_status_id>
+				<oproduct_status_changed/>
+				<oproduct_hts_code>9404.21.0013</oproduct_hts_code>
+				<oproduct_tier>B</oproduct_tier>
+				<oproduct_amr_is_obsolete>0</oproduct_amr_is_obsolete>
+				<oproducts_parcel_cost>45.3949275</oproducts_parcel_cost>
+				<oproducts_additional_handling>1</oproducts_additional_handling>
+				<oproducts_over_max>0</oproducts_over_max>
+				<oproducts_large_pack>0</oproducts_large_pack>
+				<oproducts_ltl_cost>17.3343784733382</oproducts_ltl_cost>
+				<oproducts_transfer_cost>10.0124483698634</oproducts_transfer_cost>
+				<oproduct_box_is_determined>0</oproduct_box_is_determined>
+				<oproduct_pallet_size>1</oproduct_pallet_size>
+				<oproduct_qty_per_pallet>9</oproduct_qty_per_pallet>
+				<oproduct_gsp>0</oproduct_gsp>
+				<oproduct_usmca>0</oproduct_usmca>
+				<oproduct_tsca>0</oproduct_tsca>
+				<oproduct_cotton_fee>0</oproduct_cotton_fee>
+				<oproduct_lacey>0</oproduct_lacey>
+				<oproduct_is_filled>0</oproduct_is_filled>
+				<oproduct_is_visible>1</oproduct_is_visible>
+				<oproducts_landed_is_std_cost>0</oproducts_landed_is_std_cost>
+				<oproduct_designation_id>1</oproduct_designation_id>
+				<oproduct_shipping_method>1</oproduct_shipping_method>
+				<nmfc/>
+				<class/>
+				<subclass/>
+				<OCDT>2022-10-27 00:00:00</OCDT>
+				<OCU>614</OCU>
+				<OMDT>2023-01-03 02:01:53</OMDT>
+				<OMU/>
+				<oproduct_external_id/>
+				<oproduct_is_tax_exempt/>
+			</product>
+		</package_items>
+		<package_items>
+			<opackage_item_id>33189906</opackage_item_id>
+			<oorder_item_id>26894113</oorder_item_id>
+			<opackage_id>25930455</opackage_id>
+			<oproduct_id>22988</oproduct_id>
+			<obackorder_id/>
+			<oorder_item_quantity>1</oorder_item_quantity>
+			<opackage_item_quantity_scanned/>
+			<opackage_item_sequence/>
+			<opackage_number/>
+			<opackage_item_x>0</opackage_item_x>
+			<opackage_item_y>0</opackage_item_y>
+			<opackage_item_z>0</opackage_item_z>
+			<OCDT>2023-01-03 10:02:03</OCDT>
+			<OCU>481</OCU>
+			<OMDT/>
+			<OMU/>
+			<opackage_item_quantity_unfulfillable/>
+			<opo_container_item_id/>
+			<product>
+				<oproduct_id>22988</oproduct_id>
+				<oproduct_signature></oproduct_signature>
+				<oproduct_default_location/>
+				<oproduct_name>Structures E255 Adjustable Base, King</oproduct_name>
+				<oproduct_sku>STE255KKAB</oproduct_sku>
+				<oproduct_upc>840008332495</oproduct_upc>
+				<oproduct_asin_us>B07Y44SN1J</oproduct_asin_us>
+				<oproduct_asin_ca/>
+				<oproduct_list_price/>
+				<oproduct_sell_price/>
+				<oproduct_quantity/>
+				<oproduct_channels>malouf,wholesale,amazon-retail,product,amazon-ds</oproduct_channels>
+				<oproduct_wholesale_price>0</oproduct_wholesale_price>
+				<oproduct_case_pack>1</oproduct_case_pack>
+				<oproduct_fulfillment_method/>
+				<oproduct_price_change/>
+				<oproduct_weight>0</oproduct_weight>
+				<oproduct_average_cost>0</oproduct_average_cost>
+				<oproduct_purchase_cost>0</oproduct_purchase_cost>
+				<oproduct_estimated_freight_cost>0</oproduct_estimated_freight_cost>
+				<oproduct_duties>1.00000</oproduct_duties>
+				<obrand_id>5</obrand_id>
+				<oproduct_parent_id>20930</oproduct_parent_id>
+				<oproduct_is_parent>0</oproduct_is_parent>
+				<oproduct_variation_types/>
+				<oproduct_qty_per_container>156</oproduct_qty_per_container>
+				<oproduct_target_days_left>0</oproduct_target_days_left>
+				<oproduct_class>MALOUF</oproduct_class>
+				<oproduct_type></oproduct_type>
+				<order_variable>0</order_variable>
+				<oproduct_master_id>0</oproduct_master_id>
+				<oproduct_master_parent_id>0</oproduct_master_parent_id>
+				<oproduct_gtin>10840008332492</oproduct_gtin>
+				<oproduct_casepack_upc>10840008332492</oproduct_casepack_upc>
+				<slug>structures-e255-adjustable-base-1</slug>
+				<oproduct_order>206</oproduct_order>
+				<parent_id/>
+				<oproduct_is_noninventory>0</oproduct_is_noninventory>
+				<oproduct_upc_new>840008332495</oproduct_upc_new>
+				<oproduct_gtin_new>10840008332492</oproduct_gtin_new>
+				<oproduct_casepack_upc_new>10840008332492</oproduct_casepack_upc_new>
+				<oproduct_freight_class>65</oproduct_freight_class>
+				<oproduct_status_id>2</oproduct_status_id>
+				<oproduct_status_changed>2022-08-11 09:36:26</oproduct_status_changed>
+				<oproduct_hts_code>9403.20.0035</oproduct_hts_code>
+				<oproduct_tier>D</oproduct_tier>
+				<oproduct_amr_is_obsolete>0</oproduct_amr_is_obsolete>
+				<oproducts_parcel_cost>1109.86385</oproducts_parcel_cost>
+				<oproducts_additional_handling>0</oproducts_additional_handling>
+				<oproducts_over_max>0</oproducts_over_max>
+				<oproducts_large_pack>1</oproducts_large_pack>
+				<oproducts_ltl_cost/>
+				<oproducts_transfer_cost/>
+				<oproduct_box_is_determined>0</oproduct_box_is_determined>
+				<oproduct_pallet_size>2</oproduct_pallet_size>
+				<oproduct_qty_per_pallet>11</oproduct_qty_per_pallet>
+				<oproduct_gsp>0</oproduct_gsp>
+				<oproduct_usmca>0</oproduct_usmca>
+				<oproduct_tsca>0</oproduct_tsca>
+				<oproduct_cotton_fee>0</oproduct_cotton_fee>
+				<oproduct_lacey>0</oproduct_lacey>
+				<oproduct_is_filled>0</oproduct_is_filled>
+				<oproduct_is_visible>1</oproduct_is_visible>
+				<oproducts_landed_is_std_cost>0</oproducts_landed_is_std_cost>
+				<oproduct_designation_id>1</oproduct_designation_id>
+				<oproduct_shipping_method>2</oproduct_shipping_method>
+				<nmfc/>
+				<class/>
+				<subclass/>
+				<OCDT>2022-05-19 02:02:01</OCDT>
+				<OCU/>
+				<OMDT>2023-01-03 02:01:19</OMDT>
+				<OMU/>
+				<oproduct_external_id/>
+				<oproduct_is_tax_exempt/>
+			</product>
+		</package_items>
+	</packages>
 </root>
