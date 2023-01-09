@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <oinventory_id>16873469</oinventory_id>
+   <oproduct_id>102944</oproduct_id>
+   <olocation_id>3</olocation_id>
+   <ochannel_id />
+   <oinventory_available />
+   <oinventory_allocated />
+   <oinventory_pulled />
+   <oinventory_on_hand />
+   <oinventory_on_order />
+   <oinventory_quarantined_available>0</oinventory_quarantined_available>
+   <oinventory_quarantined_allocated>0</oinventory_quarantined_allocated>
+   <oinventory_quarantined_on_hand>0</oinventory_quarantined_on_hand>
+   <oinventory_dnip_available>0</oinventory_dnip_available>
+   <oinventory_dnip_allocated>0</oinventory_dnip_allocated>
+   <oinventory_dnip_on_hand>0</oinventory_dnip_on_hand>
+   <oinventory_oop_available>0</oinventory_oop_available>
+   <oinventory_oop_allocated>0</oinventory_oop_allocated>
+   <oinventory_oop_on_hand>0</oinventory_oop_on_hand>
+   <oinventory_working>0</oinventory_working>
+   <oinventory_shipped>0</oinventory_shipped>
+   <oinventory_receiving>0</oinventory_receiving>
+   <oinventory_external_id />
+   <oinventory_checked_in>0</oinventory_checked_in>
+   <oinventory_backordered>0</oinventory_backordered>
+   <oinventory_in_transit_from>0</oinventory_in_transit_from>
+   <oinventory_in_transit_to>0</oinventory_in_transit_to>
+   <oinventory_type>amazon-us</oinventory_type>
+   <OCDT>2023-01-04 15:36:53</OCDT>
+   <OCU>0</OCU>
+   <OMDT>2023-01-05 00:06:15</OMDT>
+   <OMU />
+</root>

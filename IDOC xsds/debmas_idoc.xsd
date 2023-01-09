@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
- <xs:element name="DEBMAS01">
+ <xs:element name="DEBMAS06">
   <xs:annotation>
    <xs:documentation>Customer master</xs:documentation>
   </xs:annotation>
@@ -109,7 +109,7 @@
             </xs:restriction>
            </xs:simpleType>
           </xs:element>
-          <xs:element name="IDOCTYP" type="xs:string" fixed="DEBMAS01">
+          <xs:element name="IDOCTYP" type="xs:string" fixed="DEBMAS06">
            <xs:annotation>
             <xs:documentation>Name of basic type</xs:documentation>
            </xs:annotation>

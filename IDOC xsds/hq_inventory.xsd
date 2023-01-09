@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="oinventory_id" type="xs:string" />
+        <xs:element minOccurs="0" name="oproduct_id" type="xs:string" />
+        <xs:element minOccurs="0" name="olocation_id" type="xs:string" />
+        <xs:element minOccurs="0" name="ochannel_id" />
+        <xs:element minOccurs="0" name="oinventory_available" />
+        <xs:element minOccurs="0" name="oinventory_allocated" />
+        <xs:element minOccurs="0" name="oinventory_pulled" />
+        <xs:element minOccurs="0" name="oinventory_on_hand" />
+        <xs:element minOccurs="0" name="oinventory_on_order" />
+        <xs:element minOccurs="0" name="oinventory_quarantined_available" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_quarantined_allocated" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_quarantined_on_hand" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_dnip_available" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_dnip_allocated" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_dnip_on_hand" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_oop_available" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_oop_allocated" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_oop_on_hand" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_working" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_shipped" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_receiving" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_external_id" />
+        <xs:element minOccurs="0" name="oinventory_checked_in" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_backordered" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_in_transit_from" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_in_transit_to" type="xs:string" />
+        <xs:element minOccurs="0" name="oinventory_type" type="xs:string" />
+        <xs:element minOccurs="0" name="OCDT" type="xs:string" />
+        <xs:element minOccurs="0" name="OCU" type="xs:string" />
+        <xs:element minOccurs="0" name="OMDT" type="xs:string" />
+        <xs:element minOccurs="0" name="OMU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
