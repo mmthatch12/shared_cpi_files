@@ -1,0 +1,1172 @@
+
+Structure of basic type BOMMAT07 
+Material BOM with UPS Link 
+
+•	E1STZUM : Master BOM (STZU) 
+Status: Required , min. number : 1 , max. number : 1 
+Structure 
+•	E1SZUTH : Master BOM: BOM long text - Header 
+Status: Optional , min. number : 1 , max. number : 1 
+Structure 
+•	E1SZUTL : Master BOM: BOM long text - Line 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+•	E1MASTM : Master material BOM 
+Status: Required , min. number : 1 , max. number : 999 
+Structure 
+•	E1T415B : Empties Bill of Material (Retail) 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+•	E1STKOM : Master BOM (STKO) 
+Status: Required , min. number : 1 , max. number : 999 
+Structure 
+•	E1SKOTH : Master BOM: BOM alternative long text - Header 
+Status: Optional , min. number : 1 , max. number : 1 
+Structure 
+•	E1SKOTL : Master BOM: BOM alternative long text - Line 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+•	E1STASM : Master BOM (STAS) 
+Status: Optional , min. number : 1 , max. number : 99999 
+Structure 
+•	E1STPOM : Master BOM Item 
+Status: Optional , min. number : 1 , max. number : 99999 
+Structure 
+•	E1STPOM1 : Master BOM Item 
+Status: Optional , min. number : 1 , max. number : 1 
+Structure 
+•	E1CUKBM : Master Dependency Basic Data 
+Status: Optional , min. number : 1 , max. number : 999 
+Structure 
+•	E1CUKBT : Master Dependency Descriptions 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+•	E1CUKNM : Master Dependency Source Code 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+•	E1CUTXM : Master Dependency Documentation 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+•	E1SPOTH : Master BOM: BOM item long text - Header 
+Status: Optional , min. number : 1 , max. number : 1 
+Structure 
+•	E1SPOTL : Master BOM: BOM item long text - Line 
+Status: Optional , min. number : 1 , max. number : 9999 
+Structure 
+•	E1STPUM : Master BOM sub-item 
+Status: Optional , min. number : 1 , max. number : 99 
+Structure 
+•	E1SGTBOM : BOM Segmentation 
+Status: Optional , min. number : 1 , max. number : 99999 
+Structure 
+•	E1FSHBOM : Fashion BOM Deviation Quantities for Components 
+Status: Optional , min. number : 1 , max. number : 99999 
+Structure 
+•	E1UPSLINK : Reference from Object to Superior UPS 
+Status: Optional , min. number : 1 , max. number : 1 
+Structure 
+
+Segment structures 
+
+•	E1STZUM : Master BOM (STZU) 
+Segment definition E2STZUM002 Released since Release 46B , Segment length: 0125 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	STLTY : BOM category 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 002, Offset : 0066. external length : 000001
+3.	STLNR : Bill of Material 
+internal data type : CHAR
+Internal length : 000008 characters
+Position in segment : 003, Offset : 0067. external length : 000008
+4.	STLAN : BOM Usage 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 004, Offset : 0075. external length : 000001
+5.	EXSTL : BOM group 
+internal data type : CHAR
+Internal length : 000018 characters
+Position in segment : 005, Offset : 0076. external length : 000018
+6.	ALTST : Indicator: Alternatives 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 006, Offset : 0094. external length : 000001
+7.	VARST : Indicator: variants 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 007, Offset : 0095. external length : 000001
+8.	KBAUS : Indicator: configurable BOM 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 008, Offset : 0096. external length : 000001
+9.	LTXSP : Language: The long text was stored in this language 
+internal data type : LANG
+Internal length : 000001 characters
+Position in segment : 009, Offset : 0097. external length : 000001
+10.	STLBE : Authorization group for bills of material 
+internal data type : CHAR
+Internal length : 000004 characters
+Position in segment : 010, Offset : 0098. external length : 000004
+11.	ZTEXT : BOM Description 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 011, Offset : 0102. external length : 000040
+12.	AENRL : Last change number 
+internal data type : CHAR
+Internal length : 000012 characters
+Position in segment : 012, Offset : 0142. external length : 000012
+13.	STLDT : Date on which the BOM was last changed 
+internal data type : DATS
+Internal length : 000008 characters
+Position in segment : 013, Offset : 0154. external length : 000008
+14.	STLTM : Time when BOM was last changed 
+internal data type : TIMS
+Internal length : 000006 characters
+Position in segment : 014, Offset : 0162. external length : 000006
+15.	LTXSP_ISO : 2-Character SAP Language Code 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 015, Offset : 0168. external length : 000002
+16.	EXSTL_C : BOM group 
+internal data type : CHAR
+Internal length : 000018 characters
+Position in segment : 016, Offset : 0170. external length : 000018
+•	E1SZUTH : Master BOM: BOM long text - Header 
+Segment definition E2SZUTH001 Released since Release 40A , Segment length: 0080 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	TDNAME : Name 
+internal data type : CHAR
+Internal length : 000070 characters
+Position in segment : 002, Offset : 0066. external length : 000070
+3.	TDID : Text ID 
+internal data type : CHAR
+Internal length : 000004 characters
+Position in segment : 003, Offset : 0136. external length : 000004
+4.	TDSPRAS : Language Key 
+internal data type : LANG
+Internal length : 000001 characters
+Position in segment : 004, Offset : 0140. external length : 000001
+5.	TDSPRAS_ISO : 2-Character SAP Language Code 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 005, Offset : 0141. external length : 000002
+•	E1SZUTL : Master BOM: BOM long text - Line 
+Segment definition E2SZUTL Released since Release 31G , Segment length: 0134 
+1.	TDFORMAT : Tag column 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 001, Offset : 0063. external length : 000002
+2.	TDLINE : Text Line 
+internal data type : CHAR
+Internal length : 000132 characters
+Position in segment : 002, Offset : 0065. external length : 000132
+•	E1MASTM : Master material BOM 
+Segment definition E2MASTM002 Released since Release 751 , Segment length: 0189 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	MATNR : Material Number (18 Characters) 
+internal data type : CHAR
+Internal length : 000018 characters
+Position in segment : 002, Offset : 0066. external length : 000018
+3.	WERKS : Plant 
+internal data type : CHAR
+Internal length : 000004 characters
+Position in segment : 003, Offset : 0084. external length : 000004
+4.	STLAN : BOM Usage 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 004, Offset : 0088. external length : 000001
+5.	STLNR : Bill of Material 
+internal data type : CHAR
+Internal length : 000008 characters
+Position in segment : 005, Offset : 0089. external length : 000008
+6.	STLAL : Alternative BOM 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 006, Offset : 0097. external length : 000002
+7.	LOSVN : From Lot Size 
+internal data type : QUAN
+Internal length : 000013 characters
+000003 decimal places, without sign
+Position in segment : 007, Offset : 0099. external length : 000015
+8.	LOSBS : To Lot Size 
+internal data type : QUAN
+Internal length : 000013 characters
+000003 decimal places, without sign
+Position in segment : 008, Offset : 0114. external length : 000015
+9.	CSLTY : Indicator: configured material (material variant) 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 009, Offset : 0129. external length : 000001
+10.	MATNR_EXTERNAL : Material Number 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 010, Offset : 0130. external length : 000040
+11.	MATNR_VERSION : Version Number for MATNR Field 
+internal data type : CHAR
+Internal length : 000010 characters
+Position in segment : 011, Offset : 0170. external length : 000010
+12.	MATNR_GUID : External GUID for MATNR Field 
+internal data type : CHAR
+Internal length : 000032 characters
+Position in segment : 012, Offset : 0180. external length : 000032
+13.	MATNR_LONG : Material No. 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 013, Offset : 0212. external length : 000040
+•	E1T415B : Empties Bill of Material (Retail) 
+Segment definition E2T415B002 Released since Release 751 , Segment length: 0149 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	MATNR : Material Number (18 Characters) 
+internal data type : CHAR
+Internal length : 000018 characters
+Position in segment : 002, Offset : 0066. external length : 000018
+3.	STLAN : BOM Usage 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 003, Offset : 0084. external length : 000001
+4.	BASME : Base Unit of Measure for BOM 
+internal data type : UNIT
+Internal length : 000003 characters
+Position in segment : 004, Offset : 0085. external length : 000003
+5.	STLAL : Alternative BOM 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 005, Offset : 0088. external length : 000002
+6.	MATNR_EXTERNAL : Material Number 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 006, Offset : 0090. external length : 000040
+7.	MATNR_VERSION : Version Number for MATNR Field 
+internal data type : CHAR
+Internal length : 000010 characters
+Position in segment : 007, Offset : 0130. external length : 000010
+8.	MATNR_GUID : External GUID for MATNR Field 
+internal data type : CHAR
+Internal length : 000032 characters
+Position in segment : 008, Offset : 0140. external length : 000032
+9.	MATNR_LONG : Material No. 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 009, Offset : 0172. external length : 000040
+•	E1STKOM : Master BOM (STKO) 
+Segment definition E2STKOM002 Released since Release 46B , Segment length: 0140 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	STLAL : Alternative BOM 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 002, Offset : 0066. external length : 000002
+3.	DATUV : Valid-From Date 
+internal data type : DATS
+Internal length : 000008 characters
+Position in segment : 003, Offset : 0068. external length : 000008
+4.	AENNR : Change Number 
+internal data type : CHAR
+Internal length : 000012 characters
+Position in segment : 004, Offset : 0076. external length : 000012
+5.	LOEKZ : Deletion flag for BOMs 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 005, Offset : 0088. external length : 000001
+6.	BMEIN : Unit of measure for base quantity 
+internal data type : UNIT
+Internal length : 000003 characters
+Position in segment : 006, Offset : 0089. external length : 000003
+7.	BMENG : Confirmed Quantity 
+internal data type : QUAN
+Internal length : 000013 characters
+000003 decimal places, without sign
+Position in segment : 007, Offset : 0092. external length : 000015
+8.	CADKZ : CAD Indicator 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 008, Offset : 0107. external length : 000001
+9.	LABOR : Laboratory/design office 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 009, Offset : 0108. external length : 000003
+10.	LTXSP : Language: The long text was stored in this language 
+internal data type : LANG
+Internal length : 000001 characters
+Position in segment : 010, Offset : 0111. external length : 000001
+11.	STKTX : Alternative BOM Text 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 011, Offset : 0112. external length : 000040
+12.	STLST : Bill of Material Status 
+internal data type : NUMC
+Internal length : 000002 characters
+Position in segment : 012, Offset : 0152. external length : 000002
+13.	LTXSP_ISO : 2-Character SAP Language Code 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 013, Offset : 0154. external length : 000002
+14.	BMENG_C : Base quantity 
+internal data type : CHAR
+Internal length : 000015 characters
+Position in segment : 014, Offset : 0156. external length : 000015
+15.	GUIDX : Guid external display (char32) 
+internal data type : CHAR
+Internal length : 000032 characters
+Position in segment : 015, Offset : 0171. external length : 000032
+•	E1SKOTH : Master BOM: BOM alternative long text - Header 
+Segment definition E2SKOTH001 Released since Release 40A , Segment length: 0080 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	TDNAME : Name 
+internal data type : CHAR
+Internal length : 000070 characters
+Position in segment : 002, Offset : 0066. external length : 000070
+3.	TDID : Text ID 
+internal data type : CHAR
+Internal length : 000004 characters
+Position in segment : 003, Offset : 0136. external length : 000004
+4.	TDSPRAS : Language Key 
+internal data type : LANG
+Internal length : 000001 characters
+Position in segment : 004, Offset : 0140. external length : 000001
+5.	TDSPRAS_ISO : 2-Character SAP Language Code 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 005, Offset : 0141. external length : 000002
+•	E1SKOTL : Master BOM: BOM alternative long text - Line 
+Segment definition E2SKOTL Released since Release 31G , Segment length: 0134 
+1.	TDFORMAT : Tag column 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 001, Offset : 0063. external length : 000002
+2.	TDLINE : Text Line 
+internal data type : CHAR
+Internal length : 000132 characters
+Position in segment : 002, Offset : 0065. external length : 000132
+•	E1STASM : Master BOM (STAS) 
+Segment definition E2STASM Released since Release 31G , Segment length: 0042 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	STLAL : Alternative BOM 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 002, Offset : 0066. external length : 000002
+3.	STLKN : BOM item node number 
+internal data type : NUMC
+Internal length : 000008 characters
+Position in segment : 003, Offset : 0068. external length : 000008
+4.	DATUV : Valid-From Date 
+internal data type : DATS
+Internal length : 000008 characters
+Position in segment : 004, Offset : 0076. external length : 000008
+5.	AENNR : Change Number 
+internal data type : CHAR
+Internal length : 000012 characters
+Position in segment : 005, Offset : 0084. external length : 000012
+6.	LKENZ : Deletion Indicator 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 006, Offset : 0096. external length : 000001
+7.	STVKN : Inherited node number of BOM item 
+internal data type : NUMC
+Internal length : 000008 characters
+Position in segment : 007, Offset : 0097. external length : 000008
+•	E1STPOM : Master BOM Item 
+Segment definition E2STPOM005 Released since Release 751 , Segment length: 0991 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	STLKN : BOM item node number 
+internal data type : NUMC
+Internal length : 000008 characters
+Position in segment : 002, Offset : 0066. external length : 000008
+3.	ID_ITM_CTG : Item category (bill of material) 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 003, Offset : 0074. external length : 000001
+4.	ID_ITEM_NO : BOM Item Number 
+internal data type : CHAR
+Internal length : 000004 characters
+Position in segment : 004, Offset : 0075. external length : 000004
+5.	ID_COMP : Material Number (18 Characters) 
+internal data type : CHAR
+Internal length : 000018 characters
+Position in segment : 005, Offset : 0079. external length : 000018
+6.	ID_CLASS : Class number 
+internal data type : CHAR
+Internal length : 000018 characters
+Position in segment : 006, Offset : 0097. external length : 000018
+7.	ID_CL_TYPE : Class Type 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 007, Offset : 0115. external length : 000003
+8.	ID_DOC : Document number 
+internal data type : CHAR
+Internal length : 000025 characters
+Position in segment : 008, Offset : 0118. external length : 000025
+9.	ID_DOC_TYP : Document Type 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 009, Offset : 0143. external length : 000003
+10.	ID_DOC_PRT : Document Part 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 010, Offset : 0146. external length : 000003
+11.	ID_DOC_VRS : Document Version 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 011, Offset : 0149. external length : 000002
+12.	ID_SORT : Sort String 
+internal data type : CHAR
+Internal length : 000010 characters
+Position in segment : 012, Offset : 0151. external length : 000010
+13.	DATUV : Valid-From Date 
+internal data type : DATS
+Internal length : 000008 characters
+Position in segment : 013, Offset : 0161. external length : 000008
+14.	AENNR : Change Number 
+internal data type : CHAR
+Internal length : 000012 characters
+Position in segment : 014, Offset : 0169. external length : 000012
+15.	LKENZ : Deletion Indicator 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 015, Offset : 0181. external length : 000001
+16.	IDNRK : BOM component 
+internal data type : CHAR
+Internal length : 000018 characters
+Position in segment : 016, Offset : 0182. external length : 000018
+17.	POSTP : Item category (bill of material) 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 017, Offset : 0200. external length : 000001
+18.	POSNR : BOM Item Number 
+internal data type : CHAR
+Internal length : 000004 characters
+Position in segment : 018, Offset : 0201. external length : 000004
+19.	SORTF : Sort String 
+internal data type : CHAR
+Internal length : 000010 characters
+Position in segment : 019, Offset : 0205. external length : 000010
+20.	MEINS : Base Unit of Measure 
+internal data type : UNIT
+Internal length : 000003 characters
+Position in segment : 020, Offset : 0215. external length : 000003
+21.	MENGE : Quantity 
+internal data type : QUAN
+Internal length : 000013 characters
+000003 decimal places, without sign
+Position in segment : 021, Offset : 0218. external length : 000015
+22.	FMENG : Fixed Quantity 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 022, Offset : 0233. external length : 000001
+23.	AUSCH : Component Scrap in Percent 
+internal data type : DEC 
+Internal length : 000005 characters
+000002 decimal places, without sign
+Position in segment : 023, Offset : 0234. external length : 000007
+24.	AVOAU : Operation Scrap 
+internal data type : DEC 
+Internal length : 000005 characters
+000002 decimal places, without sign
+Position in segment : 024, Offset : 0241. external length : 000007
+25.	NETAU : Net Scrap Indicator 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 025, Offset : 0248. external length : 000001
+26.	SCHGT : Indicator: bulk material 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 026, Offset : 0249. external length : 000001
+27.	BEIKZ : Material Provision Indicator 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 027, Offset : 0250. external length : 000001
+28.	ERSKZ : Indicator: Spare Part 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 028, Offset : 0251. external length : 000001
+29.	RVREL : Indicator: item relevant to sales 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 029, Offset : 0252. external length : 000001
+30.	SANFE : Indicator: item relevant to production 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 030, Offset : 0253. external length : 000001
+31.	SANIN : Indicator: item relevant to plant maintenance 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 031, Offset : 0254. external length : 000001
+32.	SANKA : Indicator: Item Relevant to Costing 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 032, Offset : 0255. external length : 000001
+33.	SANKO : Indicator: item relevant to engineering 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 033, Offset : 0256. external length : 000001
+34.	SANVS : Indicator: high-level configuration 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 034, Offset : 0257. external length : 000001
+35.	STKKZ : PM assembly indicator 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 035, Offset : 0258. external length : 000001
+36.	REKRI : Indicator: BOM is recursive 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 036, Offset : 0259. external length : 000001
+37.	REKRS : Indicator: recursiveness allowed 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 037, Offset : 0260. external length : 000001
+38.	CADPO : CAD Indicator 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 038, Offset : 0261. external length : 000001
+39.	NLFZT : Lead-time offset 
+internal data type : DEC 
+Internal length : 000003 characters
+No decimal places, with sign
+Position in segment : 039, Offset : 0262. external length : 000005
+40.	VERTI : Distribution key for component consumption 
+internal data type : CHAR
+Internal length : 000004 characters
+Position in segment : 040, Offset : 0267. external length : 000004
+41.	ALPOS : Indicator: alternative item 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 041, Offset : 0271. external length : 000001
+42.	EWAHR : Usage Probability in % (Alternative Item) 
+internal data type : DEC 
+Internal length : 000003 characters
+No decimal places, without sign
+Position in segment : 042, Offset : 0272. external length : 000005
+43.	EKGRP : Purchasing Group 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 043, Offset : 0277. external length : 000003
+44.	LIFZT : Delivery time in days 
+internal data type : DEC 
+Internal length : 000003 characters
+No decimal places, without sign
+Position in segment : 044, Offset : 0280. external length : 000005
+45.	LIFNR : Account Number of Vendor or Creditor 
+internal data type : CHAR
+Internal length : 000010 characters
+Position in segment : 045, Offset : 0285. external length : 000010
+46.	PREIS : Price 
+internal data type : CURR
+Internal length : 000011 characters
+000002 decimal places, without sign
+Position in segment : 046, Offset : 0295. external length : 000013
+47.	PEINH : Price unit 
+internal data type : DEC 
+Internal length : 000005 characters
+No decimal places, without sign
+Position in segment : 047, Offset : 0308. external length : 000007
+48.	WAERS : Three-digit character field for IDocs 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 048, Offset : 0315. external length : 000003
+49.	SAKTO : Cost element 
+internal data type : CHAR
+Internal length : 000010 characters
+Position in segment : 049, Offset : 0318. external length : 000010
+50.	ROANZ : Number of variable-size items 
+internal data type : QUAN
+Internal length : 000013 characters
+000003 decimal places, without sign
+Position in segment : 050, Offset : 0328. external length : 000015
+51.	ROMS1 : Size 1 
+internal data type : QUAN
+Internal length : 000013 characters
+000003 decimal places, without sign
+Position in segment : 051, Offset : 0343. external length : 000015
+52.	ROMS2 : Size 2 
+internal data type : QUAN
+Internal length : 000013 characters
+000003 decimal places, without sign
+Position in segment : 052, Offset : 0358. external length : 000015
+53.	ROMS3 : Size 3 
+internal data type : QUAN
+Internal length : 000013 characters
+000003 decimal places, without sign
+Position in segment : 053, Offset : 0373. external length : 000015
+54.	ROMEI : Unit of measure for sizes 1 to 3 
+internal data type : UNIT
+Internal length : 000003 characters
+Position in segment : 054, Offset : 0388. external length : 000003
+55.	ROMEN : Quantity of variable-size item 
+internal data type : QUAN
+Internal length : 000013 characters
+000003 decimal places, without sign
+Position in segment : 055, Offset : 0391. external length : 000015
+56.	RFORM : Formula Key for Variable-Size Items 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 056, Offset : 0406. external length : 000002
+57.	UPSKZ : Indicator: sub-items exist 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 057, Offset : 0408. external length : 000001
+58.	LTXSP : Language: The long text was stored in this language 
+internal data type : LANG
+Internal length : 000001 characters
+Position in segment : 058, Offset : 0409. external length : 000001
+59.	POTX1 : BOM Item Text (Line 1) 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 059, Offset : 0410. external length : 000040
+60.	POTX2 : BOM Item Text (Line 2) 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 060, Offset : 0450. external length : 000040
+61.	OBJTY : Object type (BOM item) 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 061, Offset : 0490. external length : 000001
+62.	MATKL : Material Group 
+internal data type : CHAR
+Internal length : 000009 characters
+Position in segment : 062, Offset : 0491. external length : 000009
+63.	WEBAZ : Goods receipt processing time in days 
+internal data type : DEC 
+Internal length : 000003 characters
+No decimal places, without sign
+Position in segment : 063, Offset : 0500. external length : 000005
+64.	DOKAR : Document Type 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 064, Offset : 0505. external length : 000003
+65.	DOKNR : Document number 
+internal data type : CHAR
+Internal length : 000025 characters
+Position in segment : 065, Offset : 0508. external length : 000025
+66.	DOKVR : Document Version 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 066, Offset : 0533. external length : 000002
+67.	DOKTL : Document Part 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 067, Offset : 0535. external length : 000003
+68.	CSSTR : Average material purity in % 
+internal data type : DEC 
+Internal length : 000005 characters
+000002 decimal places, without sign
+Position in segment : 068, Offset : 0538. external length : 000007
+69.	CLASS : Planning Parameter Class 
+internal data type : CHAR
+Internal length : 000006 characters
+Position in segment : 069, Offset : 0545. external length : 000006
+70.	KLART : Class Type 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 070, Offset : 0551. external length : 000003
+71.	POTPR : Resulting item category 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 071, Offset : 0554. external length : 000001
+72.	AWAKZ : Selection indicator for configurable BOMs 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 072, Offset : 0555. external length : 000001
+73.	INSKZ : Instance indicator 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 073, Offset : 0556. external length : 000001
+74.	VCEKZ : Indicator: not displayed in configuration editor 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 074, Offset : 0557. external length : 000001
+75.	VSTKZ : Indicator: not displayed in single-level configuration 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 075, Offset : 0558. external length : 000001
+76.	VACKZ : Indicator: not displayed in automatic configuration 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 076, Offset : 0559. external length : 000001
+77.	EKORG : Purchasing organization 
+internal data type : CHAR
+Internal length : 000004 characters
+Position in segment : 077, Offset : 0560. external length : 000004
+78.	CLOBK : Required Component 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 078, Offset : 0564. external length : 000001
+79.	CLMUL : Multiple Selection Allowed 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 079, Offset : 0565. external length : 000001
+80.	CLALT : Alternative Display Format 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 080, Offset : 0566. external length : 000001
+81.	CVIEW : Organizational Area 
+internal data type : CHAR
+Internal length : 000010 characters
+Position in segment : 081, Offset : 0567. external length : 000010
+82.	KNOBJ : Number of Object with Assigned Dependencies 
+internal data type : NUMC
+Internal length : 000018 characters
+Position in segment : 082, Offset : 0577. external length : 000018
+83.	LGORT : Issue Location for Production Order 
+internal data type : CHAR
+Internal length : 000004 characters
+Position in segment : 083, Offset : 0595. external length : 000004
+84.	KZKUP : Indicator: co-product 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 084, Offset : 0599. external length : 000001
+85.	INTRM : Intra Material 
+internal data type : CHAR
+Internal length : 000018 characters
+Position in segment : 085, Offset : 0600. external length : 000018
+86.	TPEKZ : Indicator: restrictions exist 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 086, Offset : 0618. external length : 000001
+87.	DSPST : Explosion type 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 087, Offset : 0619. external length : 000002
+88.	ALPST : Alternative item: strategy 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 088, Offset : 0621. external length : 000001
+89.	ALPRF : Alternative item: ranking order 
+internal data type : NUMC
+Internal length : 000002 characters
+Position in segment : 089, Offset : 0622. external length : 000002
+90.	ALPGR : Alternative item: group 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 090, Offset : 0624. external length : 000002
+91.	NFGRP : Follow-up group 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 091, Offset : 0626. external length : 000002
+92.	NFEAG : Discontinuation group 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 092, Offset : 0628. external length : 000002
+93.	CLSZU : Classification number 
+internal data type : NUMC
+Internal length : 000008 characters
+Position in segment : 093, Offset : 0630. external length : 000008
+94.	KZCLB : Indicator: classification as selection condition 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 094, Offset : 0638. external length : 000001
+95.	LTXSP_ISO : 2-Character SAP Language Code 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 095, Offset : 0639. external length : 000002
+96.	NLFZV : Lead-time offset for operation 
+internal data type : DEC 
+Internal length : 000003 characters
+No decimal places, with sign
+Position in segment : 096, Offset : 0641. external length : 000005
+97.	NLFMV : Unit for lead-time offset for operation 
+internal data type : UNIT
+Internal length : 000003 characters
+Position in segment : 097, Offset : 0646. external length : 000003
+98.	KLASSE : Class number 
+internal data type : CHAR
+Internal length : 000018 characters
+Position in segment : 098, Offset : 0649. external length : 000018
+99.	MENGE_C : Component quantity 
+internal data type : CHAR
+Internal length : 000015 characters
+Position in segment : 099, Offset : 0667. external length : 000015
+100.	ID_CLASS_C : Class number 
+internal data type : CHAR
+Internal length : 000018 characters
+Position in segment : 100, Offset : 0682. external length : 000018
+101.	ROMEN_C : Quantity of variable-size item 
+internal data type : QUAN
+Internal length : 000013 characters
+000003 decimal places, without sign
+Position in segment : 101, Offset : 0700. external length : 000015
+102.	PRVBE : Production Supply Area 
+internal data type : CHAR
+Internal length : 000010 characters
+Position in segment : 102, Offset : 0715. external length : 000010
+103.	ITMID : External identification of an item 
+internal data type : CHAR
+Internal length : 000008 characters
+Position in segment : 103, Offset : 0725. external length : 000008
+104.	GUIDX : Guid external display (char32) 
+internal data type : CHAR
+Internal length : 000032 characters
+Position in segment : 104, Offset : 0733. external length : 000032
+105.	ITSOB : Special Procurement Type for BOM Item 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 105, Offset : 0765. external length : 000002
+106.	RFPNT : Reference point for BOM transfer 
+internal data type : CHAR
+Internal length : 000020 characters
+Position in segment : 106, Offset : 0767. external length : 000020
+107.	IDNRK_EXTERNAL : Long Material Number for Field IDNRK 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 107, Offset : 0787. external length : 000040
+108.	IDNRK_VERSION : Version Number for Field IDNRK 
+internal data type : CHAR
+Internal length : 000010 characters
+Position in segment : 108, Offset : 0827. external length : 000010
+109.	IDNRK_GUID : External GUID for Field IDNRK 
+internal data type : CHAR
+Internal length : 000032 characters
+Position in segment : 109, Offset : 0837. external length : 000032
+110.	ID_COMP_EXTERNAL : Long Material Number for Field ID_COMP 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 110, Offset : 0869. external length : 000040
+111.	ID_COMP_VERSION : Version Number for Field ID_COMP 
+internal data type : CHAR
+Internal length : 000010 characters
+Position in segment : 111, Offset : 0909. external length : 000010
+112.	ID_COMP_GUID : External GUID for Field ID_COMP 
+internal data type : CHAR
+Internal length : 000032 characters
+Position in segment : 112, Offset : 0919. external length : 000032
+113.	INTRM_EXTERNAL : Long Material Number for Field INTRM 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 113, Offset : 0951. external length : 000040
+114.	INTRM_VERSION : Version Number for Field INTRM 
+internal data type : CHAR
+Internal length : 000010 characters
+Position in segment : 114, Offset : 0991. external length : 000010
+115.	INTRM_GUID : External GUID for Field INTRM 
+internal data type : CHAR
+Internal length : 000032 characters
+Position in segment : 115, Offset : 1001. external length : 000032
+116.	SEGMENT_VALUE : Segmentation Value 
+internal data type : CHAR
+Internal length : 000016 characters
+Position in segment : 116, Offset : 1033. external length : 000016
+117.	CRITICAL_COMP_INDICATOR : Critical Component Indicator 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 117, Offset : 1049. external length : 000001
+118.	CRITICAL_LEVEL : Crtical Level of a Component in BoM 
+internal data type : DEC 
+Internal length : 000002 characters
+No decimal places, without sign
+Position in segment : 118, Offset : 1050. external length : 000004
+•	E1STPOM1 : Master BOM Item 
+Segment definition E2STPOM1001 Released since Release 752 , Segment length: 0160 
+1.	ID_COMP_LONG : Material No. 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 001, Offset : 0063. external length : 000040
+2.	IDNRK_LONG : BOM component 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 002, Offset : 0103. external length : 000040
+3.	INTRM_LONG : Intra Material 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 003, Offset : 0143. external length : 000040
+4.	SEG_VAL_LONG : Segmentation Value 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 004, Offset : 0183. external length : 000040
+•	E1CUKBM : Master Dependency Basic Data 
+Segment definition E2CUKBM001 Released since Release 45A , Segment length: 0088 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	DEP_INTERN : Internal name of dependency 
+internal data type : CHAR
+Internal length : 000030 characters
+Position in segment : 002, Offset : 0066. external length : 000030
+3.	DEP_EXTERN : External Dependency Name 
+internal data type : CHAR
+Internal length : 000030 characters
+Position in segment : 003, Offset : 0096. external length : 000030
+4.	DEP_TYPE : Dependency type 
+internal data type : CHAR
+Internal length : 000004 characters
+Position in segment : 004, Offset : 0126. external length : 000004
+5.	STATUS : Dependency status 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 005, Offset : 0130. external length : 000001
+6.	GROUP : Dependency Group 
+internal data type : CHAR
+Internal length : 000010 characters
+Position in segment : 006, Offset : 0131. external length : 000010
+7.	WHR_TO_USE : Authorization Group for Object Dependencies 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 007, Offset : 0141. external length : 000003
+8.	DEP_LINENO : Counter for sorting object allocations 
+internal data type : NUMC
+Internal length : 000004 characters
+Position in segment : 008, Offset : 0144. external length : 000004
+9.	FLDELETE : Deletion Indicator 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 009, Offset : 0148. external length : 000001
+10.	DEP_TYPE2 : Dependency type - supplement 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 010, Offset : 0149. external length : 000001
+11.	SCE_FLAG : Indicator: Dependencies for SCE Format 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 011, Offset : 0150. external length : 000001
+•	E1CUKBT : Master Dependency Descriptions 
+Segment definition E2CUKBT001 Released since Release 40A , Segment length: 0037 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	LANGUAGE : Language Key 
+internal data type : LANG
+Internal length : 000001 characters
+Position in segment : 002, Offset : 0066. external length : 000001
+3.	DESCRIPT : Dependency Description 
+internal data type : CHAR
+Internal length : 000030 characters
+Position in segment : 003, Offset : 0067. external length : 000030
+4.	FLDELETE : Deletion Indicator 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 004, Offset : 0097. external length : 000001
+5.	LANGUAGE_ISO : 2-Character SAP Language Code 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 005, Offset : 0098. external length : 000002
+•	E1CUKNM : Master Dependency Source Code 
+Segment definition E2CUKNM Released since Release 31G , Segment length: 0075 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	LINE : Line of object dependency source (72 characters) 
+internal data type : CHAR
+Internal length : 000072 characters
+Position in segment : 002, Offset : 0066. external length : 000072
+•	E1CUTXM : Master Dependency Documentation 
+Segment definition E2CUTXM001 Released since Release 40A , Segment length: 0140 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	LANGUAGE : Language Key 
+internal data type : LANG
+Internal length : 000001 characters
+Position in segment : 002, Offset : 0066. external length : 000001
+3.	TXT_FORM : Tag column 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 003, Offset : 0067. external length : 000002
+4.	TXT_LINE : Text Line 
+internal data type : CHAR
+Internal length : 000132 characters
+Position in segment : 004, Offset : 0069. external length : 000132
+5.	LANGUAGE_ISO : 2-Character SAP Language Code 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 005, Offset : 0201. external length : 000002
+•	E1SPOTH : Master BOM: BOM item long text - Header 
+Segment definition E2SPOTH001 Released since Release 40A , Segment length: 0080 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	TDNAME : Name 
+internal data type : CHAR
+Internal length : 000070 characters
+Position in segment : 002, Offset : 0066. external length : 000070
+3.	TDID : Text ID 
+internal data type : CHAR
+Internal length : 000004 characters
+Position in segment : 003, Offset : 0136. external length : 000004
+4.	TDSPRAS : Language Key 
+internal data type : LANG
+Internal length : 000001 characters
+Position in segment : 004, Offset : 0140. external length : 000001
+5.	TDSPRAS_ISO : 2-Character SAP Language Code 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 005, Offset : 0141. external length : 000002
+•	E1SPOTL : Master BOM: BOM item long text - Line 
+Segment definition E2SPOTL Released since Release 31G , Segment length: 0134 
+1.	TDFORMAT : Tag column 
+internal data type : CHAR
+Internal length : 000002 characters
+Position in segment : 001, Offset : 0063. external length : 000002
+2.	TDLINE : Text Line 
+internal data type : CHAR
+Internal length : 000132 characters
+Position in segment : 002, Offset : 0065. external length : 000132
+•	E1STPUM : Master BOM sub-item 
+Segment definition E2STPUM001 Released since Release 640 , Segment length: 0101 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	STLKN : BOM item node number 
+internal data type : NUMC
+Internal length : 000008 characters
+Position in segment : 002, Offset : 0066. external length : 000008
+3.	UPMNG : Sub-item quantity 
+internal data type : QUAN
+Internal length : 000013 characters
+000003 decimal places, with sign
+Position in segment : 003, Offset : 0074. external length : 000015
+4.	EBORT : Installation Point for Subitem 
+internal data type : CHAR
+Internal length : 000020 characters
+Position in segment : 004, Offset : 0089. external length : 000020
+5.	UPTXT : BOM sub-item text 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 005, Offset : 0109. external length : 000040
+6.	UPMNG_C : Subitem Quantity 
+internal data type : CHAR
+Internal length : 000015 characters
+Position in segment : 006, Offset : 0149. external length : 000015
+•	E1SGTBOM : BOM Segmentation 
+Segment definition E2SGTBOM001 Released since Release 752 , Segment length: 0061 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	STOCK_SEGMENT : Segmentation Value 
+internal data type : CHAR
+Internal length : 000016 characters
+Position in segment : 002, Offset : 0066. external length : 000016
+3.	SEGMENTATION_INCLUDE : Segmentation : Flag Including 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 003, Offset : 0082. external length : 000001
+4.	SEGMENTATION_EXCLUDE : Segmentation: Flag Excluding 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 004, Offset : 0083. external length : 000001
+5.	STK_SEG_LONG : Segmentation Value 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 005, Offset : 0084. external length : 000040
+•	E1FSHBOM : Fashion BOM Deviation Quantities for Components 
+Segment definition E2FSHBOM003 Released since Release 750 , Segment length: 0303 
+1.	MSGFN : Function 
+internal data type : CHAR
+Internal length : 000003 characters
+Position in segment : 001, Offset : 0063. external length : 000003
+2.	MATERIAL : Material Number (18 Characters) 
+internal data type : CHAR
+Internal length : 000018 characters
+Position in segment : 002, Offset : 0066. external length : 000018
+3.	COMPONENT : BOM component 
+internal data type : CHAR
+Internal length : 000018 characters
+Position in segment : 003, Offset : 0084. external length : 000018
+4.	DEVIATION_QUANTITY : Component Quantity 
+internal data type : QUAN
+Internal length : 000013 characters
+000003 decimal places, with sign
+Position in segment : 004, Offset : 0102. external length : 000015
+5.	CRITICAL_COMP_INDICATOR : Critical Component Indicator 
+internal data type : CHAR
+Internal length : 000001 characters
+Position in segment : 005, Offset : 0117. external length : 000001
+6.	CRITICAL_LEVEL : Crtical Level of a Component in BoM 
+internal data type : DEC 
+Internal length : 000002 characters
+No decimal places, without sign
+Position in segment : 006, Offset : 0118. external length : 000004
+7.	MATERIAL_EXTERNAL : Long Material Number for MATERIAL Field 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 007, Offset : 0122. external length : 000040
+8.	MATERIAL_VERSION : Version Number for MATERIAL Field 
+internal data type : CHAR
+Internal length : 000010 characters
+Position in segment : 008, Offset : 0162. external length : 000010
+9.	MATERIAL_GUID : External GUID for MATERIAL Field 
+internal data type : CHAR
+Internal length : 000032 characters
+Position in segment : 009, Offset : 0172. external length : 000032
+10.	COMPONENT_EXTERNAL : Long Material Number for COMPONENT Field 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 010, Offset : 0204. external length : 000040
+11.	COMPONENT_VERSION : Version Number for COMPONENT Field 
+internal data type : CHAR
+Internal length : 000010 characters
+Position in segment : 011, Offset : 0244. external length : 000010
+12.	COMPONENT_GUID : External GUID for COMPONENT Field 
+internal data type : CHAR
+Internal length : 000032 characters
+Position in segment : 012, Offset : 0254. external length : 000032
+13.	MATERIAL_LONG : Material No. 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 013, Offset : 0286. external length : 000040
+14.	COMPONENT_LONG : BOM component 
+internal data type : CHAR
+Internal length : 000040 characters
+Position in segment : 014, Offset : 0326. external length : 000040
+•	E1UPSLINK : Reference from Object to Superior UPS 
+Segment definition E2UPSLINK000 Released since Release 620 , Segment length: 0210 
+1.	UPSNAM : ALE Distribution Packet: Name 
+internal data type : CHAR
+Internal length : 000020 characters
+Position in segment : 001, Offset : 0063. external length : 000020
+2.	ORGNAM : ALE Distribution Packet : Original Packet Name 
+internal data type : CHAR
+Internal length : 000020 characters
+Position in segment : 002, Offset : 0083. external length : 000020
+3.	MESTYP : Message Type 
+internal data type : CHAR
+Internal length : 000030 characters
+Position in segment : 003, Offset : 0103. external length : 000030
+4.	OBJID : ALE Distribution Packet: Object Key 
+internal data type : CHAR
+Internal length : 000120 characters
+Position in segment : 004, Offset : 0133. external length : 000120
+5.	OBJVAL : ALE Distribution Package: Object Validity 
+internal data type : CHAR
+Internal length : 000020 characters
+Position in segment : 005, Offset : 0253. external length : 000020
+
+Info... 
+Automatically created HTML doc.
+created on 01/10/2023 at 11:35:15 
+Client 100 
+System S4M 
+Release 755 
+Lang. E 
+Transaction WE60 
+Display current status 
+Version 3 of IDoc record types : IDoc record types for SAP Release 4.0 
+
