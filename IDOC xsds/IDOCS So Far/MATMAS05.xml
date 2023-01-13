@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MATMAS05>
+   <IDOC BEGIN="1">
+      <EDI_DC40 SEGMENT="1">
+         <TABNAM>EDI_DC40</TABNAM>
+         <MANDT />
+         <DOCREL>755</DOCREL>
+         <STATUS>30</STATUS>
+         <DIRECT>2</DIRECT>
+         <OUTMOD />
+         <IDOCTYP>MATMAS05</IDOCTYP>
+         <MESTYP>MATMAS</MESTYP>
+         <SNDPOR>SAPS4M</SNDPOR>
+         <SNDPRT>LS</SNDPRT>
+         <SNDPRN>SAP_PO_DHL</SNDPRN>
+         <RCVPOR>SAPS4M</RCVPOR>
+         <RCVPRT>LS</RCVPRT>
+         <RCVPRN>S4MEWM100</RCVPRN>
+      </EDI_DC40>
+      <E1MARAM SEGMENT="1">
+         <MATNR>000000000000000327</MATNR>
+         <ERSDA>2012-11-12 16:37:05</ERSDA>
+         <LAEDA>2021-08-02 09:30:01</LAEDA>
+         <MTART>ROH</MTART>
+         <MBRSH>A</MBRSH>
+         <MATKL>L002</MATKL>
+         <MEINS>KG</MEINS>
+         <NORMT>Lucid 12" Gel Memo</NORMT>
+         <GEWEI>LB</GEWEI>
+         <E1MAKTM SEGMENT="1">
+            <MSGFN>005</MSGFN>
+            <SPRAS>E</SPRAS>
+            <MAKTX>Lucid 12" Gel Memory Foam Mattress, Plush</MAKTX>
+         </E1MAKTM>
+      </E1MARAM>
+   </IDOC>
+</MATMAS05>

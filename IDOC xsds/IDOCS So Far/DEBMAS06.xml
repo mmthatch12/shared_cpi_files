@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEBMAS06>
+   <IDOC BEGIN="1">
+      <EDI_DC40 SEGMENT="1">
+         <TABNAM>EDI_DC40</TABNAM>
+         <MANDT />
+         <DOCNUM />
+         <DOCREL>755</DOCREL>
+         <STATUS>30</STATUS>
+         <DIRECT>2</DIRECT>
+         <OUTMOD />
+         <IDOCTYP>DEBMAS06</IDOCTYP>
+         <MESTYP>DEBMAS</MESTYP>
+         <SNDPOR>SAPS4M</SNDPOR>
+         <SNDPRT>LS</SNDPRT>
+         <SNDPRN>S4MCLNT110</SNDPRN>
+         <RCVPOR>SAPS4M</RCVPOR>
+         <RCVPRT>LS</RCVPRT>
+         <RCVPRN>S4MEWM100</RCVPRN>
+      </EDI_DC40>
+      <E1KNA1M SEGMENT="1">
+         <KUNNR>0001423457</KUNNR>
+         <KTOKD>DE10</KTOKD>
+         <LAND1>US</LAND1>
+         <NAME1>Test Company</NAME1>
+         <NAME2>Test Company</NAME2>
+         <ORT01>Logan</ORT01>
+         <PSTLZ>84321</PSTLZ>
+         <REGIO>UT</REGIO>
+         <STRAS>1525 W. 2960 S.</STRAS>
+         <TELF1>8016452857</TELF1>
+         <KATR10>1</KATR10>
+         <SPRAS_ISO>EN</SPRAS_ISO>
+      </E1KNA1M>
+   </IDOC>
+</DEBMAS06>
